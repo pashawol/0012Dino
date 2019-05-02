@@ -1,0 +1,130 @@
+extends layout/main.pug
+
+
+include ../blocks/s-content/_s-content.pug
+include ../blocks/s-contact/_s-contact.pug
+include ../blocks/s-portfolio/_s-portfolio.pug
+include ../blocks/s-about/_s-about.pug
+include ../blocks/s-team/_s-team.pug
+include ../blocks/s-servises/_s-servises.pug
+include ../blocks/s-logos/_s-logos.pug
+
+block title
+	title title
+
+block pagecontent
+	// PRLD
+	#prld.prld
+	// / CRLS
+	.crls
+		#callWrap.crls__form.call
+			a.btt-close.callClose
+				span Закрыть
+				i.icn.icn-close
+			.call__ttl.ttl-bord
+				h4
+					span.thm Упаковка
+					br
+					| бизнеса
+			.call__dsc
+				p Упаковка — это все, что люди могут увидеть или узнать о вашей компании.
+				p
+					| Это процесс описания бизнеса, продукта или технологии, с целью нахождения важных преимуществ и создания на их основе материалов.
+				p
+					| Данные материалы способствуют улучшению показателей бизнеса или внешнего восприятия компании людьми.
+				p
+					| Если компания вызывает вопросы и недоверие, 
+					span.nw с ней
+					|  никто не будет работать.
+				p
+					| После упаковки клиенты начинают больше покупать, а специалисты хотят работать только 
+					span.nw с вами.
+			a.btt(href='#')
+				span Оценить проект
+		#crlsNav.crls__nav
+			ul#headNav.crls__nav-menu
+				li
+					a Главная
+				li
+					a Наши работы
+				li
+					a О нас
+				li
+					a Услуги
+				li
+					a Наши клиенты
+				li
+					a Контакты
+				li
+					a Блог
+			.crls__nav-scls.scls
+				p Связаться с нами:
+				a(href='#')
+					i.icn.icn-msg
+				a(href='#')
+					i.icn.icn-sk
+				a(href='#')
+					i.icn.icn-tg
+				a(href='#')
+					i.icn.icn-vb
+				a(href='#')
+					i.icn.icn-wa
+		.crls-cl.crls-tl
+			a.logo.crls__logo(href='#')
+				i.logo_main.wow.fadeInLeft
+				i.logo_name.wow.fadeInRight
+			a#menuOpen.crls_menu
+				span.btt-menu
+					i
+					i
+					i
+				span.txt меню
+		.crls-cl.crls-tr.wow.fadeIn(data-wow-delay='.22s')
+			.crls__langs
+				a.text-white(href='#') Eng
+				span Rus°
+			a.crls__call.callOpen
+				span.btt-call
+					i.icn.icn-hand
+				span.txt связаться
+		.crls-cl.crls-bl.wow.fadeIn.hidden(data-wow-delay='.22s')
+			ul.crls_pgs
+				li.active
+					a(href='#')
+				li
+					a(href='#')
+				li
+					a(href='#')
+		.crls-cl.crls-bc.wow.fadeInLeft(data-wow-delay='.4s')
+			a.crls_mouse(href='#')
+				i.icn.icn-mouse
+				i.icn.icn-arrow
+		.crls-cl.crls-br
+			.crls_scls.scls
+				a(href='https://www.facebook.com/DinoCSlive/', target='_blank')
+					i.icn.icn-fb
+				a(href='https://www.instagram.com/creative_studio_dino/', target='_blank')
+					i.icn.icn-inst
+				a(href='https://www.behance.net/DinoCreativeStudio/', target='_blank')
+					i.icn.icn-be
+				a(href='https://www.pinterest.com/dinocreativestudio/', target='_blank')
+					i.icn.icn-pint
+				a(href='https://www.linkedin.com/company/dino-creative-studio/', target='_blank')
+					i.icn.icn-ln
+		// CRLS /
+	//- +mob-mnu()
+	//- +header()
+		//- +top-line()
+		//- +top-nav()
+	
+	#wrp.wrp
+		+header-block()
+		+s-portfolio
+		+s-about
+		+s-team
+		+s-servises
+		+s-logos
+		+s-form()
+		//- +s-contact()
+		+footer()
+
