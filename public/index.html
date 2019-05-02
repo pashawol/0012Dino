@@ -14,7 +14,7 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,700|Roboto:400,700">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/onepage-scroll/1.3.1/onepage-scroll.min.css" />
     <link rel="stylesheet" href="libs/magnificPopup/magnific-popup.css">
-    <link rel="stylesheet" href="libs/slick/slick.css">
+    <link rel="stylesheet" href="libs/swiper-4.2.0/swiper.min.css">
     <link rel="stylesheet" href="libs/fullPage.js/dist/fullpage.min.css">
     <link rel="stylesheet" href="css/main.min.css">
   </head>
@@ -94,101 +94,96 @@
         </section>
         <!-- .Promo /-->
         <!-- / .Works-->
-        <section class="section scrollable" id="works">
-          <div class="wrks">
-            <div class="wrks__head">
-              <div class="wrks_bg">
-                <div class="pg__ttl">
-                  <h2>Наши работы</h2>
-                </div>
-                <div class="wrks__tbs">
-                  <div class="container">
-                    <ul class="etabs wrks__tbs-links">
-                      <li class="active"><a href="#tab1">Все работы</a></li>
-                      <!---->
-                      <li><a href="#tab2">Веб</a></li>
-                      <li><a href="#tab3">Упаковка</a></li>
-                      <li><a href="#tab4">Полиграфия</a></li>
-                      <li><a class="nw" href="#tab5">Мобильные приложения</a></li>
-                    </ul>
+        <section class="wrks scrollable" id="works">
+          <div class="wrks_bg">
+            <div class="container pg__ttl">
+              <h2>Наши работы</h2>
+            </div>
+          </div>
+          <div class="js-tabs wrks__tbs">
+            <ul class="etabs wrks__tbs-links">
+              <li class="active"><a href="#tab1">Все работы</a></li>
+              <!--
+              <li><a href="#tab2">Веб</a></li>
+              <li><a href="#tab3">Упаковка</a></li>
+              <li><a href="#tab4">Полиграфия</a></li>
+              <li><a href="#tab5" class="nw">Мобильные приложения</a></li>
+              -->
+            </ul>
+            <div class="wrks__tbs-itm" id="tab1">
+              <div class="arn-msnr">
+                <div class="cl-sizer cl-1"></div>
+                <div class="cl cl-7 itm ht2" style="background-image: url('img/content/work-1.jpg');">
+                  <div class="itm__more">
+                    <div class="ttl-bord">
+                      <h5>Билборд <span class="nw">для лечебного</span> центра компания - <span class="nw thm">D-medical</span></h5>
+                    </div><a class="btt btt-blue" href="#"><span class="nw">Нажмите для просмотра проекта</span></a>
                   </div>
                 </div>
-              </div>
-              <div class="wrks__tbs-itm" id="tab1">
-                <div class="arn-msnr">
-                  <div class="cl-sizer cl-1"></div>
-                  <div class="cl cl-7 itm ht2" style="background-image: url('img/content/work-1.jpg');">
-                    <div class="itm__more">
-                      <div class="ttl-bord">
-                        <h5>Билборд <span class="nw">для лечебного</span> центра компания - <span class="nw thm">D-medical</span></h5>
-                      </div><a class="btt btt-blue" href="#"><span class="nw">Нажмите для просмотра проекта</span></a>
-                    </div>
+                <div class="cl cl-5 itm" style="background-image: url('img/content/work-2.jpg');">
+                  <div class="itm__more">
+                    <div class="ttl-bord">
+                      <h5>Продающий сайт <br/>для <span class="nw thm">квест-комнаты</span><br/>“Лабиринт”</h5>
+                    </div><a class="btt btt-blue" href="#"><span class="nw">Нажмите для просмотра проекта</span></a>
                   </div>
-                  <div class="cl cl-5 itm" style="background-image: url('img/content/work-2.jpg');">
-                    <div class="itm__more">
-                      <div class="ttl-bord">
-                        <h5>Продающий сайт <br/>для <span class="nw thm">квест-комнаты</span><br/>“Лабиринт”</h5>
-                      </div><a class="btt btt-blue" href="#"><span class="nw">Нажмите для просмотра проекта</span></a>
-                    </div>
+                </div>
+                <div class="cl cl-4 itm" style="background-image: url('img/content/work-3.jpg');">
+                  <div class="itm__more">
+                    <div class="ttl-bord">
+                      <h5>Продающий сайт <br/>для <span class="nw thm">it компании</span><br/>General Marketing</h5>
+                    </div><a class="btt btt-blue" href="#"><span class="nw">Нажмите для просмотра проекта</span></a>
                   </div>
-                  <div class="cl cl-4 itm" style="background-image: url('img/content/work-3.jpg');">
-                    <div class="itm__more">
-                      <div class="ttl-bord">
-                        <h5>Продающий сайт <br/>для <span class="nw thm">it компании</span><br/>General Marketing</h5>
-                      </div><a class="btt btt-blue" href="#"><span class="nw">Нажмите для просмотра проекта</span></a>
-                    </div>
+                </div>
+                <div class="cl cl-3 itm" style="background-image: url('img/content/work-4.jpg');">
+                  <div class="itm__more">
+                    <div class="ttl-bord">
+                      <h5>Листовка <br/><span class="nw">для <span class="thm">сети</span></span><span class="thm">кальянных компании</span><br/>“Cheshire”</h5>
+                    </div><a class="btt btt-blue" href="#"><span class="nw">Нажмите для просмотра проекта</span></a>
                   </div>
-                  <div class="cl cl-3 itm" style="background-image: url('img/content/work-4.jpg');">
-                    <div class="itm__more">
-                      <div class="ttl-bord">
-                        <h5>Листовка <br/><span class="nw">для <span class="thm">сети</span></span><span class="thm">кальянных компании</span><br/>“Cheshire”</h5>
-                      </div><a class="btt btt-blue" href="#"><span class="nw">Нажмите для просмотра проекта</span></a>
-                    </div>
+                </div>
+                <div class="cl cl-5 itm ht2" style="background-image: url('img/content/work-5.jpg');">
+                  <div class="itm__more">
+                    <div class="ttl-bord">
+                      <h5>Продающий сайт <br/>для <span class="nw thm">кроссфит проекта</span><span class="nw">для компании</span> Geroy</h5>
+                    </div><a class="btt btt-blue" href="#"><span class="nw">Нажмите для просмотра проекта</span></a>
                   </div>
-                  <div class="cl cl-5 itm ht2" style="background-image: url('img/content/work-5.jpg');">
-                    <div class="itm__more">
-                      <div class="ttl-bord">
-                        <h5>Продающий сайт <br/>для <span class="nw thm">кроссфит проекта</span><span class="nw">для компании</span> Geroy</h5>
-                      </div><a class="btt btt-blue" href="#"><span class="nw">Нажмите для просмотра проекта</span></a>
-                    </div>
+                </div>
+                <div class="cl cl-7 itm ht2" style="background-image: url('img/content/work-1.jpg');">
+                  <div class="itm__more">
+                    <div class="ttl-bord">
+                      <h5>Билборд <span class="nw">для лечебного</span> центра компания - <span class="nw thm">D-medical</span></h5>
+                    </div><a class="btt btt-blue" href="#"><span class="nw">Нажмите для просмотра проекта</span></a>
                   </div>
-                  <div class="cl cl-7 itm ht2" style="background-image: url('img/content/work-1.jpg');">
-                    <div class="itm__more">
-                      <div class="ttl-bord">
-                        <h5>Билборд <span class="nw">для лечебного</span> центра компания - <span class="nw thm">D-medical</span></h5>
-                      </div><a class="btt btt-blue" href="#"><span class="nw">Нажмите для просмотра проекта</span></a>
-                    </div>
+                </div>
+                <div class="cl cl-5 itm" style="background-image: url('img/content/work-2.jpg');">
+                  <div class="itm__more">
+                    <div class="ttl-bord">
+                      <h5>Продающий сайт <br/>для <span class="nw thm">квест-комнаты</span><br/>“Лабиринт”</h5>
+                    </div><a class="btt btt-blue" href="#"><span class="nw">Нажмите для просмотра проекта</span></a>
                   </div>
-                  <div class="cl cl-5 itm" style="background-image: url('img/content/work-2.jpg');">
-                    <div class="itm__more">
-                      <div class="ttl-bord">
-                        <h5>Продающий сайт <br/>для <span class="nw thm">квест-комнаты</span><br/>“Лабиринт”</h5>
-                      </div><a class="btt btt-blue" href="#"><span class="nw">Нажмите для просмотра проекта</span></a>
-                    </div>
+                </div>
+                <div class="cl cl-4 itm" style="background-image: url('img/content/work-3.jpg');">
+                  <div class="itm__more">
+                    <div class="ttl-bord">
+                      <h5>Продающий сайт <br/>для <span class="nw thm">it компании</span><br/>General Marketing</h5>
+                    </div><a class="btt btt-blue" href="#"><span class="nw">Нажмите для просмотра проекта</span></a>
                   </div>
-                  <div class="cl cl-4 itm" style="background-image: url('img/content/work-3.jpg');">
-                    <div class="itm__more">
-                      <div class="ttl-bord">
-                        <h5>Продающий сайт <br/>для <span class="nw thm">it компании</span><br/>General Marketing</h5>
-                      </div><a class="btt btt-blue" href="#"><span class="nw">Нажмите для просмотра проекта</span></a>
-                    </div>
+                </div>
+                <div class="cl cl-3 itm" style="background-image: url('img/content/work-4.jpg');">
+                  <div class="itm__more">
+                    <div class="ttl-bord">
+                      <h5>Листовка <br/><span class="nw">для <span class="thm">сети</span></span><span class="thm">кальянных компании</span><br/>“Cheshire”</h5>
+                    </div><a class="btt btt-blue" href="#"><span class="nw">Нажмите для просмотра проекта</span></a>
                   </div>
-                  <div class="cl cl-3 itm" style="background-image: url('img/content/work-4.jpg');">
-                    <div class="itm__more">
-                      <div class="ttl-bord">
-                        <h5>Листовка <br/><span class="nw">для <span class="thm">сети</span></span><span class="thm">кальянных компании</span><br/>“Cheshire”</h5>
-                      </div><a class="btt btt-blue" href="#"><span class="nw">Нажмите для просмотра проекта</span></a>
-                    </div>
-                  </div>
-                  <div class="cl cl-5 itm ht2 lst" style="background-image: url('img/content/work-5.jpg');"><a class="itm__more" id="loadWorks">
-                      <big class="thm">
-                        <big>+34</big><br/> проекта
-                      </big></a>
-                    <div class="itm__more hid">
-                      <div class="ttl-bord">
-                        <h5>Продающий сайт <br/>для <span class="nw thm">кроссфит проекта</span><span class="nw">для компании</span> Geroy</h5>
-                      </div><a class="btt btt-blue" href="#"><span class="nw">Нажмите для просмотра проекта</span></a>
-                    </div>
+                </div>
+                <div class="cl cl-5 itm ht2 lst" style="background-image: url('img/content/work-5.jpg');"><a class="itm__more" id="loadWorks">
+                    <big class="thm">
+                      <big>+34</big><br/> проекта
+                    </big></a>
+                  <div class="itm__more hid">
+                    <div class="ttl-bord">
+                      <h5>Продающий сайт <br/>для <span class="nw thm">кроссфит проекта</span><span class="nw">для компании</span> Geroy</h5>
+                    </div><a class="btt btt-blue" href="#"><span class="nw">Нажмите для просмотра проекта </span></a>
                   </div>
                 </div>
               </div>
@@ -245,10 +240,10 @@
           </div>
         </section>
         <!-- end s-form-->
-        <footer class="footer">
-          <div class="container"></div>
-        </footer>
       </div>
+      <footer class="footer">
+        <div class="container"></div>
+      </footer>
     </div>
     <div class="form-wrap zoom-anim-dialog mfp-hide modal-win modal-form" id="modal-call">
       <form>
@@ -281,6 +276,7 @@
     <script src="libs/fullPage.js/vendors/easings.min.js"></script>
     <script src="libs/fullPage.js/vendors/scrolloverflow.min.js"></script>
     <script src="/libs/fullPage.js/dist/fullpage.min.js"></script>
+    <script src="/js/jquery.onepage-scroll.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.pkgd.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/smooth-scroll/10.2.1/js/smooth-scroll.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
@@ -294,7 +290,7 @@
     <script src="libs/magnificPopup/jquery.magnific-popup.min.js"></script>
     <!-- modal libs-->
     <!-- slider libs-->
-    <script src="libs/slick/slick.min.js"></script>
+    <script src="libs/swiper-4.2.0/swiper.min.js"></script>
     <!-- /slider libs-->
     <!-- for svg libs-->
     <script src="libs/svg4everybody-master/svg4everybody.min.js"></script>

@@ -32,9 +32,9 @@ $(document).ready(function() {
     new WOW().init();
     // fullpage
     // $("#wrp").onepage_scroll({
-    //    animationTime: 1000,             // AnimationTime let you define how long each section takes to animate
+    // //    animationTime: 1000,             // AnimationTime let you define how long each section takes to animate
     //    pagination: true,                // You can either show or hide the pagination. Toggle true for show, false for hide.
-    //    updateURL: false,                // Toggle this true if you want the URL to be updated automatically when the user scroll to each page.
+    //    updateURL: true,                // Toggle this true if you want the URL to be updated automatically when the user scroll to each page.
     //    beforeMove: function(index) {
     //     if(index==1) body.removeClass('page-scrolled');
     //     if(index==2) body.addClass('page-scrolled'); 
@@ -42,7 +42,7 @@ $(document).ready(function() {
     //    afterMove: function(index) {},   // This option accepts a callback function. The function will be called after the page moves.
     //    loop: false,                     // You can have the page loop back to the top/bottom when the user navigates at up/down on the first/last page.
     //    keyboard: false,                  // You can activate the keyboard controls
-    //    responsiveFallback: true,        // You can fallback to normal page scroll by defining the width of the browser in which
+    //    responsiveFallback: false,        // You can fallback to normal page scroll by defining the width of the browser in which
     // });
     // easyTabs
     $('.js-tabs').easytabs({
