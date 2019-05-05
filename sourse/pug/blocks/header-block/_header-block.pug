@@ -1,35 +1,138 @@
 mixin header-block()
 	// / .Promo
-	section.section#main.prm&attributes(attributes)
-		.wrp__bg.wow.slideInRight(data-wow-duration='1.2s')
-		// / WRP
-		.arn.prm__wrp
-			.row.fx-aic
-				.col-lg-7.col-xl-7
-					.prm__dsc
+	section.section#main&attributes(attributes)
+		+b.prm
+			+e.slider--js.swiper-container
+				.swiper-wrapper
+					mixin slide(x)
+						+e.slide.swiper-slide
+							.wrp__bg.wow.slideInRight(data-wow-duration='1.2s')
+							// / WRP
+							.arn.prm__wrp
+								.row.fx-aic
+									.col-md-8.col-lg-7.col-xl-7.col-xxxl-6
+										.prm__dsc
+											block
+											
+										.d-none.d-md-block
+											a.btt.btt-calc.wow.fadeInUp(href="#" data-wow-delay='0.3s')
+												i.icn.icn-calc
+												span.nw Оценить проект
+									.col-md.wow.fadeInRight(data-wow-delay='0.52s')
+										.prm_pht&attributes(attributes)
+											img(src="#" data-src=`img/head-img-${x}.png`, alt='')
+								.d-md-none
+										a.btt.btt-calc.wow.fadeInUp(href="#" data-wow-delay='0.3s')
+											i.icn.icn-calc
+											span.nw Оценить проект
+										.crls-cl.crls-br.crls-mobile
+											.crls_scls.scls
+												a(href='https://www.facebook.com/DinoCSlive/', target='_blank')
+													i.icn.icn-fb
+												a(href='https://www.instagram.com/creative_studio_dino/', target='_blank')
+													i.icn.icn-inst
+												a(href='https://www.behance.net/DinoCreativeStudio/', target='_blank')
+													i.icn.icn-be
+												a(href='https://www.pinterest.com/dinocreativestudio/', target='_blank')
+													i.icn.icn-pint
+												a(href='https://www.linkedin.com/company/dino-creative-studio/', target='_blank')
+													i.icn.icn-ln
+						.prm__pxs.pxs
+							.px1.px.px-1
+								img(src='img/backs/promo-px-1.png', alt='', data-depth='1')
+							.px2.px.px-2
+								img(src='img/backs/promo-px-2.png', alt='', data-depth='0.75')
+							.px3.px.px-3
+								img(src='img/backs/promo-px-3.png', alt='', data-depth='0.5')
+						// +e.slide.swiper-slide
+					+slide(1)
 						.h1.wow.fadeInUp
-							b.thm Сочный
+							b.thm.big Сочный
 							br
 							span.thm
 								| дизайн 
 								span.nw и разработка
 							span.d-inline-block.nw для вашего  бизнеса!
-						p.wow.fadeInUp(data-wow-delay='0.3s')
+						p.h4.wow.fadeInUp(data-wow-delay='0.3s')
 							| и 
 							a.thm(href='#') «упаковка»
 							|  бизнеса 
 							span.nw под ключ
-					button.btt.btt-calc.wow.fadeInUp(data-wow-delay='0.3s')
-						i.icn.icn-calc
-						span.nw Оценить проект
-				.col-lg-5.col-xl-5.wow.fadeInRight(data-wow-delay='0.52s')
-					.prm_pht
-						img(src='img/head-img-1.png', alt='')
-		.prm__pxs.pxs
-			#px1.px.px-1
-				img(src='img/backs/promo-px-1.png', alt='', data-depth='1')
-			#px2.px.px-2
-				img(src='img/backs/promo-px-2.png', alt='', data-depth='0.75')
-			#px3.px.px-3
-				img(src='img/backs/promo-px-3.png', alt='', data-depth='0.5')
+					
+					+slide(2)
+						.h1.wow.fadeInUp
+							b Разработка 
+								| 
+								span.thm  упаковки
+							 
+						p.h4.wow.fadeInUp(data-wow-delay='0.3s')
+							span.thm   и этикетки для вашей продукции 
+							br
+							//- br
+							| и
+							|
+							a.thm(href='#') «упаковка»
+							|  бизнеса 
+							span.nw под ключ
+					
+					+slide(3)
+						.h1.wow.fadeInUp
+							b Разработка 
+								| 
+								span.thm  дизайна
+							span.h2.thm   полиграфической продукции  
+						p.h4.wow.fadeInUp(data-wow-delay='0.3s')
+							| и 
+							a.thm(href='#') «упаковка»
+							|  бизнеса 
+							span.nw под ключ
+					
+					+slide(4)
+						.h1.wow.fadeInUp
+							b Разработка
+							br
+							span.thm   одностраничных сайтов 
+							
+						p.h4.wow.fadeInUp(data-wow-delay='0.3s')
+							| и 
+							a.thm(href='#') «упаковка»
+							|  бизнеса 
+							span.nw под ключ
+					
+					+slide(5)(class="img-mr")
+						.h1.wow.fadeInUp
+							b Разработка 
+								| 
+								span.thm  дизайна 
+							br
+							span.smaller.thm   широкоформатной печати
+						p.h4.wow.fadeInUp(data-wow-delay='0.3s') 
+						 
+							| и 
+							a.thm(href='#') «упаковка»
+							|  бизнеса 
+							span.nw под ключ
+					
+					+slide(6)
+						.h1.wow.fadeInUp
+							b Разработка 
+								| 
+								span.thm и  дизайна 
+						p.h4.wow.fadeInUp(data-wow-delay='0.3s')
+							span.thm   мобильных приложений и интерфейсов 
+							br
+							| и 
+							a.thm(href='#') «упаковка»
+							|  бизнеса 
+							span.nw под ключ 
+					
+				+e.pagin.swiper-pagination.swiper-pagination-bullets
+					div(class="swiper-pagination-dot wrapper-dot  " tabindex="0" role="button" aria-label="Go to slide 1")
+						
+					
+					div(class="swiper-pagination-dot wrapper-dot " tabindex="1" role="button" aria-label="Go to slide 2")
+						
+					div(class="swiper-pagination-dot wrapper-dot " tabindex="2" role="button" aria-label="Go to slide 3")
+						
+					
 	// .Promo /

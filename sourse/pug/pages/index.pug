@@ -14,7 +14,7 @@ block title
 
 block pagecontent
 	// PRLD
-	#prld.prld
+	//- #prld.prld
 	// / CRLS
 	.crls
 		#callWrap.crls__form.call
@@ -70,6 +70,7 @@ block pagecontent
 				a(href='#')
 					i.icn.icn-wa
 		.crls-cl.crls-tl
+			.after
 			a.logo.crls__logo(href='#')
 				i.logo_main.wow.fadeInLeft
 				i.logo_name.wow.fadeInRight
@@ -99,7 +100,8 @@ block pagecontent
 			a.crls_mouse(href='#')
 				i.icn.icn-mouse
 				i.icn.icn-arrow
-		.crls-cl.crls-br
+		
+		.crls-cl.crls-br.d-none.d-md-flex
 			.crls_scls.scls
 				a(href='https://www.facebook.com/DinoCSlive/', target='_blank')
 					i.icn.icn-fb
@@ -116,10 +118,10 @@ block pagecontent
 	//- +header()
 		//- +top-line()
 		//- +top-nav()
-	
+	//- .main-wrapper
 	#wrp.wrp
 		+header-block(class="")
-		+s-portfolio(class="")
+		+s-portfolio(class="fp-auto-height")
 		+s-about(class="")
 		+s-team(class="")
 		+s-servises(class="")

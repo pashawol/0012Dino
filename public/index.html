@@ -9,19 +9,16 @@
     <meta property="og:image" content="path/to/image.jpg">
     <link rel="shortcut icon" type="image/png" href="img/favicon/favicon.png">
     <!-- Custom Browsers Color-->
-    <meta name="theme-color" content="#3361d8"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,700|Roboto:400,700">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/onepage-scroll/1.3.1/onepage-scroll.min.css" />
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,700|Roboto:400,700">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/onepage-scroll/1.3.1/onepage-scroll.min.css" />
+    <meta name="theme-color" content="#3361d8">
     <link rel="stylesheet" href="libs/magnificPopup/magnific-popup.css">
     <link rel="stylesheet" href="libs/swiper-4.2.0/swiper.min.css">
-    <link rel="stylesheet" href="libs/fullPage.js/dist/fullpage.min.css">
+    <link rel="stylesheet" href="libs/jquery-plugin-circliful/css/jquery.circliful.css">
+    <link rel="stylesheet" href="libs/fullPage.js/fullpage.min.css">
     <link rel="stylesheet" href="css/main.min.css">
   </head>
   <body>
     <div class="main-wrapper">
       <!-- PRLD-->
-      <div class="prld" id="prld"></div>
       <!-- / CRLS-->
       <div class="crls">
         <div class="crls__form call" id="callWrap"><a class="btt-close callClose"><span>Закрыть</span><i class="icn icn-close"></i></a>
@@ -50,7 +47,9 @@
             <p>Связаться с нами:</p><a href="#"><i class="icn icn-msg"></i></a><a href="#"><i class="icn icn-sk"></i></a><a href="#"><i class="icn icn-tg"></i></a><a href="#"><i class="icn icn-vb"></i></a><a href="#"><i class="icn icn-wa"></i></a>
           </div>
         </div>
-        <div class="crls-cl crls-tl"><a class="logo crls__logo" href="#"><i class="logo_main wow fadeInLeft"></i><i class="logo_name wow fadeInRight"></i></a><a class="crls_menu" id="menuOpen"><span class="btt-menu"><i></i><i></i><i></i></span><span class="txt">меню</span></a></div>
+        <div class="crls-cl crls-tl">
+          <div class="after"></div><a class="logo crls__logo" href="#"><i class="logo_main wow fadeInLeft"></i><i class="logo_name wow fadeInRight"></i></a><a class="crls_menu" id="menuOpen"><span class="btt-menu"><i></i><i></i><i></i></span><span class="txt">меню</span></a>
+        </div>
         <div class="crls-cl crls-tr wow fadeIn" data-wow-delay=".22s">
           <div class="crls__langs"><a class="text-white" href="#">Eng</a><span>Rus°</span></div><a class="crls__call callOpen"><span class="btt-call"><i class="icn icn-hand"></i></span><span class="txt">связаться</span></a>
         </div>
@@ -62,129 +61,323 @@
           </ul>
         </div>
         <div class="crls-cl crls-bc wow fadeInLeft" data-wow-delay=".4s"><a class="crls_mouse" href="#"><i class="icn icn-mouse"></i><i class="icn icn-arrow"></i></a></div>
-        <div class="crls-cl crls-br">
+        <div class="crls-cl crls-br d-none d-md-flex">
           <div class="crls_scls scls"><a href="https://www.facebook.com/DinoCSlive/" target="_blank"><i class="icn icn-fb"></i></a><a href="https://www.instagram.com/creative_studio_dino/" target="_blank"><i class="icn icn-inst"></i></a><a href="https://www.behance.net/DinoCreativeStudio/" target="_blank"><i class="icn icn-be"></i></a><a href="https://www.pinterest.com/dinocreativestudio/" target="_blank"><i class="icn icn-pint"></i></a><a href="https://www.linkedin.com/company/dino-creative-studio/" target="_blank"><i class="icn icn-ln"></i></a></div>
         </div>
         <!-- CRLS /-->
       </div>
       <div class="wrp" id="wrp">
         <!-- / .Promo-->
-        <section class="section prm" id="main">
-          <div class="wrp__bg wow slideInRight" data-wow-duration="1.2s"></div>
-          <!-- / WRP-->
-          <div class="arn prm__wrp">
-            <div class="row fx-aic">
-              <div class="col-lg-7 col-xl-7">
-                <div class="prm__dsc">
-                  <div class="h1 wow fadeInUp"><b class="thm">Сочный</b><br/><span class="thm">дизайн <span class="nw">и разработка</span></span><span class="d-inline-block nw">для вашего  бизнеса!</span></div>
-                  <p class="wow fadeInUp" data-wow-delay="0.3s">и <a class="thm" href="#">«упаковка»</a> бизнеса <span class="nw">под ключ</span></p>
-                </div>
-                <button class="btt btt-calc wow fadeInUp" data-wow-delay="0.3s"><i class="icn icn-calc"></i><span class="nw">Оценить проект</span></button>
+        <section class="section" id="main">
+          <div class="prm">
+            <div class="prm__slider prm__slider--js swiper-container">
+              <div class="swiper-wrapper">
+                  <div class="prm__slide swiper-slide">
+                    <div class="wrp__bg wow slideInRight" data-wow-duration="1.2s"></div>
+                    <!-- / WRP-->
+                    <div class="arn prm__wrp">
+                      <div class="row fx-aic">
+                        <div class="col-md-8 col-lg-7 col-xl-7 col-xxxl-6">
+                          <div class="prm__dsc">
+                            <div class="h1 wow fadeInUp"><b class="thm big">Сочный</b><br/><span class="thm">дизайн <span class="nw">и разработка</span></span><span class="d-inline-block nw">для вашего  бизнеса!</span></div>
+                            <p class="h4 wow fadeInUp" data-wow-delay="0.3s">и <a class="thm" href="#">«упаковка»</a> бизнеса <span class="nw">под ключ</span></p>
+                          </div>
+                          <div class="d-none d-md-block"><a class="btt btt-calc wow fadeInUp" href="#" data-wow-delay="0.3s"><i class="icn icn-calc"></i><span class="nw">Оценить проект</span></a></div>
+                        </div>
+                        <div class="col-md wow fadeInRight" data-wow-delay="0.52s">
+                          <div class="prm_pht"><img src="#" data-src="img/head-img-1.png" alt=""/></div>
+                        </div>
+                      </div>
+                      <div class="d-md-none"><a class="btt btt-calc wow fadeInUp" href="#" data-wow-delay="0.3s"><i class="icn icn-calc"></i><span class="nw">Оценить проект</span></a>
+                        <div class="crls-cl crls-br crls-mobile">
+                          <div class="crls_scls scls"><a href="https://www.facebook.com/DinoCSlive/" target="_blank"><i class="icn icn-fb"></i></a><a href="https://www.instagram.com/creative_studio_dino/" target="_blank"><i class="icn icn-inst"></i></a><a href="https://www.behance.net/DinoCreativeStudio/" target="_blank"><i class="icn icn-be"></i></a><a href="https://www.pinterest.com/dinocreativestudio/" target="_blank"><i class="icn icn-pint"></i></a><a href="https://www.linkedin.com/company/dino-creative-studio/" target="_blank"><i class="icn icn-ln"></i></a></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="prm__pxs pxs">
+                    <div class="px1 px px-1"><img src="img/backs/promo-px-1.png" alt="" data-depth="1"/></div>
+                    <div class="px2 px px-2"><img src="img/backs/promo-px-2.png" alt="" data-depth="0.75"/></div>
+                    <div class="px3 px px-3"><img src="img/backs/promo-px-3.png" alt="" data-depth="0.5"/></div>
+                  </div>
+                  <!-- +e.slide.swiper-slide-->
+                  <div class="prm__slide swiper-slide">
+                    <div class="wrp__bg wow slideInRight" data-wow-duration="1.2s"></div>
+                    <!-- / WRP-->
+                    <div class="arn prm__wrp">
+                      <div class="row fx-aic">
+                        <div class="col-md-8 col-lg-7 col-xl-7 col-xxxl-6">
+                          <div class="prm__dsc">
+                            <div class="h1 wow fadeInUp"><b>
+                                Разработка  <span class="thm"> упаковки</span></b></div>
+                            <p class="h4 wow fadeInUp" data-wow-delay="0.3s"><span class="thm">  и этикетки для вашей продукции </span><br/>и
+                              <a class="thm" href="#">«упаковка»</a> бизнеса <span class="nw">под ключ</span>
+                            </p>
+                          </div>
+                          <div class="d-none d-md-block"><a class="btt btt-calc wow fadeInUp" href="#" data-wow-delay="0.3s"><i class="icn icn-calc"></i><span class="nw">Оценить проект</span></a></div>
+                        </div>
+                        <div class="col-md wow fadeInRight" data-wow-delay="0.52s">
+                          <div class="prm_pht"><img src="#" data-src="img/head-img-2.png" alt=""/></div>
+                        </div>
+                      </div>
+                      <div class="d-md-none"><a class="btt btt-calc wow fadeInUp" href="#" data-wow-delay="0.3s"><i class="icn icn-calc"></i><span class="nw">Оценить проект</span></a>
+                        <div class="crls-cl crls-br crls-mobile">
+                          <div class="crls_scls scls"><a href="https://www.facebook.com/DinoCSlive/" target="_blank"><i class="icn icn-fb"></i></a><a href="https://www.instagram.com/creative_studio_dino/" target="_blank"><i class="icn icn-inst"></i></a><a href="https://www.behance.net/DinoCreativeStudio/" target="_blank"><i class="icn icn-be"></i></a><a href="https://www.pinterest.com/dinocreativestudio/" target="_blank"><i class="icn icn-pint"></i></a><a href="https://www.linkedin.com/company/dino-creative-studio/" target="_blank"><i class="icn icn-ln"></i></a></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="prm__pxs pxs">
+                    <div class="px1 px px-1"><img src="img/backs/promo-px-1.png" alt="" data-depth="1"/></div>
+                    <div class="px2 px px-2"><img src="img/backs/promo-px-2.png" alt="" data-depth="0.75"/></div>
+                    <div class="px3 px px-3"><img src="img/backs/promo-px-3.png" alt="" data-depth="0.5"/></div>
+                  </div>
+                  <!-- +e.slide.swiper-slide-->
+                  <div class="prm__slide swiper-slide">
+                    <div class="wrp__bg wow slideInRight" data-wow-duration="1.2s"></div>
+                    <!-- / WRP-->
+                    <div class="arn prm__wrp">
+                      <div class="row fx-aic">
+                        <div class="col-md-8 col-lg-7 col-xl-7 col-xxxl-6">
+                          <div class="prm__dsc">
+                            <div class="h1 wow fadeInUp"><b>
+                                Разработка  <span class="thm"> дизайна</span></b><span class="h2 thm">  полиграфической продукции  </span></div>
+                            <p class="h4 wow fadeInUp" data-wow-delay="0.3s">и <a class="thm" href="#">«упаковка»</a> бизнеса <span class="nw">под ключ</span></p>
+                          </div>
+                          <div class="d-none d-md-block"><a class="btt btt-calc wow fadeInUp" href="#" data-wow-delay="0.3s"><i class="icn icn-calc"></i><span class="nw">Оценить проект</span></a></div>
+                        </div>
+                        <div class="col-md wow fadeInRight" data-wow-delay="0.52s">
+                          <div class="prm_pht"><img src="#" data-src="img/head-img-3.png" alt=""/></div>
+                        </div>
+                      </div>
+                      <div class="d-md-none"><a class="btt btt-calc wow fadeInUp" href="#" data-wow-delay="0.3s"><i class="icn icn-calc"></i><span class="nw">Оценить проект</span></a>
+                        <div class="crls-cl crls-br crls-mobile">
+                          <div class="crls_scls scls"><a href="https://www.facebook.com/DinoCSlive/" target="_blank"><i class="icn icn-fb"></i></a><a href="https://www.instagram.com/creative_studio_dino/" target="_blank"><i class="icn icn-inst"></i></a><a href="https://www.behance.net/DinoCreativeStudio/" target="_blank"><i class="icn icn-be"></i></a><a href="https://www.pinterest.com/dinocreativestudio/" target="_blank"><i class="icn icn-pint"></i></a><a href="https://www.linkedin.com/company/dino-creative-studio/" target="_blank"><i class="icn icn-ln"></i></a></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="prm__pxs pxs">
+                    <div class="px1 px px-1"><img src="img/backs/promo-px-1.png" alt="" data-depth="1"/></div>
+                    <div class="px2 px px-2"><img src="img/backs/promo-px-2.png" alt="" data-depth="0.75"/></div>
+                    <div class="px3 px px-3"><img src="img/backs/promo-px-3.png" alt="" data-depth="0.5"/></div>
+                  </div>
+                  <!-- +e.slide.swiper-slide-->
+                  <div class="prm__slide swiper-slide">
+                    <div class="wrp__bg wow slideInRight" data-wow-duration="1.2s"></div>
+                    <!-- / WRP-->
+                    <div class="arn prm__wrp">
+                      <div class="row fx-aic">
+                        <div class="col-md-8 col-lg-7 col-xl-7 col-xxxl-6">
+                          <div class="prm__dsc">
+                            <div class="h1 wow fadeInUp"><b>Разработка</b><br/><span class="thm">  одностраничных сайтов </span></div>
+                            <p class="h4 wow fadeInUp" data-wow-delay="0.3s">и <a class="thm" href="#">«упаковка»</a> бизнеса <span class="nw">под ключ</span></p>
+                          </div>
+                          <div class="d-none d-md-block"><a class="btt btt-calc wow fadeInUp" href="#" data-wow-delay="0.3s"><i class="icn icn-calc"></i><span class="nw">Оценить проект</span></a></div>
+                        </div>
+                        <div class="col-md wow fadeInRight" data-wow-delay="0.52s">
+                          <div class="prm_pht"><img src="#" data-src="img/head-img-4.png" alt=""/></div>
+                        </div>
+                      </div>
+                      <div class="d-md-none"><a class="btt btt-calc wow fadeInUp" href="#" data-wow-delay="0.3s"><i class="icn icn-calc"></i><span class="nw">Оценить проект</span></a>
+                        <div class="crls-cl crls-br crls-mobile">
+                          <div class="crls_scls scls"><a href="https://www.facebook.com/DinoCSlive/" target="_blank"><i class="icn icn-fb"></i></a><a href="https://www.instagram.com/creative_studio_dino/" target="_blank"><i class="icn icn-inst"></i></a><a href="https://www.behance.net/DinoCreativeStudio/" target="_blank"><i class="icn icn-be"></i></a><a href="https://www.pinterest.com/dinocreativestudio/" target="_blank"><i class="icn icn-pint"></i></a><a href="https://www.linkedin.com/company/dino-creative-studio/" target="_blank"><i class="icn icn-ln"></i></a></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="prm__pxs pxs">
+                    <div class="px1 px px-1"><img src="img/backs/promo-px-1.png" alt="" data-depth="1"/></div>
+                    <div class="px2 px px-2"><img src="img/backs/promo-px-2.png" alt="" data-depth="0.75"/></div>
+                    <div class="px3 px px-3"><img src="img/backs/promo-px-3.png" alt="" data-depth="0.5"/></div>
+                  </div>
+                  <!-- +e.slide.swiper-slide-->
+                  <div class="prm__slide swiper-slide">
+                    <div class="wrp__bg wow slideInRight" data-wow-duration="1.2s"></div>
+                    <!-- / WRP-->
+                    <div class="arn prm__wrp">
+                      <div class="row fx-aic">
+                        <div class="col-md-8 col-lg-7 col-xl-7 col-xxxl-6">
+                          <div class="prm__dsc">
+                            <div class="h1 wow fadeInUp"><b>
+                                Разработка  <span class="thm"> дизайна </span></b><br/><span class="smaller thm">  широкоформатной печати</span></div>
+                            <p class="h4 wow fadeInUp" data-wow-delay="0.3s">
+                               и <a class="thm" href="#">«упаковка»</a> бизнеса <span class="nw">под ключ</span></p>
+                          </div>
+                          <div class="d-none d-md-block"><a class="btt btt-calc wow fadeInUp" href="#" data-wow-delay="0.3s"><i class="icn icn-calc"></i><span class="nw">Оценить проект</span></a></div>
+                        </div>
+                        <div class="col-md wow fadeInRight" data-wow-delay="0.52s">
+                          <div class="prm_pht img-mr"><img src="#" data-src="img/head-img-5.png" alt=""/></div>
+                        </div>
+                      </div>
+                      <div class="d-md-none"><a class="btt btt-calc wow fadeInUp" href="#" data-wow-delay="0.3s"><i class="icn icn-calc"></i><span class="nw">Оценить проект</span></a>
+                        <div class="crls-cl crls-br crls-mobile">
+                          <div class="crls_scls scls"><a href="https://www.facebook.com/DinoCSlive/" target="_blank"><i class="icn icn-fb"></i></a><a href="https://www.instagram.com/creative_studio_dino/" target="_blank"><i class="icn icn-inst"></i></a><a href="https://www.behance.net/DinoCreativeStudio/" target="_blank"><i class="icn icn-be"></i></a><a href="https://www.pinterest.com/dinocreativestudio/" target="_blank"><i class="icn icn-pint"></i></a><a href="https://www.linkedin.com/company/dino-creative-studio/" target="_blank"><i class="icn icn-ln"></i></a></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="prm__pxs pxs">
+                    <div class="px1 px px-1"><img src="img/backs/promo-px-1.png" alt="" data-depth="1"/></div>
+                    <div class="px2 px px-2"><img src="img/backs/promo-px-2.png" alt="" data-depth="0.75"/></div>
+                    <div class="px3 px px-3"><img src="img/backs/promo-px-3.png" alt="" data-depth="0.5"/></div>
+                  </div>
+                  <!-- +e.slide.swiper-slide-->
+                  <div class="prm__slide swiper-slide">
+                    <div class="wrp__bg wow slideInRight" data-wow-duration="1.2s"></div>
+                    <!-- / WRP-->
+                    <div class="arn prm__wrp">
+                      <div class="row fx-aic">
+                        <div class="col-md-8 col-lg-7 col-xl-7 col-xxxl-6">
+                          <div class="prm__dsc">
+                            <div class="h1 wow fadeInUp"><b>
+                                Разработка  <span class="thm">и  дизайна </span></b></div>
+                            <p class="h4 wow fadeInUp" data-wow-delay="0.3s"><span class="thm">  мобильных приложений и интерфейсов </span><br/>и <a class="thm" href="#">«упаковка»</a> бизнеса <span class="nw">под ключ </span></p>
+                          </div>
+                          <div class="d-none d-md-block"><a class="btt btt-calc wow fadeInUp" href="#" data-wow-delay="0.3s"><i class="icn icn-calc"></i><span class="nw">Оценить проект</span></a></div>
+                        </div>
+                        <div class="col-md wow fadeInRight" data-wow-delay="0.52s">
+                          <div class="prm_pht"><img src="#" data-src="img/head-img-6.png" alt=""/></div>
+                        </div>
+                      </div>
+                      <div class="d-md-none"><a class="btt btt-calc wow fadeInUp" href="#" data-wow-delay="0.3s"><i class="icn icn-calc"></i><span class="nw">Оценить проект</span></a>
+                        <div class="crls-cl crls-br crls-mobile">
+                          <div class="crls_scls scls"><a href="https://www.facebook.com/DinoCSlive/" target="_blank"><i class="icn icn-fb"></i></a><a href="https://www.instagram.com/creative_studio_dino/" target="_blank"><i class="icn icn-inst"></i></a><a href="https://www.behance.net/DinoCreativeStudio/" target="_blank"><i class="icn icn-be"></i></a><a href="https://www.pinterest.com/dinocreativestudio/" target="_blank"><i class="icn icn-pint"></i></a><a href="https://www.linkedin.com/company/dino-creative-studio/" target="_blank"><i class="icn icn-ln"></i></a></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="prm__pxs pxs">
+                    <div class="px1 px px-1"><img src="img/backs/promo-px-1.png" alt="" data-depth="1"/></div>
+                    <div class="px2 px px-2"><img src="img/backs/promo-px-2.png" alt="" data-depth="0.75"/></div>
+                    <div class="px3 px px-3"><img src="img/backs/promo-px-3.png" alt="" data-depth="0.5"/></div>
+                  </div>
+                  <!-- +e.slide.swiper-slide-->
               </div>
-              <div class="col-lg-5 col-xl-5 wow fadeInRight" data-wow-delay="0.52s">
-                <div class="prm_pht"><img src="img/head-img-1.png" alt=""/></div>
+              <div class="prm__pagin swiper-pagination swiper-pagination-bullets">
+                <div class="swiper-pagination-dot wrapper-dot  " tabindex="0" role="button" aria-label="Go to slide 1"></div>
+                <div class="swiper-pagination-dot wrapper-dot " tabindex="1" role="button" aria-label="Go to slide 2"></div>
+                <div class="swiper-pagination-dot wrapper-dot " tabindex="2" role="button" aria-label="Go to slide 3"></div>
               </div>
             </div>
-          </div>
-          <div class="prm__pxs pxs">
-            <div class="px px-1" id="px1"><img src="img/backs/promo-px-1.png" alt="" data-depth="1"/></div>
-            <div class="px px-2" id="px2"><img src="img/backs/promo-px-2.png" alt="" data-depth="0.75"/></div>
-            <div class="px px-3" id="px3"><img src="img/backs/promo-px-3.png" alt="" data-depth="0.5"/></div>
           </div>
         </section>
         <!-- .Promo /-->
         <!-- / .Works-->
-        <section class="wrks scrollable" id="works">
-          <div class="wrks_bg">
-            <div class="container pg__ttl">
+        <section class="section scrollable fp-auto-height" id="works">
+          <div class="wrks">
+            <div class="d-lg-none text-center">
               <h2>Наши работы</h2>
             </div>
-          </div>
-          <div class="js-tabs wrks__tbs">
-            <ul class="etabs wrks__tbs-links">
-              <li class="active"><a href="#tab1">Все работы</a></li>
-              <!--
-              <li><a href="#tab2">Веб</a></li>
-              <li><a href="#tab3">Упаковка</a></li>
-              <li><a href="#tab4">Полиграфия</a></li>
-              <li><a href="#tab5" class="nw">Мобильные приложения</a></li>
-              -->
-            </ul>
-            <div class="wrks__tbs-itm" id="tab1">
-              <div class="arn-msnr">
-                <div class="cl-sizer cl-1"></div>
-                <div class="cl cl-7 itm ht2" style="background-image: url('img/content/work-1.jpg');">
+            <div class="wrks__head d-none d-lg-block">
+              <div class="wrks_bg">
+                <div class="container pg__ttl">
+                  <h2>Наши работы</h2>
+                </div>
+                <ul class="etabs wrks__tbs-links">
+                  <li class="active"><a href="#tab1">Все работы</a></li>
+                  <li> <a href="#tab1">Веб</a></li>
+                  <li> <a href="#tab1">Упаковка</a></li>
+                  <li> <a href="#tab1">Полиграфия</a></li>
+                  <li> <a href="#tab1">Мобильные приложения</a></li>
+                  <!--
+                  <li><a href="#tab2"></a></li>
+                  <li><a href="#tab3"></a></li>
+                  <li><a href="#tab4"></a></li>
+                  <li><a href="#tab5" class="nw"></a></li>
+                  -->
+                </ul>
+              </div>
+            </div>
+            <div class="js-tabs wrks__tbs">
+              <div class="wrks__tbs-itm" id="tab1">
+                <div class="arn-msnr"><a class="cl cl-7 itm" href="#" style="background-image: url('img/project-1.jpg');">
                   <div class="itm__more">
                     <div class="ttl-bord">
-                      <h5>Билборд <span class="nw">для лечебного</span> центра компания - <span class="nw thm">D-medical</span></h5>
-                    </div><a class="btt btt-blue" href="#"><span class="nw">Нажмите для просмотра проекта</span></a>
-                  </div>
-                </div>
-                <div class="cl cl-5 itm" style="background-image: url('img/content/work-2.jpg');">
+                      <div class="cl__title">
+                        Билборд  для лечебного  центра компания&nbsp;&mdash;   <span class="thm d-inline-block">D-medical</span>
+                      </div>
+                    </div>
+                    <button class="btt btt-blue" type="button"><span>Нажмите для просмотра проекта</span></button>
+                  </div></a><a class="cl cl-5 itm" href="#" style="background-image: url('img/project-2.jpg');">
                   <div class="itm__more">
                     <div class="ttl-bord">
-                      <h5>Продающий сайт <br/>для <span class="nw thm">квест-комнаты</span><br/>“Лабиринт”</h5>
-                    </div><a class="btt btt-blue" href="#"><span class="nw">Нажмите для просмотра проекта</span></a>
+                      <div class="cl__title">
+                         Продающий сайт   для   <span class="thm d-inline-block">квест-комнаты “Лабиринт”</span>
+                      </div>
+                    </div>
+                    <button class="btt btt-blue" type="button"><span>Нажмите для просмотра проекта</span></button>
+                  </div></a>
+                  <div class="cl-7">
+                    <div class="arn-msnr"><a class="cl cl-7 itm ht6" href="#" style="background-image: url('img/project-3.jpg');">
+                      <div class="itm__more">
+                        <div class="ttl-bord">
+                          <div class="cl__title">
+                             Продающий сайт   для   <span class="thm d-inline-block">it&nbsp;компании  General Marketing</span>
+                          </div>
+                        </div>
+                        <button class="btt btt-blue" type="button"><span>Нажмите для просмотра проекта</span></button>
+                      </div></a><a class="cl cl-5 itm ht6" href="#" style="background-image: url('img/project-4.jpg');">
+                      <div class="itm__more">
+                        <div class="ttl-bord">
+                          <div class="cl__title">
+                            Листовка   для 
+                             <span class="thm d-inline-block">сети  кальянных компании</span>
+                            “Cheshire”
+                          </div>
+                        </div>
+                        <button class="btt btt-blue" type="button"><span>Нажмите для просмотра проекта</span></button>
+                      </div></a><a class="cl cl-7 itm ht5" href="#" style="background-image: url('img/project-5.jpg');">
+                      <div class="itm__more">
+                        <div class="ttl-bord">
+                          <div class="cl__title">
+                             Продающий сайт   для   
+                             <span class="thm d-inline-block">it&nbsp;компании  General Marketing</span>
+                          </div>
+                        </div>
+                        <button class="btt btt-blue" type="button"><span>Нажмите для просмотра проекта</span></button>
+                      </div></a><a class="cl cl-5 itm ht5" href="#" style="background-image: url('img/project-7.jpg');">
+                      <div class="itm__more">
+                        <div class="ttl-bord">
+                          <div class="cl__title"> Листовка   для <span class="thm d-inline-block">сети  кальянных компании</span> 
+                            “Cheshire”
+                          </div>
+                        </div>
+                        <button class="btt btt-blue" type="button"><span>Нажмите для просмотра проекта</span></button>
+                      </div></a>
+                    </div>
                   </div>
-                </div>
-                <div class="cl cl-4 itm" style="background-image: url('img/content/work-3.jpg');">
+                  <div class="cl-5 cl-5-right"><a class="cl cl-12 itm ht4" href="#" style="background-image: url('img/project-7.jpg');">
+                    <div class="itm__more">
+                      <div class="ttl-bord">
+                        <div class="cl__title"> Продающий сайт   для <span class="thm d-inline-block">кроссфит проекта</span>
+                           для компании  Geroy
+                        </div>
+                      </div>
+                      <button class="btt btt-blue" type="button"><span>Нажмите для просмотра проекта</span></button>
+                    </div></a><a class="cl cl-12 itm" href="#" style="background-image: url('img/project-8.jpg');">
+                    <div class="itm__more">
+                      <div class="ttl-bord">
+                        <div class="cl__title"> Продающий сайт   для <span class="thm d-inline-block">квест-комнаты</span> 
+                          “Лабиринт”
+                        </div>
+                      </div>
+                      <button class="btt btt-blue" type="button"><span>Нажмите для просмотра проекта</span></button>
+                    </div></a>
+                  </div><a class="cl cl-7 itm" href="#" style="background-image: url('img/project-9.jpg');">
                   <div class="itm__more">
                     <div class="ttl-bord">
-                      <h5>Продающий сайт <br/>для <span class="nw thm">it компании</span><br/>General Marketing</h5>
-                    </div><a class="btt btt-blue" href="#"><span class="nw">Нажмите для просмотра проекта</span></a>
-                  </div>
-                </div>
-                <div class="cl cl-3 itm" style="background-image: url('img/content/work-4.jpg');">
-                  <div class="itm__more">
-                    <div class="ttl-bord">
-                      <h5>Листовка <br/><span class="nw">для <span class="thm">сети</span></span><span class="thm">кальянных компании</span><br/>“Cheshire”</h5>
-                    </div><a class="btt btt-blue" href="#"><span class="nw">Нажмите для просмотра проекта</span></a>
-                  </div>
-                </div>
-                <div class="cl cl-5 itm ht2" style="background-image: url('img/content/work-5.jpg');">
-                  <div class="itm__more">
-                    <div class="ttl-bord">
-                      <h5>Продающий сайт <br/>для <span class="nw thm">кроссфит проекта</span><span class="nw">для компании</span> Geroy</h5>
-                    </div><a class="btt btt-blue" href="#"><span class="nw">Нажмите для просмотра проекта</span></a>
-                  </div>
-                </div>
-                <div class="cl cl-7 itm ht2" style="background-image: url('img/content/work-1.jpg');">
-                  <div class="itm__more">
-                    <div class="ttl-bord">
-                      <h5>Билборд <span class="nw">для лечебного</span> центра компания - <span class="nw thm">D-medical</span></h5>
-                    </div><a class="btt btt-blue" href="#"><span class="nw">Нажмите для просмотра проекта</span></a>
-                  </div>
-                </div>
-                <div class="cl cl-5 itm" style="background-image: url('img/content/work-2.jpg');">
-                  <div class="itm__more">
-                    <div class="ttl-bord">
-                      <h5>Продающий сайт <br/>для <span class="nw thm">квест-комнаты</span><br/>“Лабиринт”</h5>
-                    </div><a class="btt btt-blue" href="#"><span class="nw">Нажмите для просмотра проекта</span></a>
-                  </div>
-                </div>
-                <div class="cl cl-4 itm" style="background-image: url('img/content/work-3.jpg');">
-                  <div class="itm__more">
-                    <div class="ttl-bord">
-                      <h5>Продающий сайт <br/>для <span class="nw thm">it компании</span><br/>General Marketing</h5>
-                    </div><a class="btt btt-blue" href="#"><span class="nw">Нажмите для просмотра проекта</span></a>
-                  </div>
-                </div>
-                <div class="cl cl-3 itm" style="background-image: url('img/content/work-4.jpg');">
-                  <div class="itm__more">
-                    <div class="ttl-bord">
-                      <h5>Листовка <br/><span class="nw">для <span class="thm">сети</span></span><span class="thm">кальянных компании</span><br/>“Cheshire”</h5>
-                    </div><a class="btt btt-blue" href="#"><span class="nw">Нажмите для просмотра проекта</span></a>
-                  </div>
-                </div>
-                <div class="cl cl-5 itm ht2 lst" style="background-image: url('img/content/work-5.jpg');"><a class="itm__more" id="loadWorks">
-                    <big class="thm">
-                      <big>+34</big><br/> проекта
-                    </big></a>
-                  <div class="itm__more hid">
-                    <div class="ttl-bord">
-                      <h5>Продающий сайт <br/>для <span class="nw thm">кроссфит проекта</span><span class="nw">для компании</span> Geroy</h5>
-                    </div><a class="btt btt-blue" href="#"><span class="nw">Нажмите для просмотра проекта </span></a>
-                  </div>
+                      <div class="cl__title">
+                        Билборд  для лечебного  центра компания&nbsp;&mdash;   <span class="thm d-inline-block">D-medical</span>
+                      </div>
+                    </div>
+                    <button class="btt btt-blue" type="button"><span>Нажмите для просмотра проекта</span></button>
+                  </div></a><a class="cl cl-5 itm lst" href="#" style="background-image: url('img/project-all.jpg');">
+                  <div class="itm__more" id="loadWorks">
+                    <big class="thm d-inline-block">
+                      <big>+34</big><br/> проекта 
+                    </big>
+                  </div></a>
                 </div>
               </div>
             </div>
@@ -270,24 +463,17 @@
     </div>
     <!-- #modal-call-->
     <!-- modal-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="libs/jquery-plugin-circliful/js/jquery.circliful.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
     <script src="libs/fullPage.js/vendors/easings.min.js"></script>
     <script src="libs/fullPage.js/vendors/scrolloverflow.min.js"></script>
-    <script src="/libs/fullPage.js/dist/fullpage.min.js"></script>
-    <script src="/js/jquery.onepage-scroll.js"></script>
+    <script src="libs/fullPage.js/fullpage.min.js"> </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.pkgd.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/smooth-scroll/10.2.1/js/smooth-scroll.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/1.6.9/js/lightgallery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightslider/1.1.6/js/lightslider.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.easytabs/3.2.0/jquery.easytabs.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-popup-overlay/1.7.9/jquery.popupoverlay.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.form/3.51/jquery.form.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.countdown/2.2.0/jquery.countdown.min.js"></script>
     <!-- modal libs-->
     <script src="libs/magnificPopup/jquery.magnific-popup.min.js"></script>
+    <script src="libs/sticky-kit.js"></script>
     <!-- modal libs-->
     <!-- slider libs-->
     <script src="libs/swiper-4.2.0/swiper.min.js"></script>

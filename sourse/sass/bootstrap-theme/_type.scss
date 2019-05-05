@@ -12,8 +12,11 @@ h1, h2, h3, h4, h5, h6,
   line-height: $headings-line-height;
   color: $headings-color;
 }
-h2{
+
+h1, h2 {
   margin-bottom: .5em;
+  // font-weight: 900;
+  font-family: "PF Agora Slab Pro - Ultra Black";
 }
 
 h1, .h1 {
@@ -25,7 +28,7 @@ h1, .h1 {
   @include media-breakpoint-up(xl) {
     
     // font-size:  $h1-font-size ; 
-    @include font-size($h1-font-size * .9); 
+    @include font-size($h1-font-size * .8); 
   }
   
   @include media-breakpoint-up(lg) {
@@ -35,14 +38,45 @@ h1, .h1 {
     @include font-size($h1-font-size * .78); 
   }
 
-  // @include font-size($h1-font-size * .6); 
+  @include font-size($h1-font-size * .6); 
 
 }
-h2, .h2 { @include font-size($h2-font-size); }
-h3, .h3 { @include font-size($h3-font-size); }
-h4, .h4 { @include font-size($h4-font-size); }
-h5, .h5 { @include font-size($h5-font-size); }
-h6, .h6 { @include font-size($h6-font-size); }
+h2, .h2 { 
+  @include media-breakpoint-up(lg) {
+
+    @include font-size($h2-font-size);
+  }
+  
+  @include font-size($h2-font-size * .8);
+   }
+h3, .h3 { 
+  @include media-breakpoint-up(lg) {
+
+    @include font-size($h3-font-size);
+  }
+  
+  @include font-size($h3-font-size * .8);
+   }
+h4, .h4 { 
+  @include media-breakpoint-up(lg) {
+
+    @include font-size($h4-font-size);
+  }
+  
+  @include font-size($h4-font-size * .8);
+   }
+h5, .h5 { 
+  @include media-breakpoint-up(lg) {
+
+    @include font-size($h5-font-size);
+  }
+  
+  @include font-size($h5-font-size * .8);
+   }
+h6, .h6 { 
+  
+  @include font-size($h6-font-size);
+   }
 
 .lead {
   @include font-size($lead-font-size);

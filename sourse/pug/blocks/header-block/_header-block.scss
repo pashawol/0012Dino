@@ -1,9 +1,124 @@
-.header-block {
-	display: block;
+
+
+.prm {
   
-	
-	// 
-	@include media-breakpoint-up(xl) {}
+  font-family: "PF Agora Slab Pro - Ultra Black";
+	.h1{
+    
+  }
+
+  // &__pagination{
+  // }
+  .swiper-pagination{
+    @extend .container;
+    text-align: left;
+    @include a-cent(x);
+    // height: 100vh;
+    // top: 50%;
+    text-align: right;
+    bottom: 40px;
+    margin-top: rem(100);
+  }
+  @keyframes rota {
+    0%   { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+  @keyframes fill {
+    0%        { opacity: 0; }
+    50%, 100% { opacity: 1; }
+  }
+  
+  @keyframes mask {
+    0%        { opacity: 1; }
+    50%, 100% { opacity: 0; }
+  }
+
+  // .wrapper-dot {
+  //   width: 30px;
+  //   height: 30px;
+  //   position: relative;
+  //   // background: white;
+  //   background-color: transparent;
+  // }
+  // .pie {
+  //   width: 50%;
+  //   height: 100%;
+  //   position: absolute;
+  //   // background: #08C;
+  //   border: 5px solid rgba(0,0,0,0.4);
+  // }
+  // .spinner {
+  //   border-radius: 125px 0 0 125px;
+  //   z-index: 200;
+  //   border-right: none;
+  //   animation: rota 10s linear infinite;
+  // }
+  // .filler {
+  //   border-radius: 0 125px 125px 0;
+  //   z-index: 100;
+  //   border-left: none;
+  //   animation: fill 10s steps(1, end) infinite;
+  //   left: 50%;
+  //   opacity: 0;
+  // }
+  // .mask {
+  //   width: 50%;
+  //   height: 100%;
+  //   position: absolute;
+  //   z-index: 300;
+  //   opacity: 1;
+  //   background: inherit;
+  //   animation: mask 10s steps(1, end) infinite;
+  // }
+  // 
+  .swiper-pagination-bullet{
+    outline: none !important;
+     width: 42px;
+     height: 42px;
+    border-radius: 50%;
+    // border: 2px solid $warning;
+    display: inline-block;
+    // margin-left: 10px;
+    cursor: pointer;
+    vertical-align: top;
+    opacity: 1;
+    position: relative;
+    background: none !important;
+    &::before{
+      content: ''; 
+      @include a-cent;
+      background-color: $warning;
+      border-radius: 50%;
+      width: 6px;
+      height: 6px;
+    }
+    .spinner{
+      width: 42px;
+      height: 42px;
+    }
+    .timer{
+      display: none;
+    }
+    &:not(.swiper-pagination-bullet-active){
+      svg{
+
+        opacity: 0;
+      }
+    }
+  }
+  .h2{
+    font-size: em(10);
+  }
+  .smaller{
+    font-size: .85em;
+
+  }
+  .h4{
+    line-height: 1.8;
+  }
+	@include media-breakpoint-up(xl) {
+  }
 
 	@include media-breakpoint-up(lg) {}
 
@@ -32,14 +147,88 @@
 
 	@include media-breakpoint-down(lg) {}
 
-	@include media-breakpoint-down(md) {}
+	@include media-breakpoint-down(md) {
+     
+  }
 
-	@include media-breakpoint-down(sm) {}
 
-	@include media-breakpoint-down(xs) {}
+  
+	@include media-breakpoint-down(sm) {
+    padding-top: 100px;
+    padding-bottom: 0px;
+    text-align: center;
+    &_pht{
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 340px;
+      max-height: 300px;
+      img{
+        // width: auto;
+        // max-height: 100%;
+        max-height: 320px;
+        max-width: 100%;
+
+      }
+    }
+    .btt{
+      // margin-bottom: 40px;
+      // margin-left: auto;
+      // margin-right: auto;
+      // display: flex;
+      // @extend .btn-block;
+      // width: 252px;
+      // display: block
+      margin-top: 40px;
+    }
+    &__dsc p {
+      margin-bottom: .5em ;
+    }
+  }
+  
+  @include media-breakpoint-down(xs) {}
+  
+  .img-mr{
+    position: relative;
+    z-index: -1;
+    margin-right: -10%;
+    margin-left: -10%;
+    max-width: none;
+  }
+}
+@include media-breakpoint-down(md) {
+  .iScrollVerticalScrollbar{
+    display: none !important;
+  }
 }
 
-
+.btt{
+  color: #ffffff !important;
+}
+.wrp__bg {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  right: 0;
+  width: ( (1533 / 1920) * 100%);
+  height: 100%;
+  background-image: url("../img/backs/promo-bg-af.png");
+  background-repeat: no-repeat;
+  // background:  top 0 right 0 no-repeat;
+  
+  background-size: 100% 100%; 
+  @include media-breakpoint-down(sm) {
+    background-image: url("../img/backs/promo-bg-af-m.png");
+            // transform: rotate(90deg) !important;
+            // top: auto;
+            bottom: 0;
+            top: auto;
+            right: auto;
+            width: 100%;
+            height: 50%;
+          }
+  transition: transform 0.9s; 
+  
+}
 .prm_pht{
 	max-width: rem(759);
 	margin-right: rem(-10);
@@ -57,10 +246,29 @@
 
 .prm {
   min-height: 100vh;
-  position: relative;
-  padding-left: 30px;
-  padding-right: 30px; 
-  // background: #faf9fe url(../img/backs/bg.png) 50%/cover no-repeat;
+  display: flex;
+  align-items: stretch;
+  &__slider{
+    height: 100%;
+  }
+  &__slide{
+    display: flex;
+    min-height: 100vh;
+    height: auto;
+    // justify-content: center;
+    align-items: center;
+    position: relative;
+    // padding-left: 30px;
+    // padding-right: 30px; 
+    z-index: 2;
+    @include bgs;
+    position: relative;
+    background-image: url(../img/head-bg.jpg);
+
+  }
+  // bgsc
+  // background:     cover no-repeat;
+
 }
   .prm__pxs {
     // position: absolute;
@@ -91,19 +299,28 @@
     .prm__wrp .btt {
       }
   .prm__dsc {
-    padding-top: 80px; }
+    padding-top: 80px;
+   }
     .prm__dsc * {
       font-weight: 900; }
     .prm__dsc .h1 {
       // font-size: 58px;
       // @include font-size(#{rem(58)});
-      line-height: 0.92; }
+      line-height: 1; }
       .prm__dsc .h1 b {
-        font-size:  (126em / 58);
-        line-height: 0.7;
-        margin: 0 -7px; }
+        &.big{
+          font-size:  (126em / 58);
+          margin-bottom: 10px;
+          
+        }
+        font-size:  (122em / 58);
+        line-height: .9;
+        display: inline-block;
+        margin-bottom: em(4);
+        // margin: 0 -7px; 
+      }
     .prm__dsc p {
-			@include font-size(#{rem(26)});
+			// @include font-size(#{rem(26)});
 			margin-bottom: em(28px);
       // font-size: 26px; 
     }
@@ -125,5 +342,65 @@
     
     .wrp{
       background: #faf9fe url(../img/backs/bg.png) 50%/100vh no-repeat;
+      
 }
  
+
+@include media-breakpoint-down(sm) {
+  .logo_name ,
+  .crls_menu .txt,
+  .crls__call .txt,
+  .crls__langs,
+  .crls-bc{
+    display: none !important;
+  }
+  .crls-tl{
+    // @include a-cent(x);
+    width: 100%;
+    padding-top: 0;
+    // display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    .after{
+      content: '';
+      width: 24px;
+      display: block;
+    }
+  }
+  .btt-menu{
+    font-size: 24px;
+    i{
+      height: em(2);
+      // font-size: em(2);
+    }
+  }
+  .crls__logo .logo_main{
+    margin-top: 10px;
+    width: 104px;
+    height: 44px;
+  }
+  .prm__dsc{
+    padding-top: 0;
+  }
+  .crls-mobile{
+    display: flex;
+    justify-content: center;
+    .crls_scls{
+
+      flex-direction: row;
+      position: static;
+      display: flex;
+    }
+    position: static;
+    a{
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+  }
+
+  .call{
+    max-width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}

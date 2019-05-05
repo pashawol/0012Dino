@@ -1,144 +1,124 @@
 mixin s-portfolio()
 	// / .Works
-	section#works.wrks.scrollable&attributes(attributes)
-		.wrks_bg
-			.container.pg__ttl
+	section.section#works.scrollable&attributes(attributes)
+		+b.wrks
+			.d-lg-none.text-center
 				h2 Наши работы
-		.js-tabs.wrks__tbs
-			ul.etabs.wrks__tbs-links
-				li.active
-					a(href='#tab1') Все работы
-				//
-					<li><a href="#tab2">Веб</a></li>
-					<li><a href="#tab3">Упаковка</a></li>
-					<li><a href="#tab4">Полиграфия</a></li>
-					<li><a href="#tab5" class="nw">Мобильные приложения</a></li>
-			#tab1.wrks__tbs-itm
-				.arn-msnr
-					.cl-sizer.cl-1
-					.cl.cl-7.itm.ht2(style="background-image: url('img/content/work-1.jpg');")
-						.itm__more
-							.ttl-bord
-								h5
-									| Билборд 
-									span.nw для лечебного
-									|  центра компания - 
-									span.nw.thm D-medical
-							a.btt.btt-blue(href='#')
-								span.nw Нажмите для просмотра проекта
-					.cl.cl-5.itm(style="background-image: url('img/content/work-2.jpg');")
-						.itm__more
-							.ttl-bord
-								h5
-									| Продающий сайт 
+			+e.head.d-none.d-lg-block
+				.wrks_bg
+					.container.pg__ttl
+						h2 Наши работы
+					ul.etabs.wrks__tbs-links
+						li.active
+							a(href='#tab1') Все работы
+						
+						li 
+							a(href='#tab1') Веб
+						
+						li 
+							a(href='#tab1') Упаковка
+						
+						li 
+							a(href='#tab1') Полиграфия
+						li 
+							a(href='#tab1') Мобильные приложения
+						
+						//
+							<li><a href="#tab2"></a></li>
+							<li><a href="#tab3"></a></li>
+							<li><a href="#tab4"></a></li>
+							<li><a href="#tab5" class="nw"></a></li>
+			.js-tabs.wrks__tbs
+				#tab1.wrks__tbs-itm
+					.arn-msnr
+						//- .cl-sizer.cl-1
+						+b.cl.cl-7.itm(href="#" style="background-image: url('img/project-1.jpg');")
+							.itm__more
+								.ttl-bord
+									+e.DIV.title Билборд  для лечебного  центра компания&nbsp;&mdash;  
+										| 
+										span.thm.d-inline-block D-medical
+								button.btt.btt-blue(type="button")
+									span Нажмите для просмотра проекта
+						+b.cl.cl-5.itm(href="#" style="background-image: url('img/project-2.jpg');")
+							.itm__more
+								.ttl-bord
+									+e.DIV.title  Продающий сайт   для  
+										| 
+										span.thm.d-inline-block квест-комнаты “Лабиринт”
+								button.btt.btt-blue(type="button")
+									span Нажмите для просмотра проекта
+						.cl-7
+							.arn-msnr
+								+b.cl.cl-7.itm.ht6(href="#" style="background-image: url('img/project-3.jpg');")
+									.itm__more
+										.ttl-bord
+											+e.DIV.title  Продающий сайт   для  
+												| 
+												span.thm.d-inline-block it&nbsp;компании  General Marketing
+										button.btt.btt-blue(type="button")
+											span Нажмите для просмотра проекта
+								+b.cl.cl-5.itm.ht6(href="#" style="background-image: url('img/project-4.jpg');")
+									.itm__more
+										.ttl-bord
+											+e.DIV.title Листовка   для 
+												|
+												| 
+												span.thm.d-inline-block сети  кальянных компании
+												|
+												| “Cheshire”
+										button.btt.btt-blue(type="button")
+											span Нажмите для просмотра проекта
+						 
+								+b.cl.cl-7.itm.ht5(href="#" style="background-image: url('img/project-5.jpg');")
+									.itm__more
+										.ttl-bord
+											+e.DIV.title  Продающий сайт   для  
+												| 
+												| 
+												span.thm.d-inline-block it&nbsp;компании  General Marketing
+										button.btt.btt-blue(type="button")
+											span Нажмите для просмотра проекта
+								+b.cl.cl-5.itm.ht5(href="#" style="background-image: url('img/project-7.jpg');")
+									.itm__more
+										.ttl-bord
+											+e.DIV.title  Листовка   для 
+												span.thm.d-inline-block сети  кальянных компании
+												| 
+												| “Cheshire”
+										button.btt.btt-blue(type="button")
+											span Нажмите для просмотра проекта
+						.cl-5.cl-5-right
+							+b.cl.cl-12.itm.ht4(href="#" style="background-image: url('img/project-7.jpg');")
+								.itm__more
+									.ttl-bord
+										+e.DIV.title  Продающий сайт   для 
+											span.thm.d-inline-block кроссфит проекта
+											|
+											|  для компании  Geroy
+									button.btt.btt-blue(type="button")
+										span Нажмите для просмотра проекта
+							+b.cl.cl-12.itm(href="#" style="background-image: url('img/project-8.jpg');")
+								.itm__more
+									.ttl-bord
+										+e.DIV.title  Продающий сайт   для 
+											span.thm.d-inline-block квест-комнаты
+											| 
+											| “Лабиринт”
+									button.btt.btt-blue(type="button")
+										span Нажмите для просмотра проекта
+						+b.cl.cl-7.itm(href="#" style="background-image: url('img/project-9.jpg');")
+							.itm__more
+								.ttl-bord
+									+e.DIV.title Билборд  для лечебного  центра компания&nbsp;&mdash;  
+										| 
+										span.thm.d-inline-block D-medical
+								button.btt.btt-blue(type="button")
+									span Нажмите для просмотра проекта
+						+b.cl.cl-5.itm.lst(href="#" style="background-image: url('img/project-all.jpg');")
+							#loadWorks.itm__more()
+								big.thm.d-inline-block
+									big +34
 									br
-									| для 
-									span.nw.thm квест-комнаты
-									br
-									| “Лабиринт”
-							a.btt.btt-blue(href='#')
-								span.nw Нажмите для просмотра проекта
-					.cl.cl-4.itm(style="background-image: url('img/content/work-3.jpg');")
-						.itm__more
-							.ttl-bord
-								h5
-									| Продающий сайт 
-									br
-									| для 
-									span.nw.thm it компании
-									br
-									| General Marketing
-							a.btt.btt-blue(href='#')
-								span.nw Нажмите для просмотра проекта
-					.cl.cl-3.itm(style="background-image: url('img/content/work-4.jpg');")
-						.itm__more
-							.ttl-bord
-								h5
-									| Листовка 
-									br
-									span.nw
-										| для 
-										span.thm сети
-									span.thm кальянных компании
-									br
-									| “Cheshire”
-							a.btt.btt-blue(href='#')
-								span.nw Нажмите для просмотра проекта
-					.cl.cl-5.itm.ht2(style="background-image: url('img/content/work-5.jpg');")
-						.itm__more
-							.ttl-bord
-								h5
-									| Продающий сайт 
-									br
-									| для 
-									span.nw.thm кроссфит проекта
-									span.nw для компании
-									|  Geroy
-							a.btt.btt-blue(href='#')
-								span.nw Нажмите для просмотра проекта
-					.cl.cl-7.itm.ht2(style="background-image: url('img/content/work-1.jpg');")
-						.itm__more
-							.ttl-bord
-								h5
-									| Билборд 
-									span.nw для лечебного
-									|  центра компания - 
-									span.nw.thm D-medical
-							a.btt.btt-blue(href='#')
-								span.nw Нажмите для просмотра проекта
-					.cl.cl-5.itm(style="background-image: url('img/content/work-2.jpg');")
-						.itm__more
-							.ttl-bord
-								h5
-									| Продающий сайт 
-									br
-									| для 
-									span.nw.thm квест-комнаты
-									br
-									| “Лабиринт”
-							a.btt.btt-blue(href='#')
-								span.nw Нажмите для просмотра проекта
-					.cl.cl-4.itm(style="background-image: url('img/content/work-3.jpg');")
-						.itm__more
-							.ttl-bord
-								h5
-									| Продающий сайт 
-									br
-									| для 
-									span.nw.thm it компании
-									br
-									| General Marketing
-							a.btt.btt-blue(href='#')
-								span.nw Нажмите для просмотра проекта
-					.cl.cl-3.itm(style="background-image: url('img/content/work-4.jpg');")
-						.itm__more
-							.ttl-bord
-								h5
-									| Листовка 
-									br
-									span.nw
-										| для 
-										span.thm сети
-									span.thm кальянных компании
-									br
-									| “Cheshire”
-							a.btt.btt-blue(href='#')
-								span.nw Нажмите для просмотра проекта
-					.cl.cl-5.itm.ht2.lst(style="background-image: url('img/content/work-5.jpg');")
-						a#loadWorks.itm__more
-							big.thm
-								big +34
-								br
-								|  проекта
-						.itm__more.hid
-							.ttl-bord
-								h5
-									| Продающий сайт 
-									br
-									| для 
-									span.nw.thm кроссфит проекта
-									span.nw для компании
-									|  Geroy
-							a.btt.btt-blue(href='#')
-								span.nw Нажмите для просмотра проекта 
+									|  проекта 
 	// .Works /
