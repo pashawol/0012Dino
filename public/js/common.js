@@ -358,7 +358,7 @@ var JSCCommon = {
 					$(".swiper-pagination-bullet").find("svg").remove();
 					$(".swiper-pagination-bullet-active ").circliful({
 							animation: 1,
-							animationStep: 2,
+							animationStep: 1,
 							foregroundBorderWidth: 15,
 							backgroundBorderWidth: 15,
 							percent: 100,  
