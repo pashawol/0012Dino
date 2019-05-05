@@ -527,8 +527,8 @@ new WOW().init();
 		$(window).on('load scroll resize', function() {
 			// if ($(this).scrollTop() > 0) body.toggleClass('page-scrolled');
 		});
+		JSCCommon.headSlider();
 		$(window).on('load', function() {
-			JSCCommon.headSlider();
 							// preloader
 			prld.delay(150).fadeOut().find('i').fadeOut();
 							// masonry 
