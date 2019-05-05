@@ -320,6 +320,66 @@ var JSCCommon = {
 				
 			},
 		});
+	},
+	headSlider: function(){
+		var swiper4 = new Swiper('.prm__slider--js', {
+			// slidesPerView: 5,
+			// slidesPerView: 'auto',
+			pagination: {
+				el: '.swiper-pagination', 
+				clickable: true,
+			},
+			speed: 400,
+			watchOverflow: true,
+			effect: 'fade',
+			spaceBetween: 0,
+			// freeMode: true,
+			watchOverflow: true,
+			lazy: {
+				loadPrevNext: true,
+			}, 
+			loop: true,
+			simulateTouch: false,
+			shortSwipes: false,
+			followFinger: false,
+			followFinger: false,
+			allowTouchMove: false,
+			longSwipes: false,
+			loopFillGroupWithBlank: true,
+			touchRatio: 0.2, 
+			on: {  
+				slideChange: function () { 
+					circle();  
+				},
+
+			} 
+			}); 
+				function circle() {
+
+					$(".swiper-pagination-bullet ").each(function(){
+						var index = $(this).index();
+						$(this).find("svg").remove();
+						$(this).circliful({
+							animation: 1,
+							animationStep: 1,
+							foregroundBorderWidth: 15,
+							backgroundBorderWidth: 15,
+							percent: 100, 
+							multiPercentage: 1,
+							backgroundColor:"none",
+							foregroundColor:  '#ff7c22',
+							// percentages: [10, 20, 30]
+							// halfCircle: 1,
+							// multiPercentage: 1,
+						}
+						, function(){
+							swiper4.slideNext(400, false); 
+
+						}
+						);
+					})
+				}
+				circle();
 	}
 
 };
@@ -429,64 +489,7 @@ jQuery(document).ready(function ($) {
 	// $(window).on("load", function () {
 	
 		// slider
-		var swiper4 = new Swiper('.prm__slider--js', {
-			// slidesPerView: 5,
-			// slidesPerView: 'auto',
-			pagination: {
-				el: '.swiper-pagination', 
-				clickable: true,
-			},
-			speed: 400,
-			watchOverflow: true,
-			effect: 'fade',
-			spaceBetween: 0,
-			// freeMode: true,
-			watchOverflow: true,
-			lazy: {
-				loadPrevNext: true,
-			}, 
-			loop: true,
-			simulateTouch: false,
-			shortSwipes: false,
-			followFinger: false,
-			followFinger: false,
-			allowTouchMove: false,
-			longSwipes: false,
-			loopFillGroupWithBlank: true,
-			touchRatio: 0.2, 
-			on: {  
-				slideChange: function () { 
-					circle();  
-				},
-
-			} 
-			}); 
-				function circle() {
-
-					$(".swiper-pagination-bullet ").each(function(){
-						var index = $(this).index();
-						$(this).find("svg").remove();
-						$(this).circliful({
-							animation: 1,
-							animationStep: 1,
-							foregroundBorderWidth: 15,
-							backgroundBorderWidth: 15,
-							percent: 100, 
-							multiPercentage: 1,
-							backgroundColor:"none",
-							foregroundColor:  '#ff7c22',
-							// percentages: [10, 20, 30]
-							// halfCircle: 1,
-							// multiPercentage: 1,
-						}
-						, function(){
-							swiper4.slideNext(400, false); 
-
-						}
-						);
-					})
-				}
-				circle();
+	
 			
 			
 function hideMenu() {
@@ -532,9 +535,10 @@ new WOW().init();
 		$(window).on('load scroll resize', function() {
 			// if ($(this).scrollTop() > 0) body.toggleClass('page-scrolled');
 		});
-						$(window).on('load', function() {
+		$(window).on('load', function() {
+			JSCCommon.headSlider();
 							// preloader
-							prld.delay(150).fadeOut().find('i').fadeOut();
+			prld.delay(150).fadeOut().find('i').fadeOut();
 							// masonry 
 							
 							// $grid.one( 'layoutComplete', fullPage())
