@@ -353,7 +353,7 @@ var JSCCommon = {
 		$(window).on('load', function() {
 
 			circle();
-		}
+		});
 				function circle() {
 					$(".swiper-pagination-bullet").find("svg").remove();
 					$(".swiper-pagination-bullet-active ").circliful({
