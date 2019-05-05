@@ -58,10 +58,17 @@ h3, .h3 {
   @include font-size($h3-font-size * .8);
    }
 h4, .h4 { 
-  @include media-breakpoint-up(lg) {
+  @include media-breakpoint-up(xxxl) {
 
-    @include font-size($h4-font-size);
+    font-size: $h4-font-size;
   }
+  
+  @include media-breakpoint-up(lg) {
+    font-size: $h4-font-size *.85;
+
+    
+  }
+
   
   @include font-size($h4-font-size * .8);
    }

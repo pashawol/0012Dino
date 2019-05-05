@@ -120,7 +120,11 @@
 	@include media-breakpoint-up(xl) {
   }
 
-	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(lg) {
+    .prm__dsc{
+      margin-right: -40px;
+    }
+  }
 
 	@include media-breakpoint-up(md) {}
 

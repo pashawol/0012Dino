@@ -265,31 +265,27 @@ var JSCCommon = {
 		$('#wrp').fullpage({
 			sectionSelector: 'section',
 			navigation:true,
-			slidesNavigation:true,
-			// autoScrolling:true,
-			navigationPosition:'left',
-			// normalScrollElements: '#works',
-			// slidesNavPosition:'top',
+			slidesNavigation:true, 
+			navigationPosition:'left', 
 			responsiveWidth: 991.9,
-			responsiveHeight: 600,
-			// normalScrollElements: ".scrollable",
-			// lockAnchors: true,
-			scrollOverflow: true,
-			// scrollOverflowReset: true,
-			fixedElements: ".wrks__head",
-			// scrollBar: true,
-			// continuousVertical: true,
-			// offsetSections: true,
-			// fitToSection: true,
-			// normalScrollElementTouchThreshold: 1,
-			// normalScrollElements: ".footer",
-		 
+			responsiveHeight: 600, 
+			scrollOverflow: true, 
+			fixedElements: ".wrks__head", 
+			// lazyLoading: false,
 			afterLoad: function (origin, destination, direction) {
-				// JSCCommon.masonry();
+				// JSCCommon.LazyFunction();
+				$(".lazy-bg-js").each(function(){
+	
+					$(this).parent().css('background-image', 'url(' + $(this).data('src') + ')').addClass('lazyloaded');
+				})
+				if (destination.index == 0) {
+					// $(".count-block ").addClass("text-white");
+					// $(".s-stores__col").addClass('fadeInRightBig');
+				}
 			},
+		 
 			onLeave: function (origin, destination, direction) {
 				var leavingSection = this;
-				
 				// console.log(destination.index);
 				
 				if (destination.index == 0) {
