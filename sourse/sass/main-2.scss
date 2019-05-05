@@ -1985,6 +1985,9 @@ h5 {
         -webkit-animation-timing-function: linear;
                 animation-timing-function: linear; } }
   .crls-bc {
+    @include media-breakpoint-down(md) {
+      display: none;
+    }
     position: fixed;
     -webkit-box-align: end;
     -webkit-align-items: flex-end;

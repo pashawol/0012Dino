@@ -288,19 +288,19 @@ var JSCCommon = {
 				var leavingSection = this;
 				// console.log(destination.index);
 				
-				if (destination.index == 0) {
+				if (origin.index == 0) {
 					// $(".count-block ").addClass("text-white");
 					// $(".s-stores__col").addClass('fadeInRightBig');
-				}
-				
-				if (destination.index == 1) {
 					$("body").addClass('page-scrolled'); 
-					// $(".delievary-img").addClass('fadeIn');
-					// $(".delievary-img-2").addClass('fadeInRightBig');
 				}
 				else{
 					$("body").removeClass('page-scrolled');
 
+				}
+				
+				if (destination.index == 1) {
+					// $(".delievary-img").addClass('fadeIn');
+					// $(".delievary-img-2").addClass('fadeInRightBig');
 				}
 				
 				if (destination.index > 1) {
@@ -325,12 +325,9 @@ var JSCCommon = {
 				el: '.swiper-pagination', 
 				clickable: true,
 			},
-			speed: 400,
-			watchOverflow: true,
+			speed: 400, 
 			effect: 'fade',
-			spaceBetween: 0,
-			// freeMode: true,
-			watchOverflow: true,
+			spaceBetween: 0, 
 			lazy: {
 				loadPrevNext: true,
 			}, 
@@ -341,41 +338,40 @@ var JSCCommon = {
 			followFinger: false,
 			allowTouchMove: false,
 			longSwipes: false,
-			loopFillGroupWithBlank: true,
-			touchRatio: 0.2, 
-			on: {  
+			loopFillGroupWithBlank: true, 
+			on: {
+				init: function () {
+					/* do something */
+				},
+				
 				slideChange: function () { 
 					circle();  
 				},
-
+				
 			} 
-			}); 
+		}); 
+		circle();
 				function circle() {
-
-					$(".swiper-pagination-bullet ").each(function(){
-						var index = $(this).index();
-						$(this).find("svg").remove();
-						$(this).circliful({
+					$(".swiper-pagination-bullet").find("svg").remove();
+					$(".swiper-pagination-bullet-active ").circliful({
 							animation: 1,
-							animationStep: 1,
+							animationStep: 2,
 							foregroundBorderWidth: 15,
 							backgroundBorderWidth: 15,
-							percent: 100, 
-							multiPercentage: 1,
+							percent: 100,  
 							backgroundColor:"none",
 							foregroundColor:  '#ff7c22',
 							// percentages: [10, 20, 30]
 							// halfCircle: 1,
-							// multiPercentage: 1,
+							multiPercentage: 1,
 						}
 						, function(){
-							swiper4.slideNext(400, false); 
+							swiper4.slideNext(400, 	false); 
 
 						}
-						);
-					})
+						); 
 				}
-				circle();
+			
 	}
 
 };
