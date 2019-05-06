@@ -318,9 +318,7 @@ var JSCCommon = {
 		});
 	},
 	headSlider: function(){
-		var swiper4 = new Swiper('.prm__slider--js', {
-			// slidesPerView: 5,
-			// slidesPerView: 'auto',
+		var swiper4 = new Swiper('.prm__slider--js', { 
 			pagination: {
 				el: '.swiper-pagination', 
 				clickable: true,
@@ -337,11 +335,11 @@ var JSCCommon = {
 			followFinger: false,
 			followFinger: false,
 			allowTouchMove: false,
-			longSwipes: false,
-			loopFillGroupWithBlank: true, 
+			longSwipes: false, 
 			on: {
-				init: function () {
+				reachEnd: function () {
 					/* do something */
+				
 				},
 				
 				slideChange: function () { 
@@ -350,40 +348,48 @@ var JSCCommon = {
 				
 			} 
 		}); 
+	
+		for (var i = 1; i <= 3; ++i){
+			if($("div").is("#px" + i)){ 
+				new Parallax(document.getElementById("px" + i)); 
+			} 
+		}
 		$(window).on('load', function() {
-
 			circle();
 		});
-				function circle() {
-					$(".swiper-pagination-bullet").find("svg").remove();
-					$(".swiper-pagination-bullet-active ").circliful({
-							animation: 1,
-							animationStep: 1,
-							foregroundBorderWidth: 15,
-							backgroundBorderWidth: 15,
-							percent: 100,  
-							backgroundColor:"none",
-							foregroundColor:  '#ff7c22',
-							// percentages: [10, 20, 30]
-							// halfCircle: 1,
-							multiPercentage: 1,
-						}
-						, function(){
-							swiper4.slideNext(400, 	false); 
-
-						}
-						); 
-				}
-			
+		function circle() {
+			$(".swiper-pagination-bullet").find("svg").remove();
+			$(".swiper-pagination-bullet-active ").circliful({
+				animation: 1,
+				animationStep: 2,
+				foregroundBorderWidth: 15,
+				backgroundBorderWidth: 15,
+				percent: 100,  
+				backgroundColor:"none",
+				foregroundColor:  '#ff7c22',
+				// percentages: [10, 20, 30]
+				// halfCircle: 1,
+				multiPercentage: 1,
+			}
+			, function(){
+				swiper4.slideNext(400, false); 
+				// swiper4.on('reachEnd', function () { 
+				// 	swiper4.slideTo(0, 400, false);	
+				// });
+				
+			}
+			); 
+		}
+		
 	}
-
+	
 };
 
 JSCCommon.LazyFunction();
 /***/
 
 jQuery(document).ready(function ($) {
-
+	
 	// для свг
 	svg4everybody({});
 	// Custom JS
@@ -509,9 +515,7 @@ $('#menuOpen').click(function(e) {
 $('.callOpen').click(function() { body.toggleClass('call-opened');});
 $('.callClose').click(function() { body.removeClass('call-opened');});
 // pxs
-// new Parallax(document.getElementsByClassName("px1"));
-// new Parallax(document.getElementsByClassName("px2"));
-// new Parallax(document.getElementsByClassName("px3"));
+
 // wow init
 new WOW().init();
 	

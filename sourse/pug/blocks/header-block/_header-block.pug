@@ -2,12 +2,19 @@ mixin header-block()
 	// / .Promo
 	section.section#main&attributes(attributes)
 		+b.prm
+			.wrp__bg.wow.slideInRight(data-wow-duration='1.2s')
+			// / WRP
+			.prm__pxs.pxs
+				.px1.px.px-1(id=`px1`)
+					img(src='img/backs/promo-px-1.png', alt='', data-depth='1')
+				.px2.px.px-2(id=`px2`)
+					img(src='img/backs/promo-px-2.png', alt='', data-depth='0.75')
+				.px3.px.px-3(id=`px3`)
+					img(src='img/backs/promo-px-3.png', alt='', data-depth='0.5')
 			+e.slider--js.swiper-container
 				.swiper-wrapper
 					mixin slide(x)
 						+e.slide.swiper-slide
-							.wrp__bg.wow.slideInRight(data-wow-duration='1.2s')
-							// / WRP
 							.arn.prm__wrp
 								.row
 									.col-md-8.col-lg-7.col-xl-7.col-xxxl-6
@@ -37,13 +44,8 @@ mixin header-block()
 													i.icn.icn-pint
 												a(href='https://www.linkedin.com/company/dino-creative-studio/', target='_blank')
 													i.icn.icn-ln
-						.prm__pxs.pxs
-							.px1.px.px-1
-								img(src='img/backs/promo-px-1.png', alt='', data-depth='1')
-							.px2.px.px-2
-								img(src='img/backs/promo-px-2.png', alt='', data-depth='0.75')
-							.px3.px.px-3
-								img(src='img/backs/promo-px-3.png', alt='', data-depth='0.5')
+							
+
 						// +e.slide.swiper-slide
 					+slide(1)
 						.h1.wow.fadeInUp
@@ -133,6 +135,6 @@ mixin header-block()
 					div(class="swiper-pagination-dot wrapper-dot " tabindex="1" role="button" aria-label="Go to slide 2")
 						
 					div(class="swiper-pagination-dot wrapper-dot " tabindex="2" role="button" aria-label="Go to slide 3")
-						
+			
 					
 	// .Promo /
