@@ -53,6 +53,7 @@
       border-radius: 50%;
       width: 6px;
       height: 6px;
+      @include mt;
     }
     .spinner{
       width: inherit;
@@ -62,8 +63,10 @@
       display: none;
     }
     &:not(.swiper-pagination-bullet-active){
-      svg{
-
+      &::before{
+        background-color: $body-color;
+      }
+      svg{ 
         opacity: 0;
       }
     }
@@ -348,6 +351,7 @@
     font-size: 24px;
     i{
       height: em(2);
+      // min-height: 2px;
       // font-size: em(2);
     }
   }

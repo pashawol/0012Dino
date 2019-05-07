@@ -13,8 +13,7 @@ block title
 	title title
 
 block pagecontent
-	// PRLD
-	#prld.prld
+	
 	// / CRLS
 	.crls
 		#callWrap.crls__form.call
@@ -44,31 +43,34 @@ block pagecontent
 		#crlsNav.crls__nav
 			ul#headNav.crls__nav-menu
 				li
-					a Главная
+					a(href="#") Главная
 				li
-					a Наши работы
+					a(href="#") Наши работы
 				li
-					a О нас
+					a(href="#") О нас
 				li
-					a Услуги
+					a(href="#") Услуги
 				li
-					a Наши клиенты
+					a(href="#") Наши клиенты
 				li
-					a Контакты
+					a(href="#") Контакты
 				li
-					a Блог
+					a(href="#") Блог
 			.crls__nav-scls.scls
 				p Связаться с нами:
 				a(href='#')
-					i.icn.icn-msg
+					+icon("message")
 				a(href='#')
-					i.icn.icn-sk
+					//- i.icn.icn-sk
+					+icon("skype")
 				a(href='#')
-					i.icn.icn-tg
+					+icon("telegram")
+					//- i.icn.icn-tg
 				a(href='#')
-					i.icn.icn-vb
+					+icon("viber")
+					//- i.icn.icn-vb
 				a(href='#')
-					i.icn.icn-wa
+					+icon("whatsapp")
 		.crls-cl.crls-tl
 			.after
 			a.logo.crls__logo(href='#')
@@ -124,9 +126,10 @@ block pagecontent
 		+s-portfolio(class="fp-auto-height")
 		+s-about(class="")
 		+s-team(class="")
+
 		+s-servises(class="")
 		+s-logos(class="")
 		+s-form(class="")
 	//- +s-contact()
-	+footer()
+	//- +footer()
 

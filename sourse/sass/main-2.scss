@@ -1100,9 +1100,11 @@ body {
   font-size: 14px;
   font-weight: 700;
   color: #ffffff;
-  position: relative; }
+  position: relative;
+z-index: 2; }
   .btt, .btt:before, .btt:after {
-    overflow: hidden; }
+    overflow: hidden;
+   }
   .btt:before, .btt:after {
     content: '';
     position: absolute;
@@ -1116,77 +1118,48 @@ body {
     -webkit-transition-property: background, opacity;
     -o-transition-property: background, opacity;
     transition-property: background, opacity; }
-  .btt:before {
-    z-index: 1;
-    opacity: 1;
-    background-image: -webkit-linear-gradient(92deg, #ee5586 0%, #ea7599 100%);
-    background-image: -o-linear-gradient(92deg, #ee5586 0%, #ea7599 100%);
+    .btt:before {
+      z-index: -2;  
+      // z-index: 1;
+      opacity: 1; 
     background-image: linear-gradient(-2deg, #ee5586 0%, #ea7599 100%); }
   .btt:after {
-    z-index: 2;
-    opacity: 0;
-    background-image: -webkit-linear-gradient(92deg, #ef5e8d 0%, #ee90ad 100%);
-    background-image: -o-linear-gradient(92deg, #ef5e8d 0%, #ee90ad 100%);
+    z-index: -1;
+    opacity: 0; 
     background-image: linear-gradient(-2deg, #ef5e8d 0%, #ee90ad 100%); }
   .btt:hover:after {
     opacity: 1; }
   .btt:active:after {
-    z-index: 2;
-    background-image: -webkit-linear-gradient(92deg, #f383a7 0%, #e5527f 100%);
-    background-image: -o-linear-gradient(92deg, #f383a7 0%, #e5527f 100%);
+    z-index: 2; 
     background-image: linear-gradient(-2deg, #f383a7 0%, #e5527f 100%); }
   .btt > * {
     position: relative;
     z-index: 4; }
-  .btt:hover {
-    -webkit-transform: scale(1.02);
-        -ms-transform: scale(1.02);
+  .btt:hover { 
             transform: scale(1.02); }
   .btt span {
     text-decoration: none !important; }
   .btt-blue {
-    height: 47px;
-    font-size: 12px;
-    -webkit-box-shadow: 4px 7px 22px rgba(0, 0, 0, 0.35);
+    height: rem(61);
+    font-size: rem(15); 
             box-shadow: 4px 7px 22px rgba(0, 0, 0, 0.35);
     background-color: #499ae9; }
-    .btt-blue:before {
-      background-image: -webkit-linear-gradient(92deg, #499ae9 0%, #2dc9eb 100%);
-      background-image: -o-linear-gradient(92deg, #499ae9 0%, #2dc9eb 100%);
+    .btt-blue:before { 
       background-image: linear-gradient(-2deg, #499ae9 0%, #2dc9eb 100%); }
-    .btt-blue:after {
-      background-image: -webkit-linear-gradient(92deg, #529fea 0%, #49d0ee 100%);
-      background-image: -o-linear-gradient(92deg, #529fea 0%, #49d0ee 100%);
+    .btt-blue:after { 
       background-image: linear-gradient(-2deg, #529fea 0%, #49d0ee 100%); }
-    .btt-blue:active:after {
-      background-image: -webkit-linear-gradient(92deg, #77b3ef 0%, #15b7da 100%);
-      background-image: -o-linear-gradient(92deg, #77b3ef 0%, #15b7da 100%);
+    .btt-blue:active:after { 
       background-image: linear-gradient(-2deg, #77b3ef 0%, #15b7da 100%); }
-  .btt-calc {
-    display: -webkit-inline-box;
-    display: -webkit-inline-flex;
-    display: -ms-inline-flexbox;
-    display: inline-flex;
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-        -ms-flex-align: center;
+  .btt-calc { 
+    display: inline-flex; 
             align-items: center;
     padding-right: 50px;
     height: 58px; }
     .btt-calc .icn {
       margin-right: 29px; }
-  .btt-call {
-    display: -webkit-inline-box;
-    display: -webkit-inline-flex;
-    display: -ms-inline-flexbox;
-    display: inline-flex;
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-    -webkit-justify-content: center;
-        -ms-flex-pack: center;
+  .btt-call { 
+    display: inline-flex; 
+            align-items: center; 
             justify-content: center;
     padding-left: 5px;
     padding-bottom: 4px;
@@ -1194,8 +1167,7 @@ body {
     height: 60px;
     position: relative;
     overflow-x: hidden; }
-    .btt-call, .btt-call:before {
-      -webkit-border-radius: 0 0 0 40px;
+    .btt-call, .btt-call:before { 
               border-radius: 0 0 0 40px; }
     .btt-call:before {
       content: '';
@@ -1338,7 +1310,8 @@ body {
 
 /* Texts */
 p {
-  font-weight: 300; }
+  // font-weight: 300;
+ }
 
 b, strong {
   font-weight: 700; }
@@ -1805,6 +1778,8 @@ h5 {
         display: block; }
       .crls__nav-menu a {
         display: inline-block;
+        font-family: "AgoraSlabPro";
+        font-weight: bold;
         padding: 5px 10px; }
         .crls__nav-menu a:hover {
           color: #ff7c22; }
@@ -1872,27 +1847,16 @@ h5 {
       width: 142px;
       height: 13px;
       background-image: url("../img/logo-name.png"); }
-  .crls_menu {
-    display: -webkit-inline-box;
-    display: -webkit-inline-flex;
-    display: -ms-inline-flexbox;
-    display: inline-flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -webkit-flex-direction: column;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: start;
-    -webkit-align-items: flex-start;
-        -ms-flex-align: start;
-            align-items: flex-start;
+  .crls_menu { 
+    display: inline-flex; 
+    flex-direction: column; 
+    align-items: flex-start;
     position: relative;
     z-index: 999;
     width: 25px;
     margin-top: 10px;
     padding: 4px 6px;
-    margin-left: -6px;
-    font-family: 'CenturyGothic';
+    margin-left: -6px; 
     font-weight: 700;
     text-transform: uppercase; }
     .crls_menu span.txt {
@@ -2196,37 +2160,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%; }
-
-.footer {
-  padding: 40px 0; }
-  .footer__wrap p {
-    font-size: 14px;
-    font-weight: 500;
-    color: rgba(255, 255, 255, 0.5); }
-  .footer__meta {
-    padding-right: 30px; }
-    .footer__meta p:not(:first-child) {
-      margin-left: 30px; }
-  .footer__studio img {
-    vertical-align: middle; }
-  .footer__studio a {
-    display: -webkit-inline-box;
-    display: -webkit-inline-flex;
-    display: -ms-inline-flexbox;
-    display: inline-flex;
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-        -ms-flex-align: center;
-            align-items: center; }
-    .footer__studio a img {
-      opacity: 0.5;
-      -webkit-transition: opacity .175s;
-      -o-transition: opacity .175s;
-      transition: opacity .175s; }
-      .footer__studio a img:not(:first-child) {
-        margin-left: 10px; }
-    .footer__studio a:hover img {
-      opacity: 1; }
+ 
 
 .form__inputs .input {
   display: block;

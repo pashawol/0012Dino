@@ -1,6 +1,38 @@
+
+.crls__nav-scls{
+	@extend .text-warning;
+	 
+	.icon{
+		&-skype{
+			color: #499ccb !important;
+		}
+			font-size: rem(28);
+	}
+}
 .s-form {
+
+	background-image: url(../img/form-bg.jpg);
+	@include bgs;
+	.section-title{
+		color: #ffffff;
+		p{
+			margin-left: auto;
+			margin-right: auto;
+			max-width: 440px;
+		}
+	}
 	//
-	@include media-breakpoint-up(xl) {}
+	.container{
+		padding-top: 40px;
+		padding-bottom: 80px;
+	}
+	@include media-breakpoint-up(xl) {
+		.container{
+
+			max-width: 1020px;
+		}
+	}
+	position: relative;
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}
 	@include media-breakpoint-up(sm) {}
@@ -18,10 +50,34 @@
 	@include media-breakpoint-only(xl) {}
 	
 	//
+	@include media-breakpoint-down(xxl) {
+		.crls__nav-scls{
+			margin-top: 0;
+			padding-top: 0;
+			height: auto;
+		}
+	}
 	@include media-breakpoint-down(xl) {}
 	@include media-breakpoint-down(lg) {}
 	@include media-breakpoint-down(md) {}
 	@include media-breakpoint-down(sm) {}
 	@include media-breakpoint-down(xs) {} 
 
+	.crls__nav-scls{
+		a{
+			.icon{
+				@extend .text-white;
+
+			}
+		}
+	}
+}
+
+.footer{
+	position: absolute;
+	width: 100%;
+	padding: 0 14px 40px;
+	font-size: 12px;
+	bottom: 0;
+	left: 0;
 }

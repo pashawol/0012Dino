@@ -1,6 +1,141 @@
 .s-servises {
+	.section-title{
+		margin-left: auto;
+		margin-right: auto;
+		max-width: 1040px;
+		@include media-breakpoint-up(xxl) {
+
+			margin-bottom: 80px;
+		}
+		margin-bottom: 4px;
+	}
+	&__col{
+		margin-bottom: 30px;
+	}
+	&__item{
+		height: 100%;
+		box-shadow: 5px 9px 29px rgba(0, 0, 0, 0.1);
+		@include mt;
+		&:hover{
+			box-shadow: 5px 10px 29px rgba(0, 0, 0, 0.2);
+		}
+		border-radius: 15px;
+		background-color: #ffffff;
+		@include media-breakpoint-up(xxl) {
+			
+			padding: rem(40) rem(20) rem(50);
+		}
+		@include media-breakpoint-up(xl) {
+			
+			padding: rem(20) rem(15) rem(50);
+		}
+		@include media-breakpoint-up(lg) {
+			
+			padding: rem(15) rem(10) rem(100);
+		}
+		@include media-breakpoint-up(sm){
+			
+			min-height: none;
+			padding: rem(15) rem(10) rem(40);
+		}
+		min-height: 315px;
+		padding: rem(25) rem(30) rem(40);
+		position: relative;
+	}
+	@include media-breakpoint-up(lg) {
+
+		&__item:hover &__img-wrap{
+			transform: scale(.6);
+		}
+		&__item:hover li{
+			opacity: 1;
+		}
+	}
+	&__img-wrap{
+		transform-origin: right bottom ;
+		position: absolute;
+		right: 0;
+		bottom: 0;
+		pointer-events: none;
+		@include mt;
+		img{
+			@include media-breakpoint-up(sm) {
+
+				max-height: 165px;
+			}
+			max-height: 135px;
+		}
+		@include media-breakpoint-up(lg) {
+			// height: auto;
+			max-width: 95%;
+			// max-height: none;
+			img{
+				max-height: 100%;
+				// max-height: 100%;
+			}
+		}
+		// max-width: 195px;
+	}
+	&__title{
+		@extend h5;
+		font-family: "PF Agora Slab Pro - Black";
+		padding-bottom: em(5);
+	}
+	li{
+		@include media-breakpoint-up(xl) {
+
+			margin-bottom: .5em;
+		}
+		margin-bottom: .2em;
+		@include mt;
+		@include media-breakpoint-up(lg) {
+
+			opacity: 0;
+		}
+		position: relative;
+		z-index: 4;
+	}
+	&__link{
+		display: inline-block;
+		@extend .text-secondary;
+		text-decoration: none !important;
+		position: relative;
+		padding-left: em(18);
+		@include media-breakpoint-up(sm) {
+			margin-left: 0;
+		}
+		margin-left: em(-18);
+		&::before{
+			content: '';
+			position: absolute;
+			left: 0;
+			top: em(9);
+			width: em(6px);
+			height: em(6px);
+			background-color: $warning;
+			border-radius: 50%;
+			border: 1px solid #fff;
+			box-shadow: 0 0 0 em(2px) $warning;
+			opacity: 0;
+			@include mt;
+
+		}
+		&:hover{
+			&::before{
+				opacity: 1;
+			}
+		}
+	}
+	ul{
+		padding-left: 0;
+	}
 		 
-	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(xxl) {
+		.container{
+
+			max-width: 1360px;
+		}
+	}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}
 	@include media-breakpoint-up(sm) {}

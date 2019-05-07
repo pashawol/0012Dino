@@ -1,4 +1,61 @@
 .s-logos {
+	position: relative;
+	.row{
+		align-items: center;
+	}
+	.container{
+		position: relative;
+	}
+	.section-title{
+
+		@include media-breakpoint-up(xxl) {
+			padding-bottom: 88px;
+		}
+		padding-bottom: 40px;
+	}
+	&__col{
+		text-align: center;
+		@include media-breakpoint-up(xxl) {
+
+			margin-bottom: rem(65);
+		}
+		margin-bottom: 30px;
+		// filter: invert(.2);
+		filter: grayscale(1);
+		@include mt;
+		&:hover{
+			
+			filter: grayscale(0);
+		}
+	}
+	.px{
+		width: 200px;
+	height: 243px;
+		&-4{
+			@include media-breakpoint-up(md) {
+				left: 0;
+				top: 0;
+			}
+			top: -50px;
+			left: -100px;
+		}
+		&-5{
+					left: auto;
+					right: 0;
+					top: 50px;
+					@include media-breakpoint-down(md){
+						top: 50%;
+						right: -40px;
+					}
+		}
+		
+		&-6{
+				 
+				bottom: 0;
+				top: auto;
+		}
+
+	}
 		 
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
@@ -20,7 +77,9 @@
 	//
 	@include media-breakpoint-down(xl) {}
 	@include media-breakpoint-down(lg) {}
-	@include media-breakpoint-down(md) {}
+	@include media-breakpoint-down(md) {
+		padding-top: 100px;
+	}
 	@include media-breakpoint-down(sm) {}
 	@include media-breakpoint-down(xs) {} 
 

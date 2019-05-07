@@ -1,19 +1,46 @@
 .form-wrap{
  	&__input-wrap{
+		
+		}
+		&__icon-wrap{
+			color: #ffffff;
+			position: absolute;
+			// @include a-cent(y);
+			top: rem(12);
+			left: 19px;
+			.icon{
+				font-size: 19px;
 
- 		max-width: 466px;
- 	}
- 	&__input{
-		//  outline: 0 !important;
-		 resize: none;
- 	}
- 	&__btn{
- 		cursor: pointer;
- 	}
- 	label{
- 		width: 100%;
- 		display: block;
- 	}
+			}
+			
+		}
+		&__input{
+			//  outline: 0 !important;
+			// resize: none;
+			padding-left: 57px;
+		}
+		textarea{
+			height: rem(122);
+		}
+		&__btn{
+			cursor: pointer;
+			margin-left: auto;
+			margin-right: auto;
+			max-width: rem(350px);
+			margin-top: rem(30px);
+			margin-bottom: rem(30px);
+		}
+		label{
+			// width: 100%;
+			position: relative;
+			display: block;
+		}
+		&__polite{
+			margin-left: auto;
+			margin-right: auto;
+			max-width: 315px;
+			font-size: 11px;
+		}
 }
 
 
@@ -98,15 +125,16 @@
 		// display: inline-block;
 		width: 20px;
 		height: 20px;
-		background-color: $primary;
+		background-color: rgba($color: #ffffff, $alpha: .6);
 		@include mt;
 		position: absolute; 
 		margin-right: 10px;
+		border-radius: 2px;
 
 	}
 	&__input[type="checkbox"] + &__lab{
 		&::after{ 
-			content:   url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='13' height='8' viewBox='0 0 448 512'%3E%3Cpath fill='%23fff' d='M413.505 91.951L133.49 371.966l-98.995-98.995c-4.686-4.686-12.284-4.686-16.971 0L6.211 284.284c-4.686 4.686-4.686 12.284 0 16.971l118.794 118.794c4.686 4.686 12.284 4.686 16.971 0l299.813-299.813c4.686-4.686 4.686-12.284 0-16.971l-11.314-11.314c-4.686-4.686-12.284-4.686-16.97 0z' class='st0'/%3E%3C/svg%3E");
+			content:   url(../img/check.svg);
 			position: absolute;
 			@include a-cent; 
 			opacity: 0;
@@ -124,11 +152,12 @@
 			width: 10px;
 			height: 10px;
 			border-radius: 50%;
+
 		}
 	}
 
 	&__input[type="checkbox"]:checked + &__lab{
-		background-color: $success;
+		// background-color: $success;
 		 
 	}
 	&__input:checked + &__lab{ 

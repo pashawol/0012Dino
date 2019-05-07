@@ -31,6 +31,7 @@
   .arn-msnr{
     display: flex;
     flex-wrap: wrap;
+    font-family: "AgoraSlabPro";
     .itm{
       position: relative;
       // background-color: rgba($color: #2c2d45, $alpha: .89); 
@@ -102,23 +103,25 @@
 	@include media-breakpoint-down(xs) {} 
 
 }
-.crls-tl{
+.nav-scrolled .crls-tl{
+  @include media-breakpoint-up(lg) {
 
-  &::before{
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: em(618px * .8);
-    height: em(334px * .8);
-    background-image: url(../img/nav-before.svg);
-    background-size: 100% 100%;
-    opacity: 0;
-    pointer-events: none;
+    &::before{
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: em(618px * .8);
+      height: em(334px * .8);
+      background-image: url(../img/nav-before.svg);
+      background-size: 100% 100%;
+      opacity: 0;
+      pointer-events: none;
+    }
   }
 }
 
-.page-scrolled{
+.nav-scrolled{
   .wrks__head{
     opacity: 1;
     z-index: 2;

@@ -2,8 +2,22 @@ mixin s-servises()
 	// start s-servises
 	+b.SECTION.s-servises.section#s-servises&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h2 s-servises
+			.section-title.text-center
+				h2 Наши услуги
+				p.text-secondary Наши команда&nbsp;&mdash; это те&nbsp;люди, которые каждый день решают задачи. Мы&nbsp;прошли вместе больше чем 500&nbsp;проектов. Наш сплоченны коллектив поможет реолизовать задачи в&nbsp;кратчайшие сроки с&nbsp;максимальным результатом.
 				
 			.row
+				mixin item(i,t, ...items)
+					+e.col.col-lg-4
+						+e.item
+							+e.title= t
+							ul()
+								each item in items
+									li
+										+e.link(href="#")= item
+							+e.img-wrap
+								img.res-i(src="#" data-src=`img/servises-${i}.png`)
+				+item("2","Веб разработка","Мобильное приложение","Продающая страница","Корпоративный сайт","Сайт визитка")
+				+item("2","Дизайн","Мобильное приложение","Сайт","Логотип","Фирменный стиль","Полиграфия","Упаковка","Наружная реклама")
+				+item("3","Маркетинг","SEO","SMM","Контекстная реклама","Упаковка бизнеса")
 	// end s-servises

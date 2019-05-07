@@ -44,10 +44,11 @@ h1, .h1 {
 h2, .h2 { 
   @include media-breakpoint-up(lg) {
 
-    @include font-size($h2-font-size);
+    // @include font-size($h2-font-size);
+    font-size: $h2-font-size;
   }
   
-  @include font-size($h2-font-size * .8);
+  @include font-size($h2-font-size * .9);
    }
 h3, .h3 { 
   @include media-breakpoint-up(lg) {

@@ -9,10 +9,10 @@
 @include font-face ("PF Agora Slab Pro - Ultra Black", "../fonts/PFAgoraSlabPro-UltraBlack/PFAgoraSlabPro-UltraBlack",   $file-formats: woff2 woff ttf);
  
 
-$default-font: "PF Agora Slab Pro - Black";
+$default-font: "Century Gothic";
 
 $def: #373a41;
-$em-base: 16px;
+$em-base: 17px;
 $small: rem(14);
  
 // обсалютное центрирование

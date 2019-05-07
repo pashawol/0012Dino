@@ -3,7 +3,37 @@ mixin s-form()
 	+b.SECTION.s-form.section#s-form&attributes(attributes)
 		.container
 			+b.section-title.text-center
-				h2 s-form
-				
-			.row
+				h2 
+					span.text-warning Оценить  
+					| 
+					| ваш проект?
+				p Заполните поля ниже. Наш специалист свяжется  с&nbsp;Вами в&nbsp;течение рабочего дня.
+			+form-wrap()
+				.row
+					.col-lg
+						+input('user','text','Ваше имя')
+						+input('email','email','Ваша почта')
+					.col
+						+ta('speech-bubble', 'Несколько слов о вашей задаче')
+				+e.btn.btt.btn-block.btt-blue(type="button") Получить оценку проекта
+				+polite()
+				.crls__nav-scls.scls 
+					a(href='#')
+						+icon("message")
+					a(href='#')
+						//- i.icn.icn-sk
+						+icon("skype")
+					a(href='#')
+						+icon("telegram")
+						//- i.icn.icn-tg
+					a(href='#')
+						+icon("viber")
+						//- i.icn.icn-vb
+					a(href='#')
+						+icon("whatsapp")
+						//- i.icn.icn-wa
+		+b.footer.text-center.text-white
+			a.text-white.tdu(href="#") Политика конфиденциальности
+			br
+			| © 2009-2018 Dino Creative studio. All rights reserved.
 	// end s-form

@@ -2,8 +2,46 @@ mixin s-about()
 	// start s-about
 	+b.SECTION.s-about.section#s-about&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h2 s-about
-				
 			.row
+				.col-xxl-9.col-xl-8.col-lg-7: +e.text-block
+					+b.section-title
+						h2 Дизайн-Студия Dino
+					p Студия создана в&nbsp;2015&nbsp;году. Специализируемся на&nbsp;разработке и&nbsp;поддержке сайтов.
+
+					p Сайты проектируем с&nbsp;умом и&nbsp;огоньком: разбираемся в&nbsp;бизнесе, выясняем потребности  потребителей, анализируем конкурентов, выясняем портреты пользователей и&nbsp;их&nbsp;действия  на&nbsp;сайте, проектируем структуру и&nbsp;возможности сайта, учитываем каналы продвижения, создаем прототипы.
+
+					p Студия не&nbsp;использует шаблоны и&nbsp;заготовки. Вы&nbsp;получаете уникальный дизайн, решающий  задачи именно для вас и&nbsp;ваших потребителей. Поэтому наши сайты отличаются дизайном и&nbsp;приносят пользу.
+				.col: +e.text-block--aside
+					+e.img-wrap
+						img(src="#" data-src="img/photo.png", alt="")
+					+e.aside-text 
+						p Пока одни думают какого цвета сделать кнопку, мы&nbsp;думаем как обойтись без неё.
+
+						p 
+							strong Дмитрий Новиков
+							br
+							em Генеральный директор
+			+e.row-foot.row
+				mixin item(i)
+					+e.col.col-auto
+						+e.icon-wrap
+							img.res-i(src="#" data-src=`img/about-i-${i}.svg`, alt="")
+						block
+					// /+e.col.col-auto
+				+item('1')
+					+e.caption Более 3х&nbsp;лет на&nbsp;рынке
+				+item('2')
+					+e.caption Более 500+
+						br
+						| выполненных работ
+				+item('3')
+					+e.caption 80&nbsp;% КЛИЕНТОВ  ВОЗВРАЩАЮТСЯ 
+						br
+						| К&nbsp;НАМ СНОВА
+				+item('4')
+					+e.caption 9&nbsp;СОТРУДНИКОВ
+						br
+						| В&nbsp;ШТАТЕ
+			+e.btn.btt.btt-lg.btt-blue(type="button")
+				span Наша команда
 	// end s-about

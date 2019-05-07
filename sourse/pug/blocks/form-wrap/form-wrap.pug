@@ -5,13 +5,15 @@ mixin form-head()
 mixin input(p ,  t , pl)
 	+e.input-wrap.form-group
 		label
-			+e.SPAN.title= p
+			+e.SPAN.icon-wrap
+				+icon(p)
 			+e.INPUT.input.form-control(type= t placeholder= pl)&attributes(attributes)
 	// +e.input-wrap
 mixin ta(p , pl)
 	+e.input-wrap.form-group
 		label
-			+e.SPAN.title= p
+			+e.SPAN.icon-wrap
+				+icon(p)
 			+e.TEXTAREA.input.form-control( placeholder= pl)&attributes(attributes)
 	// +e.input-wrap
 
@@ -47,4 +49,4 @@ mixin add-file(n)
 mixin polite()
 	+e.polite
 		+in-ch('checked')(checked)
-			+e.SMALL.text.text-secondary Согласен на обработку и хранение моих персональных данных в соответствии с условиями
+			+e.SPAN.text.text-white Отправляя заявку, я&nbsp;даю согласие на&nbsp;обработку персональных данных и&nbsp;соглашаюсь с&nbsp;политикой конфиденциальности
