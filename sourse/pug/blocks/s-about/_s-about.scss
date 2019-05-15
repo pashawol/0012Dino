@@ -30,6 +30,7 @@
 		 }
 		 &__img-wrap{
 
+			
 		 }
 		 &__row-foot{
 			@include media-breakpoint-up(sm) {
@@ -54,6 +55,15 @@
 		 }
 		 &__icon-wrap{
 			 margin-bottom: 0.5rem;
+			 img{
+				@include mt;
+				position: relative;
+			}
+			&:hover{
+				img{
+					transform: rotateY(180deg);
+				}
+			}
 		 }
 		 &__text-block{
 			 padding-bottom: 30px;
@@ -107,4 +117,8 @@
 	}
 	@include media-breakpoint-down(xs) {} 
 
+}
+
+.fp-controlArrow{
+	display: none;
 }

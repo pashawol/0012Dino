@@ -1,6 +1,6 @@
 mixin s-about()
 	// start s-about
-	+b.SECTION.s-about.section#s-about&attributes(attributes)
+	+b.SECTION.s-about.section&attributes(attributes)
 		.container
 			.row
 				.col-xxl-9.col-xl-8.col-lg-7: +e.text-block
@@ -23,7 +23,7 @@ mixin s-about()
 							em Генеральный директор
 			+e.row-foot.row
 				mixin item(i)
-					+e.col.col-auto
+					+e.col.col-xl-auto.col-lg-3
 						+e.icon-wrap
 							img.res-i(src="#" data-src=`img/about-i-${i}.svg`, alt="")
 						block
@@ -42,6 +42,6 @@ mixin s-about()
 					+e.caption 9&nbsp;СОТРУДНИКОВ
 						br
 						| В&nbsp;ШТАТЕ
-			+e.btn.btt.btt-lg.btt-blue(type="button")
+			+e.btn--js.btt.btt-lg.btt-blue(type="button")
 				span Наша команда
 	// end s-about

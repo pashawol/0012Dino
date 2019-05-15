@@ -1,6 +1,6 @@
 mixin header-block()
 	// / .Promo
-	section.section#main&attributes(attributes)
+	section.section&attributes(attributes)
 		+b.prm
 			.wrp__bg.wow.slideInRight(data-wow-duration='1.2s')
 			// / WRP
@@ -22,15 +22,15 @@ mixin header-block()
 											block
 											
 										.d-none.d-md-block
-											a.btt.btt-calc.wow.fadeInUp(href="#" data-wow-delay='0.3s')
-												i.icn.icn-calc
+											button.btt.btt-calc.wow.fadeInUp(type="button" data-wow-delay='0.3s')
+												+icon('calculator')
 												span.nw Оценить проект
 									.col-md.wow.fadeInRight(data-wow-delay='0.52s')
 										.prm_pht&attributes(attributes)
 											img(src="#" data-src=`img/head-img-${x}.png`, alt='')
 								.d-md-none
-										a.btt.btt-calc.wow.fadeInUp(href="#" data-wow-delay='0.3s')
-											i.icn.icn-calc
+										button.btt.btt-calc.wow.fadeInUp(type="button" data-wow-delay='0.3s')
+											+icon('calculator')
 											span.nw Оценить проект
 										.crls-cl.crls-br.crls-mobile
 											.crls_scls.scls
@@ -57,7 +57,7 @@ mixin header-block()
 							span.d-inline-block.nw для вашего  бизнеса!
 						p.h4.wow.fadeInUp(data-wow-delay='0.3s')
 							| и 
-							a.thm(href='#') «упаковка»
+							a.thm.callOpen(href="#") «упаковка»
 							|  бизнеса 
 							span.nw под ключ
 					
@@ -73,7 +73,7 @@ mixin header-block()
 							//- br
 							| и
 							|
-							a.thm(href='#') «упаковка»
+							a.thm.callOpen(href="#") «упаковка»
 							|  бизнеса 
 							span.nw под ключ
 					
@@ -85,7 +85,7 @@ mixin header-block()
 							span.h2.thm   полиграфической продукции  
 						p.h4.wow.fadeInUp(data-wow-delay='0.3s')
 							| и 
-							a.thm(href='#') «упаковка»
+							a.thm.callOpen(href="#") «упаковка»
 							|  бизнеса 
 							span.nw под ключ
 					
@@ -97,7 +97,7 @@ mixin header-block()
 							
 						p.h4.wow.fadeInUp(data-wow-delay='0.3s')
 							| и 
-							a.thm(href='#') «упаковка»
+							a.thm.callOpen(href="#") «упаковка»
 							|  бизнеса 
 							span.nw под ключ
 					
@@ -111,7 +111,7 @@ mixin header-block()
 						p.h4.wow.fadeInUp(data-wow-delay='0.3s') 
 						 
 							| и 
-							a.thm(href='#') «упаковка»
+							a.thm.callOpen(href="#") «упаковка»
 							|  бизнеса 
 							span.nw под ключ
 					
@@ -124,7 +124,7 @@ mixin header-block()
 							span.thm   мобильных приложений и интерфейсов 
 							br
 							| и 
-							a.thm(href='#') «упаковка»
+							a.thm.callOpen(href="#") «упаковка»
 							|  бизнеса 
 							span.nw под ключ 
 					

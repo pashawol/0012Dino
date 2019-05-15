@@ -16,45 +16,68 @@ block pagecontent
 	
 	// / CRLS
 	.crls
-		#callWrap.crls__form.call
-			a.btt-close.callClose
-				span Закрыть
-				i.icn.icn-close
-			.call__ttl.ttl-bord
-				h4
-					span.thm Упаковка
+		#callWrap.crls__form.call.crls__form-main
+			.call__inner
+				a.btt-close.callClose
+					span Закрыть
+					i.icn.icn-close
+				.call__ttl.ttl-bord
+					h4
+						span.thm Упаковка
+						br
+						| бизнеса
+				.call__dsc
+					p Упаковка — это все, что люди могут увидеть или узнать о вашей компании.
+					p
+						| Это процесс описания бизнеса, продукта или технологии, с целью нахождения важных преимуществ и создания на их основе материалов.
+					p
+						| Данные материалы способствуют улучшению показателей бизнеса или внешнего восприятия компании людьми.
+					p
+						| Если компания вызывает вопросы и недоверие, 
+						span.nw с ней
+						|  никто не будет работать.
+					p
+						| После упаковки клиенты начинают больше покупать, а специалисты хотят работать только 
+						span.nw с вами.
+				a.btt.btn-foot(href='#')
+					span Оценить проект
+			
+		#calProject.crls__form.call
+			.call__inner
+				a.btt-close.callProjectClose
+					span Закрыть
+					i.icn.icn-close
+				.h1.text-white
+					span.text-warning Оценить
 					br
-					| бизнеса
-			.call__dsc
-				p Упаковка — это все, что люди могут увидеть или узнать о вашей компании.
-				p
-					| Это процесс описания бизнеса, продукта или технологии, с целью нахождения важных преимуществ и создания на их основе материалов.
-				p
-					| Данные материалы способствуют улучшению показателей бизнеса или внешнего восприятия компании людьми.
-				p
-					| Если компания вызывает вопросы и недоверие, 
-					span.nw с ней
-					|  никто не будет работать.
-				p
-					| После упаковки клиенты начинают больше покупать, а специалисты хотят работать только 
-					span.nw с вами.
-			a.btt(href='#')
-				span Оценить проект
+					| ваш проект?
+				+form-wrap()
+					+input('user','text','Ваше имя')
+					+input('email','email','Ваша почта')
+					+ta('speech-bubble', 'Несколько слов о вашей задаче')
+					+e.btn.btt.btn-block.btt-blue(type="button") Получить оценку проекта
+					+polite()
+		+b.project-block-modal
+			.sk-double-bounce
+				.sk-child.sk-double-bounce-1
+				.sk-child.sk-double-bounce-2
+			+e.inner
+
 		#crlsNav.crls__nav
 			ul#headNav.crls__nav-menu
-				li
-					a(href="#") Главная
-				li
-					a(href="#") Наши работы
-				li
-					a(href="#") О нас
-				li
-					a(href="#") Услуги
-				li
-					a(href="#") Наши клиенты
-				li
-					a(href="#") Контакты
-				li
+				li(data-menuanchor="mainHead" class="active")
+					a(href="#mainHead") Главная
+				li(data-menuanchor="works")
+					a(href="#works") Наши работы
+				li(data-menuanchor="s-about")
+					a(href="#s-about") О нас
+				li(data-menuanchor="s-servises")
+					a(href="#s-servises") Услуги
+				li(data-menuanchor="s-logos")
+					a(href="#s-logos") Наши клиенты
+				li(data-menuanchor="s-form")
+					a(href="#s-form") Контакты
+				li( )
 					a(href="#") Блог
 			.crls__nav-scls.scls
 				p Связаться с нами:

@@ -285,11 +285,16 @@
         color: #fff; }
         .wrks__tbs-itm .itm.lst .itm__more {
           display: flex !important;
-          background-color: rgba($color: #2c2d45, $alpha: .89); 
+          // background-color: rgba($color: #2c2d45, $alpha: .89); 
+          background-color: transparent;
           top: 0;
           left: 0;
           height: 100%;
           width: 100%;
+          opacity: 1;
+    // -webkit-transform: scale(1);
+    // -ms-transform: scale(1);
+    // transform: scale(1);
           
         }
         .wrks__tbs-itm .itm .ttl-bord {

@@ -1,71 +1,72 @@
 mixin s-team()
 	// / .Team
-	+b.SECTION.s-team.section#team.tm&attributes(attributes)
+	+b.SECTION.s-team.section.tm&attributes(attributes)
 		.container
 			.section-title.text-center
 				h2 Наша команда
 				p.text-secondary Наши команда&nbsp;&mdash; это те&nbsp;люди, которые каждый день решают задачи. Мы&nbsp;прошли вместе больше чем 500&nbsp;проектов. Наш сплоченны коллектив поможет реолизовать задачи в&nbsp;кратчайшие сроки с&nbsp;максимальным результатом.
-			.row
-				.col-xxl-5.col-lg-4
-				.col
-					+e.swiper-wrapper
-						.swiper-container.gallery-thumbs
-							.swiper-wrapper
-								- for (var x = 1; x < 6; x++)
-									+e.slide-sm.swiper-slide
-										+e.img-wrap-sm
-											img(src="#" data-src=`img/team-${x}.png`, alt='')
-								
-								//- - for (var x = 1; x < 6; x++)
-								//- 	+e.slide-sm.swiper-slide
-								//- 		+e.img-wrap-sm
-								//- 			img(src="#" data-src=`img/team-${x}.png`, alt='')
+			div
+				.row
+					.col-xl-5.col-lg-4
+					.col
+						+e.swiper-wrapper
+							.swiper-container.gallery-thumbs
+								.swiper-wrapper
+									- for (var x = 1; x < 6; x++)
+										+e.slide-sm.swiper-slide
+											+e.img-wrap-sm
+												img(src="#" data-src=`img/team-${x}.png`, alt='')
 									
-									//- +e.slide-sm.swiper-slide
-									//- 	+e.img-wrap-sm
-									//- 		img(src="#" data-src=`img/team-${x}.png`, alt='')
-									
-						.swiper-scrollbar
-			.swiper-container.gallery-top
-				.swiper-wrapper
-					mixin item(i,t,t1)
-						+e.slide.swiper-slide
-							+e.item
-								.row
-									.col-xxl-5.col-lg-4.align-self-end
-										+e.img-wrap
-											+e.title.d-lg-none.text-center= t
-											img.res-i(src="#" data-src=`img/team-${i}.png`, alt='')
-									.col
-										+e.caption
-											+e.text
-												.text-right
-													+e.proff= t1
-												+e.title.d-none.d-lg-block= t
-												block
-											+e.btn.btt.btt-lg.btn-block.btt-blue(type="button")
-												span О нас
-						// / +e.slide.swiper-slide
-					+item("1","Дмитрий Новиков","Генеральный директор")
-						p Наши команда - это те люди, которые каждый день решают задачи. Мы прошли вместе больше чем 500 проектов.
-							br
-							| Наш сплоченны коллектив поможет реолизовать задачи в кратчайшие сроки с максимальным результатом.
-					+item("2","Денис Миловидов","Арт-директор")
-						p Наши команда - это те люди, которые каждый день решают задачи. Мы прошли вместе больше чем 500 проектов.
-							br
-							| Наш сплоченны коллектив поможет реолизовать задачи в кратчайшие сроки с максимальным результатом.
-					+item("3","Алиса Новикова","Проект менеджер")
-						p Наши команда - это те люди, которые каждый день решают задачи. Мы прошли вместе больше чем 500 проектов.
-							br
-							| Наш сплоченны коллектив поможет реолизовать задачи в кратчайшие сроки с максимальным результатом.
-					+item("4","Дмитрий Пощикайло","SMM менеджер")
-						p Наши команда - это те люди, которые каждый день решают задачи. Мы прошли вместе больше чем 500 проектов.
-							br
-							| Наш сплоченны коллектив поможет реолизовать задачи в кратчайшие сроки с максимальным результатом.
-					+item("5","Андрей Бударинцев","SEO менеджер")
-						p Наши команда - это те люди, которые каждый день решают задачи.  Мы прошли вместе больше чем 500 проектов.
+									//- - for (var x = 1; x < 6; x++)
+									//- 	+e.slide-sm.swiper-slide
+									//- 		+e.img-wrap-sm
+									//- 			img(src="#" data-src=`img/team-${x}.png`, alt='')
+										
+										//- +e.slide-sm.swiper-slide
+										//- 	+e.img-wrap-sm
+										//- 		img(src="#" data-src=`img/team-${x}.png`, alt='')
+										
+							.swiper-scrollbar
+				.swiper-container.gallery-top
+					.swiper-wrapper
+						mixin item(i,t,t1)
+							+e.slide.swiper-slide
+								+e.item
+									.row
+										.col-xl-5.col-lg-4.align-self-end
+											+e.img-wrap
+												+e.title.d-lg-none.text-center= t
+												img.res-i(src="#" data-src=`img/team-${i}.png`, alt='')
+										.col
+											+e.caption
+												+e.text
+													.text-right
+														+e.proff= t1
+													+e.title.d-none.d-lg-block= t
+													block
+												+e.btn.btt.btt-lg.btn-block.btt-blue(type="button")
+													span О нас
+							// / +e.slide.swiper-slide
+						+item("1","Дмитрий Новиков","Генеральный директор")
+							p Наши команда - это те люди, которые каждый день решают задачи. Мы прошли вместе больше чем 500 проектов.
+								br
+								| Наш сплоченны коллектив поможет реолизовать задачи в кратчайшие сроки с максимальным результатом.
+						+item("2","Денис Миловидов","Арт-директор")
+							p Наши команда - это те люди, которые каждый день решают задачи. Мы прошли вместе больше чем 500 проектов.
+								br
+								| Наш сплоченны коллектив поможет реолизовать задачи в кратчайшие сроки с максимальным результатом.
+						+item("3","Алиса Новикова","Проект менеджер")
+							p Наши команда - это те люди, которые каждый день решают задачи. Мы прошли вместе больше чем 500 проектов.
+								br
+								| Наш сплоченны коллектив поможет реолизовать задачи в кратчайшие сроки с максимальным результатом.
+						+item("4","Дмитрий Пощикайло","SMM менеджер")
+							p Наши команда - это те люди, которые каждый день решают задачи. Мы прошли вместе больше чем 500 проектов.
+								br
+								| Наш сплоченны коллектив поможет реолизовать задачи в кратчайшие сроки с максимальным результатом.
+						+item("5","Андрей Бударинцев","SEO менеджер")
+							p Наши команда - это те люди, которые каждый день решают задачи.  Мы прошли вместе больше чем 500 проектов.
 
-						p Наш сплоченны коллектив поможет реолизовать задачи в кратчайшие сроки с максимальным результатом.
+							p Наш сплоченны коллектив поможет реолизовать задачи в кратчайшие сроки с максимальным результатом.
 							
 			
 	// .Team /

@@ -65,7 +65,7 @@
 			}
 			max-height: 135px;
 		}
-		@include media-breakpoint-up(lg) {
+		@include media-breakpoint-up(xl) {
 			// height: auto;
 			max-width: 95%;
 			// max-height: none;
@@ -88,7 +88,7 @@
 		}
 		margin-bottom: .2em;
 		@include mt;
-		@include media-breakpoint-up(lg) {
+		@include media-breakpoint-up(xl) {
 
 			opacity: 0;
 		}
