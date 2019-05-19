@@ -1,14 +1,4 @@
 
-.crls__nav-scls{
-	@extend .text-warning;
-	 
-	.icon{
-		&-skype{
-			color: #499ccb !important;
-		}
-			font-size: rem(28);
-	}
-}
 .s-form {
 
 	background-image: url(../img/form-bg.jpg);
@@ -80,4 +70,19 @@
 	font-size: 12px;
 	bottom: 0;
 	left: 0;
+}
+
+
+
+.s-form .crls__nav-scls{
+	@extend .text-warning;
+	 a{
+
+		 .icon{
+			 &-skype{
+			color: #499ccb !important;
+		}
+			font-size: rem(28);
+		}
+	}
 }

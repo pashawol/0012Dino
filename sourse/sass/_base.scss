@@ -9,14 +9,18 @@ html {
 	// 	margin-right: 0;
 	// }
 
-	// background-image: url(../screen/main.jpg);
+	// background-image: url(../screen/3.png);
 }
+
 
 body {
 	// opacity: .7;
 	// min-height: 10000px; 
 	background-color: #f9f8fe;
 	// background-color: transparent;
+}
+ul{
+	padding-left: 0;
 }
 
 .mono {
@@ -142,6 +146,10 @@ body {
 	position: relative;
 	overflow: hidden;
 	height: 100%;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
 }
 
 .slick-slide img {

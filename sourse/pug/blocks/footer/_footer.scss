@@ -1,6 +1,34 @@
 .footer {
-		
-
+  text-align: center;
+	&--light{
+    padding-top: rem(20);
+    // padding-top: rem(20);
+    padding-bottom: rem(20);
+    position: static;
+  }
+  &--page{
+    position: static;
+  }
+  &__btn{
+    @extend .btn;
+    @extend .btn-outline-white;
+    @extend .btn-block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: rem(302);
+    justify-content: center;
+    border-radius: rem(40);
+    opacity: 0.4;
+    margin-bottom: rem(20);
+  }
+  &__soc{
+		filter: invert(.9);
+		opacity: 0.7;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: rem(10);
+    align-items: center;
+	}
 
 // 
 @include media-breakpoint-up(xl) {}

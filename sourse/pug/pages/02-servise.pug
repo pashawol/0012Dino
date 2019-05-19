@@ -13,9 +13,15 @@ block title
 	title title
 
 block pagecontent 
-	+top-nav()
-	+s-content()
-	+s-servises2(class="")
-	+s-form(class="")
+	.crls
+	main
+		+top-nav()
+		+s-content()
+		+s-servises(class="s-servises--page")
+		+s-form(class="")
+			+b.footer--page.text-center.text-white
+				+e.btn(href="#") Все услуги
+				a.text-white.tdu(href="#") Политика конфиденциальности
+			
 	+footer()
 

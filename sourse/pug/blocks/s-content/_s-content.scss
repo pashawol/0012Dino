@@ -1,4 +1,83 @@
 .s-content {
+	padding-top: rem(38);
+	padding-bottom: rem(44);
+	@include media-breakpoint-up(lg) {
+		padding-top: rem(78);
+		padding-bottom: rem(84);
+	}
+
+	@include media-breakpoint-up(xl) {
+		.container{
+			max-width: 1170px;
+		}
+	}
+	h1{
+		@extend .h3;
+		font-family: "PF Agora Sans Pro";
+		padding-bottom: rem(10);
+		// font-weight: bold;
+		@include media-breakpoint-up(xl) {
+			font-size: rem(34);
+		}
+	}
+
+	&__head{
+		max-width: 740px;
+	}
+	P{
+		color: $secondary;
+		line-height: 1.31;
+		margin-bottom: em(30);
+	}
+	img{
+		margin-bottom: rem(65);
+	}
+
+	&__sub-title{
+		font-family: "PF Agora Slab Pro";
+		// font-size: rem(22px);
+		@include rfs(#{rem(22)});
+		font-weight: 700;
+		line-height: 1.36;
+		margin-bottom: rem(18);
+	}
+	ul{
+		padding-left: 0;
+	}
+	&__body{
+		max-width: 900px;
+
+	}
+	li{
+		line-height: 1.31;
+		position: relative;  
+		margin-bottom: rem(20);
+		letter-spacing: .2px;
+		&::before{
+			content: '';
+		position: relative;
+		display: inline-block;
+			left: 0;
+			// top: em(9);
+			margin-right: rem(12);
+			margin-left: rem(2);
+			width: em(6px);
+			height: em(6px);
+			background-color: $warning;
+			border-radius: 50%;
+			border: 1px solid #fff;
+			box-shadow: 0 0 0 em(2px) $warning;
+		 
+			@include mt;
+}
+	}
+
+	&__btn{
+		margin-left: auto;
+		margin-right: auto;
+		max-width: rem(338);
+		margin-top: rem(55);
+	}
 	//
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
@@ -25,3 +104,4 @@
 	@include media-breakpoint-down(xs) {} 
 
 }
+ 

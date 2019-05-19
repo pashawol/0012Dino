@@ -4,7 +4,8 @@
 @include font-face ("Century Gothic", "../fonts/CenturyGothic-Bold/CenturyGothic-Bold", 700, $file-formats: woff2 woff ttf);
 
 @include font-face ("Century Gothic", "../fonts/CenturyGothic-Italic/CenturyGothic-Italic", 400, italic, $file-formats: woff2 woff ttf);
-@include font-face ("PF Agora Sans Pro", "../fonts/PFAgoraSansPro-Bold/PFAgoraSansPro-Bold", $file-formats: woff2 woff ttf);
+@include font-face ("PF Agora Sans Pro", "../fonts/PFAgoraSlabPro-Bold/PFAgoraSlabPro-Bold", $file-formats: woff2 woff ttf);
+@include font-face ("PF Agora Slab Pro", "../fonts/PFAgoraSansPro-Bold/PFAgoraSansPro-Bold", 700, $file-formats: woff2 woff ttf);
 @include font-face ("PF Agora Slab Pro - Black", "../fonts/PFAgoraSlabPro-Black/PFAgoraSlabPro-Black",   $file-formats: woff2 woff ttf);
 @include font-face ("PF Agora Slab Pro - Ultra Black", "../fonts/PFAgoraSlabPro-UltraBlack/PFAgoraSlabPro-UltraBlack",   $file-formats: woff2 woff ttf);
  
@@ -12,7 +13,7 @@
 $default-font: "Century Gothic";
 
 $def: #373a41;
-$em-base: 17px;
+$em-base: 16px;
 $small: rem(14);
  
 // обсалютное центрирование

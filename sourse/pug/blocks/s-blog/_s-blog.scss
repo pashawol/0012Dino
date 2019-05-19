@@ -1,0 +1,148 @@
+.s-blog {
+	padding-top: rem(57px);
+	padding-bottom: rem(57px);
+	@include media-breakpoint-up(xl) { 
+		.container{
+			max-width: 1170px;
+		}
+	}
+	&__img-wrap{
+		position: relative;
+		display: block;
+		background-color: $body-color;
+		img{
+			min-width: 100%;
+			@include mt;
+		}
+		&:hover{
+			img{
+				opacity: 0.8;
+			}
+		}
+	}
+	&__label{
+		position: absolute;
+		left: rem(40);
+		bottom: rem(23);
+		font-size: 13px;
+		background-color: #ffffff;
+		border-radius: 10px;
+		text-decoration: none !important;
+		color: #000 !important;
+		padding: rem(1) rem(15);
+	}
+	&__col{
+		margin-bottom: rem(30);
+	}
+	&__caption{
+		@include media-breakpoint-up(xl) {
+
+			padding: rem(32) rem(39) rem(35);
+		}
+		padding: rem(22) rem(20) rem(25);
+		background-color: #ffffff;
+	}
+	&__title{
+		font-family: "PF Agora Slab Pro";
+		// font-size: 24px;
+		@include rfs(rem((24)));
+		font-weight: 700;
+		line-height: 1.1;
+		padding-bottom: em(15);
+		
+	}
+	&__small{
+		color: $gray; 
+		@include media-breakpoint-up(xl) {
+
+			font-size: 14px; 
+		}
+		font-size: 12px; 
+		.icon{
+			font-size: 17px;
+			margin-right: 5px;
+			// stroke-width: 4px;
+		}
+	}
+
+	&__item--form{
+	}
+	&__caption--form{
+		background-color: #ff7e07;
+		text-align: center;
+		// padding: rem(35) rem(39);
+		@include media-breakpoint-up(xl) {
+
+			padding-top: rem(35);
+		}
+
+	}
+	&__title--form{
+		color: #ffffff;
+		@extend .h5;
+		padding-bottom: rem(10);
+		padding-left: rem(10);
+		padding-right: rem(10);
+		margin-bottom: rem(15);
+	}
+	
+	&__input{
+		display: block;
+		border-radius: 10px;
+		background-color: rgba($color: #fff, $alpha: .24) ;
+		width: 100%;
+		border: 1px solid transparent;
+		text-align: center;
+		font-size: 14px;
+		color: #ffffff;
+		padding: rem(15) rem(20);
+		margin-bottom: rem(20);
+		&::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+				color: #ffffff;
+		}
+		&::-moz-placeholder { /* Firefox 19+ */
+				color: #ffffff;
+		}
+		&:-ms-input-placeholder { /* IE 10+ */
+				color: #ffffff;
+		}
+		&:-moz-placeholder { /* Firefox 18- */
+				color: #ffffff;
+		}
+		 
+	
+	}
+	&__btn{
+		@extend .btn;
+		@extend .btn-white;
+		@extend .btn-block;
+		justify-content: center;
+		border-radius: 10px;
+		font-weight: bold;
+		margin-bottom: rem(15);
+	}
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-up(xs) {}
+	
+	//
+	@include media-breakpoint-between(md, xl) { }
+	
+	
+	//
+	@include media-breakpoint-only(xs) {}
+	@include media-breakpoint-only(sm) {}
+	@include media-breakpoint-only(md) {}
+	@include media-breakpoint-only(lg) {}
+	@include media-breakpoint-only(xl) {}
+	
+	//
+	@include media-breakpoint-down(xl) {}
+	@include media-breakpoint-down(lg) {}
+	@include media-breakpoint-down(md) {}
+	@include media-breakpoint-down(sm) {}
+	@include media-breakpoint-down(xs) {} 
+
+}

@@ -207,7 +207,9 @@ var JSCCommon = {
 	},
 
 	fullPage: function () {
+		if ($('div').is('#wrp')) {
 
+	
 		$('#wrp').fullpage({
 			sectionSelector: 'section',
 			navigation: true,
@@ -291,7 +293,7 @@ var JSCCommon = {
 		pageScrollTo('.s-team__btn', 's-about')
 		pageScrollTo('.btt-calc', 's-form')
 		pageScrollTo('.btn-foot', 's-form')
-		 
+	}
 		 
 	 
 
@@ -574,4 +576,19 @@ jQuery(document).ready(function ($) {
 		effect: 'fade',
 		spaceBetween: 0,
 	});
+
+
+	// init Masonry
+var $grid = $('.row--js').masonry({
+	// options...
+	
+		// use outer width of grid-sizer for columnWidth
+	columnWidth: '.grid-item',
+	itemSelector: '.grid-item',
+	percentPosition: true
+});
+// layout Masonry after each image loads
+$grid.imagesLoaded().progress( function() {
+  $grid.masonry('layout');
+});
 });

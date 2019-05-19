@@ -75,6 +75,7 @@ $warning:       $orange !default;
 $danger:        $red !default;
 $light:         #f3f3f3 !default;
 $dark:          $gray-800 !default;
+$gray:          #928b8b !default;
 
 $theme-colors: () !default;
 // stylelint-disable-next-line scss/dollar-variable-default
@@ -86,6 +87,8 @@ $theme-colors: map-merge(
     // "info":       $info,
     "warning":    $warning,
     "danger":     $danger,
+    "white":     $white,
+    "gray":     $gray,
     // "light":      $light,
     // "dark":       $dark
   ),
@@ -237,7 +240,7 @@ $line-height-sm:              1.5 !default;
 $border-width:                1px !default;
 $border-color:                $gray-300 !default;
 
-$border-radius:               .25rem !default;
+$border-radius:               rem(10) !default;
 $border-radius-lg:            .3rem !default;
 $border-radius-sm:            .2rem !default;
 
@@ -385,7 +388,7 @@ $table-border-level:          -6 !default;
 //
 // Shared variables that are reassigned to `$input-` and `$btn-` specific variables.
 
-$input-btn-padding-y:         .75rem !default;
+$input-btn-padding-y:         .85rem !default;
 $input-btn-padding-x:         .75rem !default;
 $input-btn-font-family:       null !default;
 $input-btn-font-size:         $font-size-base !default;

@@ -11,17 +11,56 @@ mixin mob-mnu()
 			.text-right
 	//  мобильное меню
 mixin top-nav() 
+	#crlsNav.crls__nav
+		ul#headNav.crls__nav-menu
+			li( class="active")
+				a(href="#mainHead") Главная
+			li( )
+				a(href="#works") Наши работы
+			li( )
+				a(href="#s-about") О нас
+			li( )
+				a(href="#s-servises") Услуги
+			li()
+				a(href="#s-logos") Наши клиенты
+			li()
+				a(href="#s-form") Контакты
+			li( )
+				a(href="#") Блог
+		.crls__nav-scls.scls
+			p Связаться с нами:
+			a(href='#')
+				+icon("message")
+			a(href='#')
+				//- i.icn.icn-sk
+				+icon("skype")
+			a(href='#')
+				+icon("telegram")
+				//- i.icn.icn-tg
+			a(href='#')
+				+icon("viber")
+				//- i.icn.icn-vb
+			a(href='#')
+				+icon("whatsapp")
 	// start top-nav
 	+b.top-nav
 		.container
 			.row
-				.col-auto
+				.col-2.d-md-none
+					a#menuOpen.crls_menu
+						span.btt-menu
+							i
+							i
+							i
+						span.txt меню
+				.col-md-auto.col-8.text-center
 					+e.logo.logo.crls__logo(href='#')
 						i.logo_main.wow.fadeInLeft
 						i.logo_name.wow.fadeInRight
-				.col
+				
+				.col.d-none.d-md-block
 					+mnu()
-				.col-auto
+				.col-auto.d-none.d-md-block
 					+e.soc.crls_scls.scls
 						a(href='https://www.facebook.com/DinoCSlive/', target='_blank')
 							i.icn.icn-fb
