@@ -14,15 +14,10 @@ block title
 	title title
 
 block pagecontent 
+	.crls
 	main
 		+top-nav()
+		+s-content-2()
 		+s-blog
-			+e.col.col-lg-4.col-sm-6.grid-item
-				+e.FORM.item--form
-					+e.caption--form
-						+e.title--form Будь в&nbsp;курсе наших новостей
-						+e.INPUT.input(type="email" required placeholder="Ваша почта")
-						+e.btn(type="submit")  Подписаться
-			// /+e.col.col-lg-4.col-sm-6.grid-item
 	+footer()
 
