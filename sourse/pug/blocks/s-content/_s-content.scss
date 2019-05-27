@@ -37,6 +37,9 @@
 	
 	&__main {
 		background-color: #fff;
+		// @extend .section;
+		padding-top: 30px;
+		padding-bottom: 30px;
 		img {
 			margin-bottom: 0;
 		}

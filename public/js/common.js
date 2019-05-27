@@ -579,15 +579,11 @@ jQuery(document).ready(function ($) {
 
 
 	// init Masonry
-var $grid = $('.row--js').masonry({
-	// options...
-	
-		// use outer width of grid-sizer for columnWidth
+var $grid = $('.row--js').masonry({ 
 	columnWidth: '.grid-item',
 	itemSelector: '.grid-item',
 	percentPosition: true
-});
-// layout Masonry after each image loads
+}); 
 $grid.imagesLoaded().progress( function() {
   $grid.masonry('layout');
 });

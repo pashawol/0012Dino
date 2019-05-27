@@ -20,7 +20,6 @@
     <!-- PRLD-->
     <div class="prld" id="prld"></div>
     <div class="main-wrapper">
-      <div class="crls"></div>
       <main>
         <div class="crls__nav" id="crlsNav">
           <ul class="crls__nav-menu" id="headNav">
@@ -118,10 +117,32 @@
             </div>
           </div>
           <div class="s-content__main">
-            <div class="container"><img class="res-i" src="img/article-2.jpg" alt=""/></div>
+            <div class="container">
+              <div id="disqus_thread"></div>
+              <script>
+                /**
+                *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+                *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+                /*
+                var disqus_config = function () {
+                this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+                this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                };
+                */
+                (function() { // DON'T EDIT BELOW THIS LINE
+                var d = document,
+                s = d.createElement('script');
+                s.src = 'https://https-pashawol-github-io-0012dino-public.disqus.com/embed.js';
+                s.setAttribute('data-timestamp', +new Date());
+                (d.head || d.body).appendChild(s);
+                })();
+              </script>
+              <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+                <!-- end s-content-->
+              </noscript><script id="dsq-count-scr" src="//https-pashawol-github-io-0012dino-public.disqus.com/count.js" async></script>
+            </div>
           </div>
         </div>
-        <!-- end s-content-->
         <!-- start s-blog-->
         <div class="s-blog section" id="s-blog">
           <div class="container">

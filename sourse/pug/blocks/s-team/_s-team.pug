@@ -7,8 +7,8 @@ mixin s-team()
 				p.text-secondary Наши команда&nbsp;&mdash; это те&nbsp;люди, которые каждый день решают задачи. Мы&nbsp;прошли вместе больше чем 500&nbsp;проектов. Наш сплоченны коллектив поможет реолизовать задачи в&nbsp;кратчайшие сроки с&nbsp;максимальным результатом.
 			div
 				.row
-					.col-xl-5.col-lg-4
 					.col
+					.col-xl-7.col-lg-8
 						+e.swiper-wrapper
 							.swiper-container.gallery-thumbs
 								.swiper-wrapper
@@ -16,7 +16,14 @@ mixin s-team()
 										+e.slide-sm.swiper-slide
 											+e.img-wrap-sm
 												img(src="#" data-src=`img/team-${x}.png`, alt='')
-									
+										
+										+e.slide-sm.swiper-slide
+											+e.img-wrap-sm
+												img(src="#" data-src=`img/team-${x}.png`, alt='')
+										+e.slide-sm.swiper-slide
+											+e.img-wrap-sm
+												img(src="#" data-src=`img/team-${x}.png`, alt='')
+
 									//- - for (var x = 1; x < 6; x++)
 									//- 	+e.slide-sm.swiper-slide
 									//- 		+e.img-wrap-sm
