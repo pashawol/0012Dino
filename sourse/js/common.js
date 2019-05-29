@@ -5,97 +5,12 @@ var prld = $('#prld');
 var JSCCommon = {
 	prld: function() {
 		$(window).on('load', function () { 
-			prld.delay(150).fadeOut().find('i').fadeOut(); 
+			prld.delay(150).fadeOut().find('i').fadeOut(function(){
+				
+			}); 
 		});
 	},
-	// часть вызов скриптов здесь, для использования при AJX
-	LazyFunction: function () {
-		// Для лэзи загрузки 
-
-		document.addEventListener("DOMContentLoaded", function () {
-			let lazyImages = [].slice.call(document.querySelectorAll("img.lazy"));
-			let active = false;
-
-			const lazyLoad = function () {
-				if (active === false) {
-					active = true;
-
-					setTimeout(function () {
-						lazyImages.forEach(function (lazyImage) {
-							if (((lazyImage.getBoundingClientRect().top - lazyImage.parentElement.clientHeight * 2) <= window.innerHeight && (lazyImage.getBoundingClientRect().bottom + lazyImage.parentElement.clientHeight * 2) >= 0) && getComputedStyle(lazyImage).display !== "none") {
-								lazyImage.src = lazyImage.dataset.src;
-								// lazyImage.srcset = lazyImage.dataset.srcset;
-								lazyImage.classList.remove("lazy");
-
-								lazyImages = lazyImages.filter(function (image) {
-									return image !== lazyImage;
-								});
-
-								if (lazyImages.length === 0) {
-									document.removeEventListener("scroll", lazyLoad);
-									window.removeEventListener("resize", lazyLoad);
-									window.removeEventListener("orientationchange", lazyLoad);
-									window.addEventListener("DOMContentLoaded", lazyLoad);
-								}
-							}
-						});
-
-						active = false;
-					}, 200);
-				}
-			};
-
-			document.addEventListener("scroll", lazyLoad);
-			window.addEventListener("resize", lazyLoad);
-			window.addEventListener("orientationchange", lazyLoad);
-			window.addEventListener("DOMContentLoaded", lazyLoad);
-		});
-
-
-		// лэзи 
-		document.addEventListener("DOMContentLoaded", function () {
-			let lazyImages = [].slice.call(document.querySelectorAll(".lazy-bg"));
-			let active = false;
-
-			const lazyLoad = function () {
-				if (active === false) {
-					active = true;
-
-					setTimeout(function () {
-						lazyImages.forEach(function (lazyImage) {
-							if (((lazyImage.getBoundingClientRect().top - lazyImage.parentElement.clientHeight) <= window.innerHeight && (lazyImage.getBoundingClientRect().bottom + lazyImage.parentElement.clientHeight) >= 0) && getComputedStyle(lazyImage).display !== "none") {
-								lazyImage.parentElement.style.backgroundImage = 'url(' + lazyImage.dataset.src + ')';
-								lazyImage.src = lazyImage.dataset.src;
-								// lazyImage.srcset = lazyImage.dataset.srcset;
-								lazyImage.classList.remove("lazy");
-
-								lazyImages = lazyImages.filter(function (image) {
-									return image !== lazyImage;
-								});
-
-								if (lazyImages.length === 0) {
-									document.removeEventListener("scroll", lazyLoad);
-									window.removeEventListener("resize", lazyLoad);
-									window.removeEventListener("orientationchange", lazyLoad);
-									window.addEventListener("DOMContentLoaded", lazyLoad);
-								}
-							}
-						});
-
-						active = false;
-					}, 200);
-				}
-			};
-
-			document.addEventListener("scroll", lazyLoad);
-			window.addEventListener("resize", lazyLoad);
-			window.addEventListener("orientationchange", lazyLoad);
-			window.addEventListener("DOMContentLoaded", lazyLoad);
-		});
-
-	},
-	// /LazyFunction
-
+ 
 
 	magnificPopupCall: function () {
 		$('.popup-with-move-anim').magnificPopup({
@@ -215,7 +130,30 @@ var JSCCommon = {
 	fullPage: function () {
 		if ($('div').is('#wrp')) {
 
-	
+			var swiper5 = new Swiper('.slider-about', {
+		
+				speed: 400, 
+				spaceBetween: 0,  
+				simulateTouch: false,
+				shortSwipes: false,
+				followFinger: false,
+				followFinger: false,
+				allowTouchMove: false,
+				longSwipes: false,
+			
+			});
+		
+			$(".s-about__btn--js").click(  function(event){ 
+				event.preventDefault(); 
+				swiper5.slideNext();
+			}) 
+			$(".s-team__btn").click(function(){
+		
+				console.log(1);
+				event.preventDefault(); 
+				swiper5.slidePrev();
+		
+			})
 		$('#wrp').fullpage({
 			sectionSelector: 'section',
 			navigation: true,
@@ -224,6 +162,7 @@ var JSCCommon = {
 			responsiveWidth: 991.9,
 			responsiveHeight: 600,
 			scrollOverflow: true,
+			responsiveSlides: false,
 			// fixedElements: ".wrks__head",
 			parallax: true,
 			parallaxOptions: {type: 'reveal', percentage: 62, property: 'translate'},
@@ -250,7 +189,7 @@ var JSCCommon = {
 
 					if (destination.index == 1) {
 						$("body").addClass('page-scrolled');
-						$("body").addClass('nav-scrolled');
+						// $("body").addClass('nav-scrolled');
 					} else {
 						$("body").removeClass('page-scrolled');
 						
@@ -272,13 +211,14 @@ var JSCCommon = {
 					$("body").addClass('nav-white');  
 					
 				}
-				// if(origin.index == 2  && $('[data-anchor="slideTeam"]').hasClass('active') ) {
-				// 	fullpage_api.moveSlideLeft();
-				// }
+				if(destination.index == 2  && $('.wrapper-slide .slider-about__slide:nth-child(2)').hasClass('swiper-slide-active') ) {
+					swiper5.slidePrev('0',false);
+					console.log(back)
+				}
 
 			},
 
-			anchors: ['mainHead', 'works', 's-about', 's-team', 's-servises','s-logos','s-form'],
+			anchors: ['mainHead', 'works', 's-about',   's-servises','s-logos','s-form'],
 			menu: '#headNav',
 		});
 		function pageScrollTo(link, ancor ){
@@ -294,12 +234,20 @@ var JSCCommon = {
 			}) 
 		}
 				 
-		pageScrollTo('.crls_mouse', 'works' )
-		pageScrollTo('.s-about__btn--js', 's-team' )
-		pageScrollTo('.s-team__btn', 's-about')
+		pageScrollTo('.crls_mouse', 'works' ) 
 		pageScrollTo('.btt-calc', 's-form')
 		pageScrollTo('.btn-foot', 's-form')
+
+		
+		// document.querySelector(".s-team__btn--js").addEventListener('click', function(event){
+		// 	event.preventDefault(); 
+		// 	fullpage_api.moveTo('s-about' , 1); 
+		 
+		// }) 
+		
+
 	}
+
 		 
 	 
 
@@ -377,8 +325,7 @@ var JSCCommon = {
 	}
 	// /headSlider
 };
-
-JSCCommon.LazyFunction();
+ 
 /***/
 
 jQuery(document).ready(function ($) {
@@ -543,8 +490,8 @@ jQuery(document).ready(function ($) {
 	// window.load-scroll-resize
 	$(window).on('load scroll resize', function () {
 		// if ($(this).scrollTop() > 0) body.toggleClass('page-scrolled');
+		JSCCommon.headSlider();
 	});
-	JSCCommon.headSlider();
 
 
 
@@ -555,12 +502,12 @@ jQuery(document).ready(function ($) {
 		// freeMode: true,
 		// watchSlidesVisibility: true,
 		loopedSlides: 5, //looped slides should be the same
-		watchSlidesProgress: true,
-		spaceBetween: 30,
-		scrollbar: {
-			el: '.swiper-scrollbar',
-			draggable: true,
-		},
+		// watchSlidesProgress: true,
+		spaceBetween: 20,
+		// scrollbar: {
+		// 	el: '.swiper-scrollbar',
+		// 	draggable: true,
+		// },
 		breakpoints: {
 			// when window width is <= 320px
 			576: { 
@@ -591,4 +538,13 @@ var $grid = $('.row--js').masonry({
 $grid.imagesLoaded().progress( function() {
   $grid.masonry('layout');
 });
+
+setInterval(function(){
+	$(".crls_mouse").toggleClass('animate')
+}, 5000)
+
+
+
+
+
 });

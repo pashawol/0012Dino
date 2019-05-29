@@ -644,10 +644,12 @@ $spinkit-spinner-color: $primary !default;
 }
 
 .icon-hand{
-	font-size: 35px;
-	// text-rendering: geometricPrecision;
-	// backface-visibility: hidden; 
+	font-size: 28px;
+	text-rendering: geometricPrecision;
+	backface-visibility: hidden; 
+	color: #ffffff;
 // transform: translateZ(0); 
+// will-change: transform;
  
 @include a-cent;
 
@@ -663,10 +665,10 @@ will-change: transform, opacity;
 	position: relative;
 	font-family: "roboto";
 	
-	// backface-visibility: inherit;
+	backface-visibility: hidden;
 	// text-rendering: geometricPrecision;
 	// backface-visibility: hidden;  
-	// -webkit-font-smoothing: antialiased;
+	-webkit-font-smoothing: antialiased;
 	font-size: rem(13);
 	
 }

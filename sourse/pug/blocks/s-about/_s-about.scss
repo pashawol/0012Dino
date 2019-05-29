@@ -1,7 +1,13 @@
+.wrapper-slide{
+	.fp-tableCell{
+		vertical-align: bottom;
+	}
+	.swiper-wrapper{
+		align-items: flex-end;
+	}
+
+}
 .s-about {
-		.fp-tableCell{
-			vertical-align: bottom;
-		}
 		.container{
 			@include media-breakpoint-up(xxl) {
 
@@ -95,6 +101,9 @@
 			 max-width: 324px;
 			 width: 100%;
 			 display: flex;
+			 @include media-breakpoint-down(md) {
+				 margin-bottom: 100px;
+			 }
 		 }
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}

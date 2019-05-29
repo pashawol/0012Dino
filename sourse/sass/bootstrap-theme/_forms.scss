@@ -53,6 +53,16 @@
   }
 }
 
+.s-form  .form-control {
+   &:focus  {
+
+    &::placeholder {
+      // color: red;
+      color: rgba($color:#fff, $alpha: .5)
+    }
+   }
+  }
+   
 select.form-control {
   &:focus::-ms-value {
     // Suppress the nested default white text on blue background highlight given to

@@ -1,6 +1,6 @@
 mixin s-team()
 	// / .Team
-	+b.SECTION.s-team.section.tm&attributes(attributes)
+	+b.s-team.section.tm&attributes(attributes)
 		.container
 			.section-title.text-center
 				h2 Наша команда
@@ -26,7 +26,7 @@ mixin s-team()
 										//- 	+e.img-wrap-sm
 										//- 		img(src="#" data-src=`img/team-${x}.png`, alt='')
 										
-							.swiper-scrollbar
+							//- .swiper-scrollbar
 				.swiper-container.gallery-top
 					.swiper-wrapper
 						mixin item(i,t,t1)

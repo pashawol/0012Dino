@@ -7,11 +7,11 @@
 	&__head{
     -webkit-box-shadow: 4px 7px 22px rgba(0, 0, 0, 0.35);
     box-shadow: 4px 7px 22px rgba(0, 0, 0, 0.35); 
-    opacity: 0;
-    z-index: -1;
+    // opacity: 0;
+    // z-index: -1;
     @include mt;
-   position: fixed;
-   overflow: hidden;
+  //  position: fixed;
+  //  overflow: hidden;
   //  -webkit-perspective: 1000;
     background: #faf9fe;
    
@@ -22,7 +22,8 @@
     // position: fixed;
     // position: relative;
     // position: fixed;
-    z-index: 10;
+    position: relative;
+    z-index: 20;
     width: 100%; 
 	}
 	&_bg{
@@ -123,11 +124,11 @@
 
 .nav-scrolled{
   .wrks__head{
-    opacity: 1;
-    z-index: 2;
-    top: 0;
-    position: absolute;
-    position: fixed;
+    // opacity: 1;
+    // z-index: 2;
+    // top: 0;
+    // position: absolute;
+    // position: fixed;
   }
 }
 
@@ -143,13 +144,13 @@
   }
 }
 .wrks { 
-  @include media-breakpoint-up(xl) {
+  // @include media-breakpoint-up(xl) {
       
-    padding-top: 158px;
-  }
+  //   padding-top: 158px;
+  // }
   @include media-breakpoint-up(lg) {
-    padding-top: 148px;
-    
+    // padding-top: 148px;
+   padding-top: 0; 
   }
   padding-top: 100px;
   @media (max-height: 600px){
@@ -220,12 +221,12 @@
       // background-color: #fff;
       @include media-breakpoint-up(xl) {
 
-        padding-top: 68px;
+        // padding-top: 68px;
       }
       
       @include media-breakpoint-up(lg) {
 
-        padding-top: 56px;
+        // padding-top: 56px;
       }
 
       overflow-y: auto; }

@@ -109,7 +109,7 @@ block pagecontent
 			.crls__langs
 				a.text-white(href='#') Eng
 				span Rus°
-			a.crls__call.callOpen
+			a.crls__call.callDown(href="#s-form")
 				span.btt-call
 					span
 						+icon('hand')
@@ -148,8 +148,13 @@ block pagecontent
 	#wrp.wrp
 		+header-block(class="")
 		+s-portfolio(class="fp-auto-height")
-		+s-about(class="")
-		+s-team(class="")
+		SECTION.wrapper-slide
+			+b.slider-about
+				.swiper-wrapper
+					+e.slide.swiper-slide
+						+s-about(class="") 
+					+e.slide.swiper-slide
+						+s-team(class="")
 
 		+s-servises(class="")
 		+s-logos(class="")

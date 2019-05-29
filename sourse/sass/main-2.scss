@@ -5244,7 +5244,7 @@
    transition: .2s;
    height: 58px;
    padding: 0 32px;
-   box-shadow: 5px 9px 29px rgba(0, 0, 0, 0.35);
+  
    border-radius: 29px;
    font-family: "CenturyGothic";
    font-size: 14px;
@@ -5301,7 +5301,7 @@
  }
 
  .btt:hover {
-   transform: scale(1.02);
+  box-shadow: 5px 9px 29px rgba(0, 0, 0, 0.35);
  }
 
  .btt span {
@@ -6174,6 +6174,8 @@
 
  .call__ttl h4 {
    font-weight: 900;
+   font-family: "PF Agora Slab Pro - Ultra Black";
+   font-size: rem(50);
  }
 
  .call__dsc {
@@ -6588,27 +6590,24 @@ $color-text:  #282828;
  }
 
  .crls_mouse {
-   display: -webkit-box;
-   display: -webkit-flex;
-   display: -ms-flexbox;
-   display: flex;
-   -webkit-box-orient: vertical;
-   -webkit-box-direction: normal;
-   -webkit-flex-direction: column;
-   -ms-flex-direction: column;
-   flex-direction: column;
-   -webkit-box-align: center;
-   -webkit-align-items: center;
-   -ms-flex-align: center;
+ 
+   display: flex; 
+   flex-direction: column; 
    align-items: center;
-   padding: 12px 20px;
-   -webkit-border-radius: 20px;
+   padding: 12px 20px; 
    border-radius: 20px;
    margin-bottom: -20px;
+   //  animation-delay: 5s;
+   &.animate{
+     
+     animation: down2 1s 4  ;
+  }
+  //  animation-direction: alternate;
+  //  animation-duration:  .1ms;
  }
-
- @-webkit-keyframes down {
-   0 {
+ 
+ @keyframes down2 {
+   0% {
      opacity: 1;
    }
 
@@ -6617,7 +6616,7 @@ $color-text:  #282828;
      opacity: 0;
    }
  }
-
+ 
  @keyframes down {
    0 {
      opacity: 1;
@@ -6628,6 +6627,7 @@ $color-text:  #282828;
      opacity: 0;
    }
  }
+
 
  .crls_mouse:hover .icn:nth-child(1) {
    -webkit-animation: down 1.2s infinite;
@@ -6672,6 +6672,7 @@ $color-text:  #282828;
  .crls_scls a {
    display: inline-block;
    padding: 5px;
+   margin-bottom: 10px;
  }
 
  body {
