@@ -55,6 +55,7 @@
 	&__swiper-wrapper {
 		z-index: 20;
 		position: relative;
+		border-bottom: 1px solid #000;
 
 		@include media-breakpoint-down(md) {
 

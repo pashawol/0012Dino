@@ -27,7 +27,7 @@ mixin header-block()
 												span.nw Оценить проект
 									.col-md.wow.fadeInRight(data-wow-delay='0.52s')
 										.prm_pht&attributes(attributes)
-											img(src="#" data-src=`img/head-img-${x}.png`, alt='')
+											img(src=`img/head-img-${x}.png`, alt='')
 								.d-md-none
 										button.btt.btt-calc.wow.fadeInUp(type="button" data-wow-delay='0.3s')
 											+icon('calculator')
@@ -129,12 +129,4 @@ mixin header-block()
 							span.nw под ключ 
 					
 				+e.pagin.swiper-pagination.swiper-pagination-bullets
-					div(class="swiper-pagination-dot wrapper-dot  " tabindex="0" role="button" aria-label="Go to slide 1")
-						
-					
-					div(class="swiper-pagination-dot wrapper-dot " tabindex="1" role="button" aria-label="Go to slide 2")
-						
-					div(class="swiper-pagination-dot wrapper-dot " tabindex="2" role="button" aria-label="Go to slide 3")
-			
-					
 	// .Promo /

@@ -1,7 +1,13 @@
 var body = $('body');
 var prld = $('#prld');
 
+
 var JSCCommon = {
+	prld: function() {
+		$(window).on('load', function () { 
+			prld.delay(150).fadeOut().find('i').fadeOut(); 
+		});
+	},
 	// часть вызов скриптов здесь, для использования при AJX
 	LazyFunction: function () {
 		// Для лэзи загрузки 
@@ -218,9 +224,9 @@ var JSCCommon = {
 			responsiveWidth: 991.9,
 			responsiveHeight: 600,
 			scrollOverflow: true,
-			fixedElements: ".wrks__head",
+			// fixedElements: ".wrks__head",
 			parallax: true,
-	parallaxOptions: {type: 'reveal', percentage: 62, property: 'translate'},
+			parallaxOptions: {type: 'reveal', percentage: 62, property: 'translate'},
 			// lazyLoading: false,
 			afterRender: function ( ) {
 				// JSCCommon.LazyFunction();
@@ -364,6 +370,9 @@ var JSCCommon = {
 				}, 100);
 			});
 		}
+		$(' .swiper-pagination-bullet:not(".swiper-pagination-bullet-active")').click(function() {
+			circle();
+		})
 
 	}
 	// /headSlider
@@ -388,6 +397,7 @@ jQuery(document).ready(function ($) {
 	JSCCommon.inputMask();
  
 	JSCCommon.fullPage();
+	JSCCommon.prld();
 
 	// var $grid = 	$('.arn-msnr').masonry({
 	// 	itemSelector: '.cl',
@@ -535,13 +545,7 @@ jQuery(document).ready(function ($) {
 		// if ($(this).scrollTop() > 0) body.toggleClass('page-scrolled');
 	});
 	JSCCommon.headSlider();
-	$(window).on('load', function () {
-		// preloader
-		prld.delay(150).fadeOut().find('i').fadeOut();
-		// masonry 
 
-		// $grid.one( 'layoutComplete', fullPage())
-	});
 
 
 	var galleryThumbs = new Swiper('.gallery-thumbs', {

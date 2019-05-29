@@ -1,8 +1,12 @@
+*{
+}
 html {
-	-webkit-font-smoothing: antialiased;
-	-webkit-overflow-scrolling: touch;
+
+	// -webkit-font-smoothing: antialiased;
+	// -webkit-overflow-scrolling: touch;
 	background-position: center top;
 	background-repeat: no-repeat;
+
 	// @include media-breakpoint-up(sm) {
 
 	// 	margin-left: calc(100vw - 100%);
@@ -627,4 +631,42 @@ $spinkit-spinner-color: $primary !default;
 		position: relative;
 		z-index: 2;
 	}
+}
+
+
+.scls a .icon{
+	font-size: rem(30);
+	color: $warning;
+}
+
+.nav-scrolled .crls-tl::before{
+	display: none !important;
+}
+
+.icon-hand{
+	font-size: 35px;
+	// text-rendering: geometricPrecision;
+	// backface-visibility: hidden; 
+// transform: translateZ(0); 
+ 
+@include a-cent;
+
+-webkit-font-smoothing: antialiased;
+
+will-change: transform, opacity;
+
+}
+
+.crls__call span.txt,
+.crls_menu span.txt{
+	// will-change: transform;
+	position: relative;
+	font-family: "roboto";
+	
+	// backface-visibility: inherit;
+	// text-rendering: geometricPrecision;
+	// backface-visibility: hidden;  
+	// -webkit-font-smoothing: antialiased;
+	font-size: rem(13);
+	
 }

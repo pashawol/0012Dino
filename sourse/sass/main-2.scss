@@ -11,7 +11,7 @@
  }
 
  .thm:hover {
-   color: #ff944b;
+  //  color: #ff944b;
    // text-shadow: 0 1px 1px #883700;
  }
 
@@ -4915,6 +4915,7 @@
    width: 24px;
    height: 27px;
    background-image: url("../img/hand.svg");
+   will-change: transform;
  }
 
  .icn-fb:before {
@@ -5200,65 +5201,26 @@
    -webkit-animation-iteration-count: infinite;
    animation-iteration-count: infinite;
  }
-
- @-webkit-keyframes hand {
-   0% {
-     -webkit-transform: rotate(0deg);
-     transform: rotate(0deg);
-   }
-
-   25% {
-     -webkit-transform: rotate(-30deg) translate(-4px, -2px);
-     transform: rotate(-30deg) translate(-4px, -2px);
-     -webkit-animation-timing-function: cubic-bezier(0.445, 0.05, 0.55, 0.95);
-     animation-timing-function: cubic-bezier(0.445, 0.05, 0.55, 0.95);
-   }
-
-   50% {
-     -webkit-transform: rotate(0deg);
-     transform: rotate(0deg);
-     -webkit-animation-timing-function: cubic-bezier(0.445, 0.05, 0.55, 0.95);
-     animation-timing-function: cubic-bezier(0.445, 0.05, 0.55, 0.95);
-   }
-
-   75% {
-     -webkit-transform: rotate(-30deg) translate(-4px, -2px);
-     transform: rotate(-30deg) translate(-4px, -2px);
-     -webkit-animation-timing-function: cubic-bezier(0.445, 0.05, 0.55, 0.95);
-     animation-timing-function: cubic-bezier(0.445, 0.05, 0.55, 0.95);
-   }
-
-   100% {
-     -webkit-transform: rotate(0deg);
-     transform: rotate(0deg);
-   }
- }
+ 
 
  @keyframes hand {
-   0% {
-     -webkit-transform: rotate(0deg);
-     transform: rotate(0deg);
+   0% { 
+     transform:  rotate(0deg) ;
    }
 
-   25% {
-     -webkit-transform: rotate(-30deg) translate(-4px, -2px);
-     transform: rotate(-30deg) translate(-4px, -2px);
-     -webkit-animation-timing-function: cubic-bezier(0.445, 0.05, 0.55, 0.95);
-     animation-timing-function: cubic-bezier(0.445, 0.05, 0.55, 0.95);
+   25% { 
+     transform:  rotate(-30deg)  translate(-4px, -1px); 
+     animation-timing-function: cubic-bezier(0.446, 0.06, 0.66, 0.96);
    }
 
-   50% {
-     -webkit-transform: rotate(0deg);
-     transform: rotate(0deg);
-     -webkit-animation-timing-function: cubic-bezier(0.445, 0.05, 0.55, 0.95);
-     animation-timing-function: cubic-bezier(0.445, 0.05, 0.55, 0.95);
+   50% { 
+     transform:  rotate(0deg) ; 
+     animation-timing-function: cubic-bezier(0.446, 0.06, 0.66, 0.96);
    }
 
-   75% {
-     -webkit-transform: rotate(-30deg) translate(-4px, -2px);
-     transform: rotate(-30deg) translate(-4px, -2px);
-     -webkit-animation-timing-function: cubic-bezier(0.445, 0.05, 0.55, 0.95);
-     animation-timing-function: cubic-bezier(0.445, 0.05, 0.55, 0.95);
+   75% { 
+     transform:  rotate(-30deg)  translate(-4px, -1px); 
+     animation-timing-function: cubic-bezier(0.446, 0.06, 0.66, 0.96);
    }
 
    100% {
@@ -5409,25 +5371,26 @@
 
  .btt-call>* {
    position: relative;
-   z-index: 2;
+   z-index: 2; 
  }
 
  .btt-call:hover:before {
-   background-color: #ff8e41;
+  //  background-color: #ff8e41;
  }
 
+ .btt-call  .icn {
+  text-rendering: geometricPrecision;
+  backface-visibility: hidden; 
+  -webkit-font-smoothing: subpixel-antialiased;
+ }
  @media all and (min-width: 901px) {
-   .btt-call:hover .icn {
-     -webkit-animation-name: hand;
-     animation-name: hand;
-     -webkit-animation-duration: 1s;
-     animation-duration: 1s;
-     -webkit-animation-delay: .1s;
-     animation-delay: .1s;
-     -webkit-animation-iteration-count: 1;
-     animation-iteration-count: 1;
-     -webkit-animation-timing-function: linear;
+   .btt-call:hover .icn {  
+     animation-duration: 1s; 
+     animation-delay: .1s; 
+     animation-iteration-count: 1; 
      animation-timing-function: linear;
+     text-rendering: geometricPrecision;
+     backface-visibility: hidden; 
    }
  }
 
@@ -6244,9 +6207,9 @@
 
  .scls a:hover {
    opacity: 0.8;
-   -webkit-transform: scale(1.15);
-   -ms-transform: scale(1.15);
-   transform: scale(1.15);
+  //  -webkit-transform: scale(1.15);
+  //  -ms-transform: scale(1.15);
+  //  transform: scale(1.15);
  }
 
  .crls {
@@ -6323,20 +6286,20 @@ $color-text:  #282828;
    margin: 0;
    top: 0;
    left: 0;
-   width: 0;
-   height: 0; 
+   width: 100%;
+   height: 100%; 
    overflow: hidden;
    background-color: rgba(255, 255, 255, 0.92); 
-  //  transition: $variable-burger-animation-time $variable-menu-animation-function;
-  animation: checkboxUncheckedAnimation $variable-menu-animation-time both;
-  border-bottom-right-radius: 100%;
   box-shadow: 3px 3px 7px rgba($color-text, .2);
+  @include mt;
+  transform: translateY(100%); 
   &:not(.active) * {
     display: none;
   }
   &.active{
-    opacity: 1; 
-    animation: checkboxCheckedAnimation $variable-menu-animation-time $variable-menu-animation-function both;
+    opacity: 1;
+    transform: translateY(0) 
+     
 
    }
  }
@@ -6478,13 +6441,19 @@ $color-text:  #282828;
  }
 
  .crls_menu span.txt {
-   -webkit-transform: rotate(-90deg) translateY(-176%);
-   -ms-transform: rotate(-90deg) translateY(-176%);
-   transform: rotate(-90deg) translateY(-176%);
+  
+   transform:  rotate(-90deg) translateY(-160%)  ;
    display: inline-block;
    margin-top: 33px;
    width: 65px;
    text-align: right;
+   font-size: 12px;
+   
+  // text-rendering: auto;
+  // text-rendering: optimizeSpeed;
+  // text-rendering: optimizeLegibility;
+  // text-rendering: geometricPrecision;
+  //  -webkit-font-smoothing: subpixel-antialiased;
  }
 
  .crls-tr {
@@ -6536,16 +6505,16 @@ $color-text:  #282828;
    align-items: flex-end;
    font-family: 'CenturyGothic';
    font-weight: 700;
-   text-transform: uppercase;
+   text-transform: uppercase; 
+
  }
 
  .crls__call span.txt {
-   -webkit-transform: rotate(-90deg) translateY(20%);
-   -ms-transform: rotate(-90deg) translateY(20%);
+ 
    transform: rotate(-90deg) translateY(20%);
    margin-top: 45px;
    width: 62px;
-   position: relative;
+   position: relative; 
  }
 
  .crls__call span.txt:before {
@@ -6559,6 +6528,7 @@ $color-text:  #282828;
    width: 70px;
    height: 2px;
    background-color: #fff;
+   will-change: transform;
  }
 
  .crls__call span.txt,
@@ -6579,20 +6549,16 @@ $color-text:  #282828;
  }
 
  .crls__call:hover .btt-call:before {
-   background-color: #ff8e41;
+  //  background-color: #ff8e41;
  }
 
  @media all and (min-width: 901px) {
-   .crls__call:hover .icn {
-     -webkit-animation-name: hand;
-     animation-name: hand;
-     -webkit-animation-duration: 1s;
-     animation-duration: 1s;
-     -webkit-animation-delay: .1s;
-     animation-delay: .1s;
-     -webkit-animation-iteration-count: 1;
-     animation-iteration-count: 1;
-     -webkit-animation-timing-function: linear;
+   .crls__call:hover .btt-call span {
+    
+     animation-name: hand; 
+     animation-duration: 1s; 
+     animation-delay: .1s; 
+     animation-iteration-count: 1; 
      animation-timing-function: linear;
    }
  }
