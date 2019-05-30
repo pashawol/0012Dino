@@ -272,10 +272,11 @@ var JSCCommon = {
 			followFinger: false,
 			allowTouchMove: false,
 			longSwipes: false,
+			autoplay: {
+				delay: 5600,
+			},
 			on: {
-				reachEnd: function () {
-					/* do something */
-
+				reachEnd: function () { 
 				},
 
 				slideChange: function () {
@@ -298,10 +299,10 @@ var JSCCommon = {
 		});
 
 		function circle() {
-			$(".swiper-pagination-bullet").find("svg").remove();
+			$(".swiper-pagination-bullet").removeClass("svg-container").find("svg").remove();
 			$(".swiper-pagination-bullet-active ").circliful({
 				animation: 1,
-				animationStep: 1,
+				animationStep: 2,
 				foregroundBorderWidth: 15,
 				backgroundBorderWidth: 15,
 				percent: 100,
@@ -313,15 +314,20 @@ var JSCCommon = {
 			}, function () {
 				setTimeout(function () {
 					// circle();  
-					swiper4.slideNext(400, false);
+					// swiper4.slideNext(400, false);
 
 				}, 100);
 			});
 		}
-		$(' .swiper-pagination-bullet:not(".swiper-pagination-bullet-active")').click(function() {
-			circle();
-		})
+	 
+		$(document).on('click', ".swiper-pagination-bullet", function(){
+			setTimeout(function () {
+				// circle();  
+				// swiper4.slideNext(400, false);
 
+				swiper4.autoplay.start();
+			}, 100);
+		})
 	}
 	// /headSlider
 };
