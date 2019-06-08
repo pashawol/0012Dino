@@ -13,7 +13,7 @@ mixin s-about()
 					p Студия не&nbsp;использует шаблоны и&nbsp;заготовки. Вы&nbsp;получаете уникальный дизайн, решающий  задачи именно для вас и&nbsp;ваших потребителей. Поэтому наши сайты отличаются дизайном и&nbsp;приносят пользу.
 				.col: +e.text-block--aside
 					+e.img-wrap
-						img(src="#" data-src="img/photo.png", alt="")
+						img(src="img/photo.png", alt="")
 					+e.aside-text 
 						p Пока одни думают какого цвета сделать кнопку, мы&nbsp;думаем как обойтись без неё.
 
@@ -25,7 +25,7 @@ mixin s-about()
 				mixin item(i)
 					+e.col.col-xl-auto.col-lg-3
 						+e.icon-wrap
-							img.res-i(src="#" data-src=`img/about-i-${i}.svg`, alt="")
+							img.res-i(src=`img/about-i-${i}.svg`, alt="")
 						block
 					// /+e.col.col-auto
 				+item('1')
