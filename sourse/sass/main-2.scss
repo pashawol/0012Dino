@@ -6317,11 +6317,12 @@ $color-text:  #282828;
    font-weight: 900;
 
    @include media-breakpoint-up(xl) {
-
-     font-size: 35px;
-   }
-
-   @extend .h3;
+     
+  }
+  font-size: rem(35px);
+    
+    // @extend .h3;
+      // @include media-breakpoint-up(xl) {
    margin-bottom: 0;
    font-weight: 400;
  }
@@ -6472,9 +6473,12 @@ $color-text:  #282828;
  }
 
  .crls__langs {
-   padding: 22px 13px 0 0;
-   font-size: 12px;
+   padding: em(22px) em(13px) 0 em(13px);
+  //  font-size: 12px;
+    font-weight: bold;
+    @extend .h6;
    text-transform: none;
+   display: inline-block;
  }
 
  .crls__langs>span {
@@ -6484,7 +6488,21 @@ $color-text:  #282828;
 
  .crls__langs a {
    display: inline-block;
-   margin: 0 7px;
+   margin: 0 em(15px);
+   &.text-white{
+      position: relative;
+      &::after{
+        content: '';
+        position: absolute;
+        width: 8px;
+        height: 8px;
+        background-color: #f9f8fe;
+        border-radius: 50%;
+        left: 100%;
+        border: 2px solid #ff7e07;
+        
+      }
+   }
  }
 
  .crls__langs a:hover {
@@ -6596,11 +6614,12 @@ $color-text:  #282828;
    align-items: center;
    padding: 12px 20px; 
    border-radius: 20px;
-   margin-bottom: -20px;
+  //  margin-bottom: -20px;
+  margin-bottom: 0;
    //  animation-delay: 5s;
    &.animate{
      
-     animation: down2 1s 4  ;
+     animation: down2 2s 4  ;
   }
   //  animation-direction: alternate;
   //  animation-duration:  .1ms;
@@ -6609,12 +6628,13 @@ $color-text:  #282828;
  @keyframes down2 {
    0% {
      opacity: 1;
-   }
-
+   } 
    100% {
-     margin: 5px 0 -5px;
+    //  margin: rem(5px) 0 rem(-5px);
+    transform: translateY(20px);
      opacity: 0;
    }
+
  }
  
  @keyframes down {

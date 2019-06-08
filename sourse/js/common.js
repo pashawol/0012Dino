@@ -64,15 +64,7 @@ var JSCCommon = {
 		});
 	},
 	 
-	stickyFunc: function () {
-		$(".wrks__head").stick_in_parent({
-			// offset_top: $(".top-nav").height() + 30,
-			// inner_scrolling: true,
-			parent: '.wrks',
-			// recalc_every: 1,
-			//  recalc_every: true,
-		});
-	},
+ 
 
 	fullPage: function () {
 		if ($('div').is('#wrp')) {
@@ -94,9 +86,7 @@ var JSCCommon = {
 				event.preventDefault(); 
 				swiper5.slideNext();
 			}) 
-			$(".s-team__btn").click(function(){
-		
-				console.log(1);
+			$(".s-team__btn").click(function(){ 
 				event.preventDefault(); 
 				swiper5.slidePrev();
 		
@@ -155,9 +145,22 @@ var JSCCommon = {
 					$("body").addClass('page-scrolled');
 					$("body").removeClass('page-next');
 					$("body").removeClass('nav-scrolled');  
-					$("body").addClass('nav-white');  
 					
 				}
+				
+				if(destination.index > 4) {
+					
+					$("body").addClass('nav-white');  
+					$("body").removeClass('page-next');
+					// $("body").removeClass('page-next');
+					$("body").addClass('last-screen');  
+				}
+				
+				if(destination.index < 4) {
+					
+					$("body").removeClass('last-screen');  
+				}
+
 				if(destination.index == 2  && $('.wrapper-slide .slider-about__slide:nth-child(2)').hasClass('swiper-slide-active') ) {
 					swiper5.slidePrev('0',false);
 					console.log(back)
@@ -169,13 +172,13 @@ var JSCCommon = {
 			menu: '#headNav',
 		});
 		function pageScrollTo(link, ancor ){
-			document.querySelector(link).addEventListener('click', function(event){
+			$(link).click(function(event){
 				event.preventDefault(); 
 				fullpage_api.moveTo(ancor); 
 				$.fn.fullpage.setAllowScrolling(true);
-				var body = document.querySelector('.call-opened')
-				if(body.classList.contains('call-opened')){
-					body.classList.remove('call-opened');
+				var body = $('.call-opened')
+				if(body.is('call-opened')){
+					body.removeClass('call-opened');
 					$.fn.fullpage.setAllowScrolling(true);
 				}
 			}) 
@@ -331,6 +334,7 @@ jQuery(document).ready(function ($) {
 		// $.fn.fullpage.setAllowScrolling(false);
 		var imgSrc = this.dataset.img
 		var img = '<img src="' + imgSrc + '">'
+		document.querySelector('.project-block-modal__inner').style.backgroundImage = 'url('+ imgSrc+')'
 		document.querySelector('.project-block-modal__inner').innerHTML = img
 	});
 	
@@ -397,7 +401,7 @@ $grid.imagesLoaded().progress( function() {
 
 setInterval(function(){
 	$(".crls_mouse").toggleClass('animate')
-}, 5000)
+}, 6000)
 
 
 

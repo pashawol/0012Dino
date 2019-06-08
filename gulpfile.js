@@ -1,9 +1,7 @@
 'use strict';
 
 global.$ = {
-	gulp: require('gulp'), 
-
-	bourbon: require('node-bourbon'),
+	gulp: require('gulp'),  
 	cleanCSS: require('gulp-clean-css'),
 	gulpif: require('gulp-if'), 
 	envDev: false,

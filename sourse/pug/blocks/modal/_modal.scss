@@ -120,3 +120,82 @@ a {
 @include media-breakpoint-down(sm) {}
 
 @include media-breakpoint-down(xs) {}
+
+
+
+
+$spinkit-size: 10em !default;
+$spinkit-spinner-color: $primary !default;
+
+// 2
+.sk-double-bounce {
+  width: $spinkit-size;
+  height: $spinkit-size;
+	// position: relative;
+	// position: absolute;
+	@include a-cent;
+  margin: auto;
+
+  .sk-child {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: $spinkit-spinner-color;
+    opacity: 0.6;
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: sk-double-bounce 2.0s infinite ease-in-out;
+  }
+
+  .sk-double-bounce-2 {
+    animation-delay: -1.0s;
+  }
+}
+
+@keyframes sk-double-bounce {
+  0%, 100% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1.0);
+  }
+}
+
+.project-block-modal{
+	&__inner{
+		position: relative;
+		z-index: 2;
+		text-align: center;
+		background-color: $body-color;
+		background-position: left top;
+		background-size: 0 0;
+		&::before{
+			content: '';
+			background-image: inherit;
+			position: absolute;
+			z-index: -1;
+			width: 100%;
+			height: 100%;
+			left: 0;
+			top: 0;
+			// box-shadow: inset 0 0 0 rem(100) rgba(255, 255, 255, 0.3);
+			// opacity: 0.5;
+			// background-size: cover;
+			filter: blur(5px);
+		}
+		&::after{
+			
+			content: '';
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			z-index: -1;
+			background-color: $body-color;
+			opacity: 0.5;
+			filter: blur(5px); 
+		}
+	}
+}

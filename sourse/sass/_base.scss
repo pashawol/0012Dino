@@ -587,51 +587,8 @@ body.page-next .crls__langs .text-white{
 
 
 
-$spinkit-size: 10em !default;
-$spinkit-spinner-color: $primary !default;
-
-// 2
-.sk-double-bounce {
-  width: $spinkit-size;
-  height: $spinkit-size;
-	// position: relative;
-	// position: absolute;
-	@include a-cent;
-  margin: auto;
-
-  .sk-child {
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    background-color: $spinkit-spinner-color;
-    opacity: 0.6;
-    position: absolute;
-    top: 0;
-    left: 0;
-    animation: sk-double-bounce 2.0s infinite ease-in-out;
-  }
-
-  .sk-double-bounce-2 {
-    animation-delay: -1.0s;
-  }
-}
-
-@keyframes sk-double-bounce {
-  0%, 100% {
-    transform: scale(0);
-  }
-  50% {
-    transform: scale(1.0);
-  }
-}
 
 
-.project-block-modal{
-	&__inner{
-		position: relative;
-		z-index: 2;
-	}
-}
 
 
 .scls a .icon{
@@ -680,4 +637,26 @@ a.callDown{
 	&:hover{
 		color: inherit;
 	}
+}
+
+
+body.last-screen:not(.page-next){
+	.crls__langs .text-white {
+    color: #fff!important;
+}
+.crls__call span.txt,
+.crls_menu{
+	color: #ffffff !important;
+}
+.crls_scls a {
+	-webkit-filter: invert(0);
+	filter: invert(0);
+}
+.btt-menu>i{
+	background-color: #ffffff !important;
+}
+.crls-bc, body.page-scrolled .crls-bc {
+	margin-top: 0;
+	opacity: 0;
+}
 }

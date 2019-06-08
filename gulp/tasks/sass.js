@@ -2,9 +2,7 @@ module.exports = function (){
 	$.gulp.task('sass', function() {
 	return $.gulp.src('sourse/sass/main.scss')
 	 
-	.pipe($.gp.sass({
-		includePaths: $.bourbon.includePaths
-	}).on("error", $.gp.notify.onError()))
+	.pipe($.gp.sass().on("error", $.gp.notify.onError()))
 	//.pipe(gulpif(envDev, sourcemaps.write({includeContent: false, sourceRoot: '/public'})))
 	.pipe($.gulpif(!$.envDev, $.gp.combineMq()))
 	.pipe($.gp.rename({suffix: '.min', prefix : ''}))
