@@ -105,6 +105,14 @@
 	@include media-breakpoint-down(xs) {} 
 
 }
+
+.wrks-wrap{
+  @include media-breakpoint-down(md) {
+    .fp-tableCell{
+      height: auto !important;
+    }
+  }
+}
 .nav-scrolled .crls-tl{
   @include media-breakpoint-up(lg) {
 

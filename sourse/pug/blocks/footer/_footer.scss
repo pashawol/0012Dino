@@ -67,5 +67,7 @@
 
 @include media-breakpoint-down(sm) {}
 
-@include media-breakpoint-down(xs) {}
+@include media-breakpoint-down(xs) {
+  // padding-top: 15px;
+}
 }

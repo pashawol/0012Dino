@@ -17,6 +17,7 @@ block pagecontent
 	// / CRLS
 	.crls
 		#callWrap.crls__form.call.crls__form-main
+			.call__bg
 			.call__inner
 				a.btt-close.callClose
 					span Закрыть
@@ -106,9 +107,9 @@ block pagecontent
 					i
 				span.txt меню
 		.crls-cl.crls-tr.wow.fadeIn(data-wow-delay='.22s')
-			.crls__langs
-				a.text-white(href='#') Eng
-				span Rus
+			+b.crls__langs
+				+e.SPAN.current.text-white Eng
+				a(href='#') Rus
 			a.crls__call.callDown(href="#s-form")
 				span.btt-call
 					span

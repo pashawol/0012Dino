@@ -14,7 +14,7 @@
 	//
 	.container{
 		padding-top: 40px;
-		padding-bottom: 80px;
+		padding-bottom: 100px;
 	}
 	@include media-breakpoint-up(xl) {
 		.container{
@@ -51,7 +51,9 @@
 	@include media-breakpoint-down(lg) {}
 	@include media-breakpoint-down(md) {}
 	@include media-breakpoint-down(sm) {}
-	@include media-breakpoint-down(xs) {} 
+	@include media-breakpoint-down(xs) {
+		padding-top: 50px;
+	} 
 
 	.crls__nav-scls{
 		a{

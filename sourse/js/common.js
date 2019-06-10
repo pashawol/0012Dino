@@ -323,10 +323,17 @@ jQuery(document).ready(function ($) {
 		$.fn.fullpage.setAllowScrolling(true);
 		
 	})
-	$('.callOpen').click(function () {
+	$(document).on('click', '.callOpen', function () {
 		body.toggleClass('call-opened');
 		$.fn.fullpage.setAllowScrolling(false);
 	});
+	
+	$('.call__bg').click(function () {
+		body.toggleClass('call-opened');
+		$.fn.fullpage.setAllowScrolling(true);
+		console.log(1);
+	});
+
 	
 	$('.full-modal-open-js').click(function (even) {
 		even.preventDefault();
@@ -404,7 +411,13 @@ setInterval(function(){
 }, 6000)
 
 
-
+$(document).mouseup(function (e) {
+	var container = $(".crls__form");
+	if (container.has(e.target).length === 0) {
+		console.log(1);
+		$("body").removeClass("call-opened");
+	}
+});
 
 
 });
