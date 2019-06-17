@@ -141,6 +141,8 @@ var JSCCommon = {
 					
 				}
 				
+				if(destination.index < 6) {
+				}
 				if(destination.index == 6) {
 					$("body").addClass('page-scrolled');
 					$("body").removeClass('page-next');
@@ -154,10 +156,14 @@ var JSCCommon = {
 					$("body").removeClass('page-next');
 					// $("body").removeClass('page-next');
 					$("body").addClass('last-screen');  
+					$(".callDown").toggleClass('d-none');  
+					$(".callTop").toggleClass('d-none');  
 				}
 				
 				if(destination.index < 4) {
 					
+					$(".callDown").toggleClass('d-none');  
+					$(".callTop").toggleClass('d-none');  
 					$("body").removeClass('last-screen');  
 				}
 

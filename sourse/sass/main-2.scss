@@ -6416,7 +6416,7 @@ $color-text:  #282828;
    display: inline-block;
    width: 144px;
    height: 62px;
-   background-image: url("../img/logo.png");
+  //  background-image: url("../img/logo.svg");
  }
 
  .crls__logo .logo_name {
@@ -6425,7 +6425,7 @@ $color-text:  #282828;
    left: 64px;
    width: 142px;
    height: 13px;
-   background-image: url("../img/logo-name.png");
+  //  background-image: url("../img/logo-name.svg");
  }
 
  .crls_menu {
@@ -6530,6 +6530,14 @@ $color-text:  #282828;
 
  }
 
+ .crls__call .txt{
+   color: #ffffff !important;
+ }
+ .crls__call .icon-arrow-top{
+   color: #ffffff;
+   font-size: rem(30);
+   margin-left: rem(10);
+ }
  .crls__call span.txt {
  
    transform: rotate(-90deg) translateY(20%);
@@ -6574,7 +6582,7 @@ $color-text:  #282828;
  }
 
  @media all and (min-width: 901px) {
-   .crls__call:hover .btt-call span {
+   .crls__call:hover .btt-call .animate {
     
      animation-name: hand; 
      animation-duration: 1s; 
@@ -7363,3 +7371,8 @@ $color-text:  #282828;
  }
 
  /* Media */
+
+
+ .callTop{
+  //  display: none;
+ }
