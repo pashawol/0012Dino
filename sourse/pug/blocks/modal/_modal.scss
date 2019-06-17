@@ -1,6 +1,10 @@
 .modal-win {
 	display: block;
 	position: relative;
+	max-width: 100%;
+	background-color: #ffffff;
+	padding-top: rem(40);
+	
 	.modal-content {
 		// max-width: 485px;
 		// padding-right: 40px 15px;

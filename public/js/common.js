@@ -169,7 +169,7 @@ var JSCCommon = {
 
 				if(destination.index == 2  && $('.wrapper-slide .slider-about__slide:nth-child(2)').hasClass('swiper-slide-active') ) {
 					swiper5.slidePrev('0',false);
-					console.log(back)
+					// console.log(back)
 				}
 
 			},
@@ -374,45 +374,49 @@ jQuery(document).ready(function ($) {
 		// if ($(this).scrollTop() > 0) body.toggleClass('page-scrolled');
 		JSCCommon.headSlider();
 	});
+// function teamsl() {
 
-
-
-	var galleryThumbs = new Swiper('.gallery-thumbs', {
-
-		slidesPerView: 'auto', 
-		loopedSlides: 5, 
-		spaceBetween: 20, 
-		breakpoints: { 
-			576: { 
-				spaceBetween: 10
-			} 
-		}
-	});
-	var galleryTop = new Swiper('.gallery-top', {
-		slidesPerView: 1,
-		loop: true,
-		loopedSlides: 5, //looped slides should be the same
-
-		thumbs: {
-			swiper: galleryThumbs,
-		},
-		speed: 400,
-		effect: 'fade',
-		spaceBetween: 0,
-	});
-
-
+// 	$(".s-team").each(function(){
+		
+		
+// 		var galleryThumbs = new Swiper($(this).find('.gallery-thumbs'), {
+			
+// 			slidesPerView: 'auto', 
+// 			loopedSlides: 5, 
+// 			spaceBetween: 20, 
+// 			breakpoints: { 
+// 				576: { 
+// 					spaceBetween: 10
+// 				} 
+// 			}
+// 		});
+// 		var galleryTop = new Swiper($(this).find('.gallery-top'), {
+// 			slidesPerView: 1,
+// 			loop: true,
+// 			loopedSlides: 5, //looped slides should be the same
+			
+// 			thumbs: {
+// 				swiper: galleryThumbs,
+// 			},
+// 			speed: 400,
+// 			effect: 'fade',
+// 			spaceBetween: 0,
+// 		});
+		
+// 	})
+// }
+	
 	// init Masonry
-var $grid = $('.row--js').masonry({ 
-	columnWidth: '.grid-item',
-	itemSelector: '.grid-item',
-	percentPosition: true
-}); 
-$grid.imagesLoaded().progress( function() {
-  $grid.masonry('layout');
-});
-
-setInterval(function(){
+	var $grid = $('.row--js').masonry({ 
+		columnWidth: '.grid-item',
+		itemSelector: '.grid-item',
+		percentPosition: true
+	}); 
+	$grid.imagesLoaded().progress( function() {
+		$grid.masonry('layout');
+	});
+	
+	setInterval(function(){
 	$(".crls_mouse").toggleClass('animate')
 }, 6000)
 

@@ -42,6 +42,12 @@ mixin s-about()
 					+e.caption 9&nbsp;СОТРУДНИКОВ
 						br
 						| В&nbsp;ШТАТЕ
-			+e.btn--js.btt.btt-lg.btt-blue(type="button")
-				span Наша команда
+			.d-none.d-lg-block
+				+e.btn--js.btt.btt-lg.btt-blue(type="button")
+					span Наша команда
+			
+			.d-lg-none
+				+e.btn--js2.btt.btt-lg.btt-blue.popup-with-move-anim(href="#modal-team")
+					span Наша команда
+			
 	// end s-about

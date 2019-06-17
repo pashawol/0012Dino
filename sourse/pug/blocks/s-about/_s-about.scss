@@ -146,9 +146,18 @@
 		padding-bottom: 100px;
 	} 
 	@include media-breakpoint-down(xs) {} 
-
+	
 }
 
 .fp-controlArrow{
 	display: none;
+}
+
+@include media-breakpoint-down(md) {
+
+	.slider-about{
+		.swiper-wrapper{
+			// transform: translate3d(0px, 0px, 0px) !important;
+		}
+	}
 }
