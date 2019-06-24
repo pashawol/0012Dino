@@ -1,6 +1,7 @@
 .s-team {
 
 	.section-title {
+		padding-top: rem(20);
 		// margin-left: auto;
 		// margin-right: auto;
 		// max-width: 1000px;
@@ -150,12 +151,12 @@
 		
 		@include media-breakpoint-up(xl) {
 			justify-content: space-between;
-			padding-top: 180px;
+			// padding-top: rem(120px);
 			// padding-bottom: rem(20px);
 		}
 		
 		@include media-breakpoint-up(lg) {
-			padding-top: 80px;
+			padding-top: rem(30px);
 			// padding-bottom: rem(20px);
 		}
 		@include media-breakpoint-up(md) {
@@ -164,7 +165,7 @@
 		}
 
 
-		padding-bottom: rem(35px);
+		padding-bottom: rem(25px);
 
 		@include media-breakpoint-down(sm) {
 
@@ -182,10 +183,10 @@
 		.section-title {
 			@include media-breakpoint-up(xxl) {
 				
-				margin-bottom: 80px;
+				margin-bottom: rem(80px);
 			}
 						@include media-breakpoint-up(xl) {
-			margin-bottom: 54px;
+			margin-bottom: rem(54px);
 						}
 		}
 	}
@@ -243,7 +244,13 @@
 	}
 
 	&__img-wrap {
-		@include media-breakpoint-up(xxl) {}
+		@include media-breakpoint-up(xxl) {
+			margin-top: 0;
+		}
+		@include media-breakpoint-up(xl) {
+			margin-top: rem(-148);
+			// margin-top: 0;
+		}
 
 		@include media-breakpoint-up(md) {
 			text-align: left;

@@ -25,7 +25,7 @@ mixin s-team()
 						+e.slide.tabs__content&attributes(attributes)
 							+e.item
 								.row
-									.col-xl-5.col-md-4.align-self-end
+									.col-xxl-5.col-md-4.align-self-end
 										+e.img-wrap
 											+e.title.d-md-none.text-center= t
 											img.res-i(src=`img/team-${i}.png`, alt='')
@@ -36,7 +36,7 @@ mixin s-team()
 													+e.proff= t1
 												+e.title.d-none.d-md-block= t
 												block
-											+e.btn.btt.btt-md.btn-block.btt-blue(type="button")
+											+e.btn.btt.btt-lg.btn-block.btt-blue(type="button")
 												span О нас
 						// / +e.slide.swiper-slide
 					+item("1","Дмитрий Новиков","Генеральный директор")(class="active")
