@@ -121,6 +121,7 @@ var JSCCommon = {
 					
 					$("body").removeClass('page-scrolled');
 					$("body").removeClass('nav-scrolled');
+					$("body").removeClass('nav-white');   
 				}
 					 
 
@@ -134,7 +135,6 @@ var JSCCommon = {
 				if (destination.index > 1 ) {
 					$("body").removeClass('nav-scrolled'); 
 					$("body").addClass('page-next');
-					$("body").removeClass('nav-white');   
 				} 
 				else {
 					$("body").removeClass('page-next');
@@ -152,18 +152,22 @@ var JSCCommon = {
 				
 				if(destination.index > 4) {
 					
+					$(".callDown").addClass('d-none');  
+					$(".callTop").removeClass('d-none');  
 					$("body").addClass('nav-white');  
 					$("body").removeClass('page-next');
 					// $("body").removeClass('page-next');
 					$("body").addClass('last-screen');  
-					$(".callDown").toggleClass('d-none');  
-					$(".callTop").toggleClass('d-none');  
-				}
 				
+				}
+				else{
+					$(".callDown").removeClass('d-none');
+					$(".callTop").addClass('d-none');    
+				}
 				if(destination.index < 4) {
 					
-					$(".callDown").toggleClass('d-none');  
-					$(".callTop").toggleClass('d-none');  
+					// $(".callDown").toggleClass('d-none');  
+					// $(".callTop").toggleClass('d-none');  
 					$("body").removeClass('last-screen');  
 				}
 

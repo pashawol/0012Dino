@@ -1,5 +1,8 @@
 .wrapper-slide{
 	.fp-tableCell{
+		@include media-breakpoint-up(xl) {
+			vertical-align: middle;
+		}
 		vertical-align: bottom;
 	}
 	.swiper-wrapper{
