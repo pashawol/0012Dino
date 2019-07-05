@@ -1,33 +1,32 @@
 mixin s-portfolio()
 	// / .Works
 	section.wrks-wrap.section.scrollable&attributes(attributes)
-		+b.wrks
-			.d-lg-none.text-center
-				h2 Наши работы
-			+e.head.d-none.d-lg-block
+		+b.wrks 
+			+e.head
 				.wrks_bg
 					.container.pg__ttl
 						h2 Наши работы
-					ul.etabs.wrks__tbs-links
-						li.active
-							a(href='#tab1') Все работы
-						
-						li 
-							a(href='#tab1') Веб
-						
-						li 
-							a(href='#tab1') Упаковка
-						
-						li 
-							a(href='#tab1') Полиграфия
-						li 
-							a(href='#tab1') Мобильные приложения
-						
-						//
-							<li><a href="#tab2"></a></li>
-							<li><a href="#tab3"></a></li>
-							<li><a href="#tab4"></a></li>
-							<li><a href="#tab5" class="nw"></a></li>
+					.d-none.d-lg-block
+						ul.etabs.wrks__tbs-links
+							li.active
+								a(href='#tab1') Все работы
+							
+							li 
+								a(href='#tab1') Веб
+							
+							li 
+								a(href='#tab1') Упаковка
+							
+							li 
+								a(href='#tab1') Полиграфия
+							li 
+								a(href='#tab1') Мобильные приложения
+							
+							//
+								<li><a href="#tab2"></a></li>
+								<li><a href="#tab3"></a></li>
+								<li><a href="#tab4"></a></li>
+								<li><a href="#tab5" class="nw"></a></li>
 			.js-tabs.wrks__tbs
 				#tab1.wrks__tbs-itm
 					.arn-msnr

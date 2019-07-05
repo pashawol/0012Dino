@@ -215,7 +215,7 @@
 
 		@include media-breakpoint-down(md) {
 
-			display: none;
+			// display: none;
 		}
 		@include media-breakpoint-down(sm) {
 			margin-left: auto;
@@ -314,6 +314,13 @@
 		max-width: 400px;
 		.swiper-wrapper{
 			transform: translate3d(0px, 0px, 0px) !important;
+		}
+	}
+
+	&__item{
+		@include media-breakpoint-up(xxl) {
+
+			margin-top: rem(-70);
 		}
 	}
 	@include media-breakpoint-up(lg) {}

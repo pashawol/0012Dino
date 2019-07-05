@@ -6,10 +6,16 @@
 			color: #ffffff;
 			position: absolute;
 			// @include a-cent(y);
-			top: rem(12);
-			left: 19px;
+			top: rem(16);
+			left: rem(19px);
+			width: rem(24);
+			text-align: center;
 			.icon{
-				font-size: 19px;
+				font-size: rem(19px);
+				
+			}
+			.icon-email{
+				font-size: rem(17px);
 
 			}
 			

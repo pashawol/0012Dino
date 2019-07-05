@@ -7,8 +7,8 @@ mixin s-team()
 				p.text-secondary Наши команда&nbsp;&mdash; это те&nbsp;люди, которые каждый день решают задачи. Мы&nbsp;прошли вместе больше чем 500&nbsp;проектов. Наш сплоченны коллектив поможет реолизовать задачи в&nbsp;кратчайшие сроки с&nbsp;максимальным результатом.
 			.tabs 
 				.row
+					.col-xxl-5.col-md-4
 					.col
-					.col-xl-7.col-md-8
 							.tabs__caption
 								mixin it(x)
 									+e.slide-sm.tabs__btn&attributes(attributes)
@@ -37,7 +37,8 @@ mixin s-team()
 												+e.title.d-none.d-md-block= t
 												block
 											+e.btn.btt.btt-lg.btn-block.btt-blue(type="button")
-												span О нас
+												span.d-none.d-md-block О нас
+												span.d-md-none Назад
 						// / +e.slide.swiper-slide
 					+item("1","Дмитрий Новиков","Генеральный директор")(class="active")
 						p Наши команда - это те люди, которые каждый день решают задачи. Мы прошли вместе больше чем 500 проектов.

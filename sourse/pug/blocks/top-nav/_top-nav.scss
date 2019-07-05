@@ -85,6 +85,16 @@
 	@include media-breakpoint-down(xs) {}
 }
 
+.crls{
+	@include media-breakpoint-down(sm) {
+		// position: relative;
+		position: fixed;
+		z-index: 200;
+		height: auto;
+	}
+
+}
+
 // мобильное меню
 
 // мобильное меню

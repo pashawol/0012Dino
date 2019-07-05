@@ -3,12 +3,27 @@
 		@include media-breakpoint-up(xl) {
 			vertical-align: middle;
 		}
+		@include media-breakpoint-up(lg) {
 		vertical-align: bottom;
+		}
 	}
-	.swiper-wrapper{
-		align-items: flex-end;
+	@include media-breakpoint-up(lg) {
+
+		.swiper-wrapper{
+			height: 100vh;
+			// align-items: flex-end;
+		}
 	}
 
+}
+.slider-about__slide{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	&--team{
+		align-items: flex-end;
+		// justify-content: flex-end;
+	}
 }
 .s-about {
 		.container{

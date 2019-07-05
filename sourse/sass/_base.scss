@@ -647,20 +647,26 @@ a.callDown{
 body.last-screen:not(.page-next){
 	.crls__langs .text-white {
     color: #fff!important;
+	}
+	.crls__call span.txt,
+	.crls_menu{
+		color: #ffffff !important;
+	}
+	.crls_scls a {
+		-webkit-filter: invert(0);
+		filter: invert(0);
+	}
+	.btt-menu>i{
+		background-color: #ffffff !important;
+	}
+	.crls-bc, body.page-scrolled .crls-bc {
+		margin-top: 0;
+		opacity: 0;
+	}
 }
-.crls__call span.txt,
-.crls_menu{
-	color: #ffffff !important;
-}
-.crls_scls a {
-	-webkit-filter: invert(0);
-	filter: invert(0);
-}
-.btt-menu>i{
-	background-color: #ffffff !important;
-}
-.crls-bc, body.page-scrolled .crls-bc {
-	margin-top: 0;
-	opacity: 0;
-}
+  body.menu-opened{
+	.crls_menu .btt-menu>i {
+
+		background-color: $body-color !important;
+	}
 }

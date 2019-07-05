@@ -236,7 +236,7 @@ var JSCCommon = {
 				slideChange: function () {
 					setTimeout(function () { 
 						swiper4.autoplay.start();
-							circle(); 
+							// circle(); 
 					}, 10);
 				},
 
@@ -328,7 +328,7 @@ jQuery(document).ready(function ($) {
 			
 		}
 	});
-	$("#headNav a").click(function(){
+	$(".crls__call, #headNav a").click(function(){
 		hideMenu()
 		$.fn.fullpage.setAllowScrolling(true);
 		
@@ -378,37 +378,7 @@ jQuery(document).ready(function ($) {
 		// if ($(this).scrollTop() > 0) body.toggleClass('page-scrolled');
 		JSCCommon.headSlider();
 	});
-// function teamsl() {
-
-// 	$(".s-team").each(function(){
-		
-		
-// 		var galleryThumbs = new Swiper($(this).find('.gallery-thumbs'), {
-			
-// 			slidesPerView: 'auto', 
-// 			loopedSlides: 5, 
-// 			spaceBetween: 20, 
-// 			breakpoints: { 
-// 				576: { 
-// 					spaceBetween: 10
-// 				} 
-// 			}
-// 		});
-// 		var galleryTop = new Swiper($(this).find('.gallery-top'), {
-// 			slidesPerView: 1,
-// 			loop: true,
-// 			loopedSlides: 5, //looped slides should be the same
-			
-// 			thumbs: {
-// 				swiper: galleryThumbs,
-// 			},
-// 			speed: 400,
-// 			effect: 'fade',
-// 			spaceBetween: 0,
-// 		});
-		
-// 	})
-// }
+ 
 	
 	// init Masonry
 	var $grid = $('.row--js').masonry({ 
@@ -433,5 +403,9 @@ $(document).mouseup(function (e) {
 	}
 });
 
+ 
+	$(".s-team__btn").click(function(){
+		$.magnificPopup.close();
 
+})
 });

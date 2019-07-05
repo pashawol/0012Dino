@@ -257,6 +257,15 @@
   &__slide{
         @include media-breakpoint-down(sm) {
           padding-top:110px;
+          flex-direction: column;
+          .prm__wrp{
+            flex-direction: column;
+            display: flex;
+            flex-grow: 1;
+            .row{
+              margin-bottom: auto;
+            }
+          }
         }
 
     display: flex;
