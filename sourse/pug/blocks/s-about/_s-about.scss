@@ -97,9 +97,11 @@
 		 }
 		 &__icon-wrap{
 			 margin-bottom: 0.5rem;
+			 height: rem(60);
 			 img{
 				@include mt;
 				position: relative;
+				max-height: 100%;
 			}
 			&:hover{
 				img{

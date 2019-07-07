@@ -6,10 +6,14 @@
 			color: #ffffff;
 			position: absolute;
 			// @include a-cent(y);
-			top: rem(16);
+			top: rem(17);
 			left: rem(19px);
 			width: rem(24);
 			text-align: center;
+			// display: block;
+			display: flex;
+			align-items: center;
+			justify-content: center;
 			.icon{
 				font-size: rem(19px);
 				
