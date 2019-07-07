@@ -250,7 +250,11 @@
   z-index: 2;
   @include bgs;
   position: relative;
-  background-image: url(../img/head-bg.jpg);
+  @include media-breakpoint-up(sm) {
+
+    background-image: url(../img/head-bg.jpg);
+  }
+  background-image: url(../img/head-bg-sm.jpg);
   &__slider{
     height: 100%;
   }

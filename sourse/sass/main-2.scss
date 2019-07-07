@@ -6610,7 +6610,10 @@ $color-text:  #282828;
    left: calc(50% - 180px);
    width: 270px;
    height: 170px;
-   background: url("../img/backs/promo-bg-bf.png") 50% no-repeat;
+   @include media-breakpoint-up(sm) {
+
+     background: url("../img/backs/promo-bg-bf.png") 50% no-repeat;
+    }
    -webkit-transition: 0.5s;
    -o-transition: 0.5s;
    transition: 0.5s;

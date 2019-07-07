@@ -1,7 +1,11 @@
 
 .s-form {
 
-	background-image: url(../img/form-bg.jpg);
+	@include media-breakpoint-up(sm) {
+
+		background-image: url(../img/form-bg.jpg);
+	}
+	background-image: url(../img/form-bg-sm.jpg);
 	@include bgs;
 	.section-title{
 		color: #ffffff;
