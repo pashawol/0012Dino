@@ -28,7 +28,9 @@ mixin header-block()
 									.col-md.wow.fadeInRight(data-wow-delay='0.52s')
 										.prm_pht&attributes(attributes)
 											picture
-												source( srcset=`img/head-img-${x}.png` media="(min-width: 576px)")
+												source(type="image/webp" srcset=`img/head-img-${x}.webp` media="(min-width: 576px)")
+												source(type="image/png" srcset=`img/head-img-${x}.png` media="(min-width: 576px)")
+												source(type="image/webp" srcset=`img/head-img-${x}-sm.webp` )
 												img(src=`img/head-img-${x}-sm.png`, alt='')
 								.d-md-none
 										button.btt.btt-calc.wow.fadeInUp(type="button" data-wow-delay='0.3s')

@@ -498,6 +498,13 @@ jQuery(document).ready(function ($) {
 		$.magnificPopup.close();
 
 	})
+
+	$(".s-about__btn--js2").click(function(){
+		$('[data-img-src]').each(function(){
+
+			$(this).attr('src',$(this).data("img-src"))
+		})
+	})
 });
 
 

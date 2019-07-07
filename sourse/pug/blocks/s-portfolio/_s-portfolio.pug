@@ -29,12 +29,12 @@ mixin s-portfolio()
 								<li><a href="#tab5" class="nw"></a></li>
 			mixin pic(i)
 				picture
-					source( srcset=`img/img/project-${i}-sm.jpg` media="(min-width: 576px)")
+					source( srcset=`img/project-${i}-sm.jpg` media="(min-width: 576px)")
 					img.object-fit-js(src="img/loadgif.gif" data-src=`img/project-${i}-xs.jpg`    , alt="")
 				
 			mixin picL(i)
 				picture
-					source( srcset=`img/img/project-${i}-xs.jpg` media="(min-width: 576px)")
+					source( srcset=`img/project-${i}-xs.jpg` media="(min-width: 576px)")
 					img.object-fit-js(src="img/loadgif.gif" data-src=`img/project-${i}.jpg`    , alt="")
 				
 			.js-tabs.wrks__tbs
