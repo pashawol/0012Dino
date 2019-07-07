@@ -265,6 +265,11 @@
 
 		// margin-right: -34px;
 		img {
+			@include media-breakpoint-up(xxxl) {
+
+				max-height: none;
+			}
+			
 			@include media-breakpoint-up(xxl) {
 
 				max-height: 620px;
