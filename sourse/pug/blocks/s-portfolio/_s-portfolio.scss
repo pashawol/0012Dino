@@ -4,20 +4,20 @@
 	font-family: 'object-fit: cover; object-position: center;';
 }
 
-picture{
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  background-color: $body-color;
-  height: 100%;
-  img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-}
 .wrks {
+  picture{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    background-color: $body-color;
+    height: 100%;
+    img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
   position: relative;
   &__tbs-itm{
     background: #faf9fe;
