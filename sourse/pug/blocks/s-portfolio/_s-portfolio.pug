@@ -29,13 +29,20 @@ mixin s-portfolio()
 								<li><a href="#tab5" class="nw"></a></li>
 			mixin pic(i)
 				picture
+					source( srcset=`img/img/project-${i}-sm.jpg` media="(min-width: 576px)")
+					img.object-fit-js(src="img/loadgif.gif" data-src=`img/project-${i}-xs.jpg`    , alt="")
+				
+			mixin picL(i)
+				picture
+					source( srcset=`img/img/project-${i}-xs.jpg` media="(min-width: 576px)")
 					img.object-fit-js(src="img/loadgif.gif" data-src=`img/project-${i}.jpg`    , alt="")
+				
 			.js-tabs.wrks__tbs
 				#tab1.wrks__tbs-itm
 					.arn-msnr
 						//- .cl-sizer.cl-1
 						+b.cl.cl-7.itm(href="#" data-img="img/project-1.jpg").full-modal-open-js
-							+pic('1-sm')
+							+pic('1')
 							.itm__more
 								.ttl-bord
 									+e.DIV.title Билборд  для лечебного  центра компания&nbsp;&mdash;  
@@ -44,7 +51,7 @@ mixin s-portfolio()
 								button.btt.btt-blue(type="button")
 									span Нажмите для просмотра проекта
 						+b.cl.cl-5.itm(href="#" data-img="img/project-2.jpg").full-modal-open-js
-							+pic('2-sm')
+							+pic('2')
 							.itm__more
 								.ttl-bord
 									+e.DIV.title  Продающий сайт   для  
@@ -58,7 +65,7 @@ mixin s-portfolio()
 						.cl-7
 							.arn-msnr
 								+b.cl.cl-7.itm.ht6(href="#" data-img="img/project-3.jpg").full-modal-open-js
-									+pic('3-sm')
+									+pic('3')
 									.itm__more
 										.ttl-bord
 											+e.DIV.title  Продающий сайт   для  
@@ -69,7 +76,7 @@ mixin s-portfolio()
 										button.btt.btt-blue(type="button")
 											span Нажмите для просмотра проекта
 								+b.cl.cl-5.itm.ht6(href="#" data-img="img/project-4.jpg").full-modal-open-js
-									+pic('4-sm')
+									+pic('4')
 									.itm__more
 										.ttl-bord
 											+e.DIV.title Листовка   для 
@@ -82,7 +89,7 @@ mixin s-portfolio()
 											span Нажмите для просмотра проекта
 						 
 								+b.cl.cl-7.itm.ht5(href="#" data-img="img/project-5.jpg").full-modal-open-js
-									+pic('5-sm')
+									+pic('5')
 									.itm__more
 										.ttl-bord
 											+e.DIV.title  Продающий сайт   для  
@@ -94,7 +101,7 @@ mixin s-portfolio()
 										button.btt.btt-blue(type="button")
 											span Нажмите для просмотра проекта
 								+b.cl.cl-5.itm.ht5(href="#" data-img="img/project-6.jpg").full-modal-open-js
-									+pic('6-sm')
+									+pic('6')
 									.itm__more
 										.ttl-bord
 											+e.DIV.title  Листовка   для 
@@ -105,7 +112,7 @@ mixin s-portfolio()
 											span Нажмите для просмотра проекта
 						.cl-5.cl-5-right
 							+b.cl.cl-12.itm.ht4(href="#" data-img="img/project-7.jpg").full-modal-open-js
-								+pic('7-sm')
+								+pic('7')
 								.itm__more
 									.ttl-bord
 										+e.DIV.title  Продающий сайт   для 
@@ -115,7 +122,7 @@ mixin s-portfolio()
 									button.btt.btt-blue(type="button")
 										span Нажмите для просмотра проекта
 							+b.cl.cl-12.itm(href="#" data-img="img/project-8.jpg").full-modal-open-js
-								+pic('8-sm')
+								+pic('8')
 								.itm__more
 									.ttl-bord
 										+e.DIV.title  Продающий сайт   для 
@@ -125,7 +132,7 @@ mixin s-portfolio()
 									button.btt.btt-blue(type="button")
 										span Нажмите для просмотра проекта
 						+b.cl.cl-7.itm(href="#" data-img="img/project-9.jpg").full-modal-open-js
-							+pic('9-sm')
+							+pic('9')
 							.itm__more
 								.ttl-bord
 									+e.DIV.title Билборд  для лечебного  центра компания&nbsp;&mdash;  
@@ -134,7 +141,7 @@ mixin s-portfolio()
 								button.btt.btt-blue(type="button")
 									span Нажмите для просмотра проекта
 						+b.cl.cl-5.itm.lst(href="#")
-							+pic('all')
+							+picL('all')
 							#loadWorks.itm__more()
 								big.thm.d-inline-block
 									big +34
