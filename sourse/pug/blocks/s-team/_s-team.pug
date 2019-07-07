@@ -79,7 +79,7 @@ mixin s-team-m()
 								mixin it(x)
 									+e.slide-sm.tabs__btn&attributes(attributes)
 										+e.img-wrap-sm
-											img.lazy(src="img/loadgif.gif" data-src=`img/team-${x}.png`, alt='') 
+											img.lazy(src="img/loadgif.gif" data-src=`img/team-${x}-sm.png`, alt='') 
 								+it('1')(class="active")
 								+it('2')
 								+it('3')
@@ -94,7 +94,7 @@ mixin s-team-m()
 									.col-xxl-5.col-md-4.align-self-end
 										+e.img-wrap
 											+e.title.d-md-none.text-center= t
-											img.res-i.lazy(src="img/loadgif.gif" data-src=`img/team-${i}.png` , alt='')
+											img.res-i.lazy(src="img/loadgif.gif" data-src=`img/team-${i}-sm.png` , alt='')
 									.col
 										+e.caption
 											+e.text
