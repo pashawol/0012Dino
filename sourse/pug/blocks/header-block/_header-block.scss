@@ -313,9 +313,17 @@
       line-height: 1; }
       .prm__dsc .h1 b {
         &.big{
+          @include media-breakpoint-up(xxxxl) {
+
+            font-size:  (106em / 58);
+          }
           font-size:  (126em / 58);
           margin-bottom: 10px;
           
+        }
+        @include media-breakpoint-up(xxxxl) {
+
+          font-size:  (102em / 58);
         }
         font-size:  (122em / 58);
         line-height: .9;

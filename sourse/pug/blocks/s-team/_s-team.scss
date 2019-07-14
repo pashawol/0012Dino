@@ -2,9 +2,9 @@
 
 	.section-title {
 		padding-top: rem(20);
-		// margin-left: auto;
-		// margin-right: auto;
-		// max-width: 1000px;
+		margin-left: auto;
+		margin-right: auto;
+		max-width: rem(1100);
 	}
 
 	&__slide {
@@ -25,11 +25,18 @@
 	&__img-wrap-sm {
 		background-color: #ffffff;
 		border-radius: 50%;
+		@include media-breakpoint-up(xxxxl) {
+
+			height: rem(55px);
+			width: rem(55px);
+		}
+		
 		@include media-breakpoint-up(sm) {
 
 			height: 55px;
 			width: 55px;
 		}
+
 		width: 48px;
 		height: 48px;
 
@@ -51,6 +58,9 @@
 		// margin-right: 0;
 		margin-left: 0;
 		max-width: 400px;
+		@include media-breakpoint-up(xxxxl){
+			padding-top: 150px;
+		}
 
 	}
 	.gallery-thumbs{
@@ -80,7 +90,8 @@
 		z-index: 20;
 		position: relative;
 		border-bottom: 2px solid #e5e5e5;
-		max-width: 450px;
+		@include media-breakpoint-up(xxxxl) 
+		max-width: rem(450px);
 
 		@include media-breakpoint-down(sm) {
 
@@ -136,15 +147,19 @@
 
 			margin-top: -130px;
 		}
- 
+		
 		margin-top: 20px;
 	}
-
+	
 	&__caption {
+		// @include media-breakpoint-up(xxxxl){
+		// 	// nt100
+		// margin-top: 100px;
+		// }
 		display: flex;
 		flex-direction: column;
 		height: 100%;
-		
+	
 		@include media-breakpoint-up(xxl) {
 			
 			padding-top: 120px;
@@ -204,7 +219,7 @@
 		margin-right: auto;
 	}
 
-	@include media-breakpoint-up(xl) {
+	@include media-breakpoint-only(xl) {
 		.container {
 			max-width: 1170px;
 		}
@@ -246,9 +261,16 @@
 	}
 
 	&__img-wrap {
+		@include media-breakpoint-up(xxxxl) {
+			margin-top: -250px;
+			margin-left: -150px;
+			text-align: center;
+		}
+		
 		@include media-breakpoint-up(xxl) {
 			margin-top: 0;
 		}
+
 		@include media-breakpoint-up(xl) {
 			margin-top: rem(-148);
 			// margin-top: 0;

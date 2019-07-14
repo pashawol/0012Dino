@@ -107,10 +107,16 @@ ul{
 
 body,
 html {
+	@include media-breakpoint-up(xxxxl) {
+
+		font-size: $em-base * 1.4;
+	}
+	
 	@include media-breakpoint-up(xxl) {
 
 		font-size: $em-base;
 	}
+
 	font-size: 14px;
 	// @include font-size(1rem);
 }

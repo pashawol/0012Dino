@@ -6447,6 +6447,12 @@ $color-text:  #282828;
   
    transform:  rotate(-90deg) translateY(-160%)  ;
    display: inline-block;
+   @include media-breakpoint-up(xxxxl) {
+
+     margin-top: rem(33px);
+     width: rem(65px);
+     font-size: rem(12px);
+   }
    margin-top: 33px;
    width: 65px;
    text-align: right;
