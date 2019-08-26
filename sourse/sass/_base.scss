@@ -676,3 +676,13 @@ body.last-screen:not(.page-next){
 		background-color: $body-color !important;
 	}
 }
+@include media-breakpoint-down(xl) {
+
+	.logo{
+		@include mt;
+	}
+	.logo-small{
+		transform: scale(.7) ;
+		transform-origin: top left;
+	}
+}

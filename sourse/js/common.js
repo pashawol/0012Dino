@@ -210,7 +210,10 @@ var JSCCommon = {
 
 				onLeave: function (origin, destination, direction) {
 					var leavingSection = this;
-
+					destination.index > 0 
+					? ($(".logo--js").addClass('logo-small'))
+					: ($(".logo--js").removeClass('logo-small'))
+				 
 					if (destination.index == 0) {
 
 						$("body").removeClass('page-scrolled');
