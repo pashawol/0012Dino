@@ -14,9 +14,16 @@
 		padding-bottom: 40px;
 	}
 	&__col{
+
 		text-align: center;
 		img{
-			max-height: rem(130)
+			@include media-breakpoint-up(xxl) {
+				margin: 0;
+				max-height: rem(130)
+			}
+			max-height: rem(100);
+			// margin-left: rem(15);
+			// margin: 0 rem(20);
 		}
 		@include media-breakpoint-up(xxl) {
 
@@ -83,7 +90,12 @@
 	}
 	
 	//
-	@include media-breakpoint-down(xl) {}
+	@include media-breakpoint-down(xl) {
+		&__img-wrap{
+			padding-left: 15px;
+			padding-right: 15px;
+		}
+	}
 	@include media-breakpoint-down(lg) {}
 	@include media-breakpoint-down(md) {
 		padding-top: 100px;

@@ -16,6 +16,7 @@ block pagecontent
 	
 	// / CRLS
 	.crls
+		
 		#callWrap.crls__form.call.crls__form-main
 			.call__bg
 			.call__inner
@@ -43,7 +44,8 @@ block pagecontent
 				a.btt.btn-foot(href='#')
 					span Оценить проект
 			
-		#calProject.crls__form.call
+		#calProject.crls__form.call.call-mobile-js
+			
 			.call__inner
 				a.btt-close.callProjectClose
 					span Закрыть
@@ -63,8 +65,12 @@ block pagecontent
 				.sk-child.sk-double-bounce-1
 				.sk-child.sk-double-bounce-2
 			+e.inner
-
+		a.btt-close.btt-close--mob.callProjectClose.d-lg-none.d-none
+				i.icn.icn-close
+		.show-form.d-lg-none.d-none
+			+icon("calculator")
 		#crlsNav.crls__nav
+			//- ul#headNav.crls__nav-menu.d-none.d-lg-flex
 			ul#headNav.crls__nav-menu
 				li(data-menuanchor="mainHead" class="active")
 					a(href="#mainHead") Главная
@@ -80,6 +86,23 @@ block pagecontent
 					a(href="#s-form") Контакты
 				li( )
 					a(href="#") Блог
+			
+			//- ul.crls__nav-menu.d-lg-none
+			//- 	li( class="active")
+			//- 		a.scroll-link(href="#mainHead") Главная
+			//- 	li( )
+			//- 		a.scroll-link(href="#works") Наши работы
+			//- 	li( )
+			//- 		a.scroll-link(href="#s-about") О нас
+			//- 	li( )
+			//- 		a.scroll-link(href="#s-servises") Услуги
+			//- 	li( )
+			//- 		a.scroll-link(href="#s-logos") Наши клиенты
+			//- 	li( )
+			//- 		a.scroll-link(href="#s-form") Контакты
+			//- 	li( )
+			//- 		a.scroll-link(href="#") Блог
+			
 			.crls__nav-scls.scls
 				p Связаться с нами:
 				a(href='#')

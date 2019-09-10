@@ -5987,31 +5987,33 @@
  .header__nav a:hover {
    color: #888;
  }
+ @include media-breakpoint-up(lg) {
 
- /* Sections */
- *::-webkit-scrollbar-track {
-   -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-   -webkit-border-radius: 10px;
-   border-radius: 10px;
+   /* Sections */
+   *::-webkit-scrollbar-track {
+     -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+     -webkit-border-radius: 10px;
+     border-radius: 10px;
    background-color: #f3f3f3;
- }
-
- *::-webkit-scrollbar {
-   width: 7px;
-   background-color: #f3f3f3;
- }
-
- .iScrollIndicator,
- *::-webkit-scrollbar-thumb {
-   -webkit-border-radius: 4px;
-   border-radius: 4px;
-   -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3) !important;
-   background-image: linear-gradient(-2deg, #ee5586 0%, #ea7599 100%) !important;
- }
-
- section {
-   padding: 0;
- }
+  }
+  
+  *::-webkit-scrollbar {
+    width: 7px;
+    background-color: #f3f3f3;
+  }
+  
+  .iScrollIndicator,
+  *::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3) !important;
+    background-image: linear-gradient(-2deg, #ee5586 0%, #ea7599 100%) !important;
+  }
+}
+  
+  section {
+    padding: 0;
+  }
 
  .px {
    position: absolute;
@@ -6136,12 +6138,18 @@
     }
     
   }
-  .call-opened2 .project-block-modal{
-    transform: translateX(0);
-    // left: 0;
+  .call-opened2 {
+
+    .project-block-modal{
+      transform: translateX(0);
+      // left: 0;
+      
+    }
+   
   }
   
- .call .btt-close {
+ .callProjectClose,
+  .call .btt-close {
    position: absolute;
    z-index: 1;
    width: auto;
@@ -6158,20 +6166,28 @@
    font-weight: 700;
    font-size: 16px;
    color: #ddd;
+   span{
+    color: #ddd;
+
+   }
  }
 
+ .callProjectClose .icn ,
  .call .btt-close .icn {
    margin-left: 6px;
  }
 
+ .callProjectClose:hover,
  .call .btt-close:hover {
    color: #fff;
  }
 
+ .callProjectClose:hover .icn:before ,
  .call .btt-close:hover .icn:before {
    background-color: #fff;
  }
 
+ 
  .call__ttl h4 {
    font-weight: 900;
    font-family: "PF Agora Slab Pro - Ultra Black";
@@ -6215,12 +6231,16 @@
  }
 
  .crls {
-   position: absolute;
    top: 0;
    left: 0;
    width: 100vw;
-   height: 100vh;
    font-size: 11px;
+   @include media-breakpoint-up(lg) {
+    height: 100vh;
+
+     position: absolute;
+    }
+    position: fixed;
  }
 
  .crls>* {
@@ -6768,10 +6788,16 @@ $color-text:  #282828;
 
  body.call-opened2,
  body.call-opened{
-   position: fixed !important;
-  //  position: absolute;
-   overflow: hidden !important;
-   max-height: 100vh;
+    overflow: hidden !important;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: 999;
+    .crls{
+     
+      z-index: 1000; 
+    }
  }
  
  body.call-opened .crls__form-main {

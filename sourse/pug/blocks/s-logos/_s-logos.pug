@@ -14,6 +14,7 @@ mixin s-logos()
 			.row
 				- for (var x = 1; x < 13; x++)
 					+e.col.col-lg-3.col-md-4.col-6
-						img.res-i(src="img/loadgif.gif" data-src=`img/logo-${x}.png`)
+						+e.img-wrap
+							img.res-i(src="img/loadgif.gif" data-src=`img/logo-${x}.png`)
 					// /+e.col.col-lg-3.col-md-4.col-6
 	// end s-logos

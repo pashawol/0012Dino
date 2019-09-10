@@ -677,7 +677,7 @@ body.last-screen:not(.page-next){
 	}
 }
 @include media-breakpoint-down(xl) {
-
+	
 	.logo{
 		@include mt;
 	}
@@ -686,3 +686,70 @@ body.last-screen:not(.page-next){
 		transform-origin: top left;
 	}
 }
+									@include media-breakpoint-down(md) {
+										.fp-tableCell{
+											display: block;
+											height: auto !important;
+										}
+										.fp-section.fp-table, .fp-slide.fp-table{
+											display: block;
+											height: auto !important;
+											width: 100%;
+										}
+									}
+
+
+
+									@include media-breakpoint-down(md) {
+
+										.project-block-modal{
+											width: 100%;
+											right: auto;
+											left: 0;
+										}
+									}
+									.call-mobile-js{
+										@include media-breakpoint-down(md) {
+											transform: translateX(100%);
+											z-index: 1200;
+											@include mt;
+											&.active{
+												
+												transform: translateX(0);
+											}
+										}
+									}
+									.btt-close.callProjectClose{
+										z-index: 1050;
+									}
+									// z-index: 1000;
+									.btt-close--mob{
+										position: fixed !important;
+										top: 40px;
+										.icn-close:before{
+											opacity: 0.3;
+											// width: 40px;
+											// height: 40px;
+											// background-size: 100%;
+										}
+									}
+	.show-form{
+		// background-image: linear-gradient(-2deg,#ef5e8d 0,#ee90ad 100%);
+		@extend .btt;
+		padding: 0;
+		position: fixed;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+		width: rem(70);
+		height: rem(70);
+		z-index: 1100;
+		bottom: rem(20);
+		right: rem(20);
+		cursor: pointer;
+		.icon{
+			font-size: 1.875em; 
+		color: #ffffff;
+		}
+	}

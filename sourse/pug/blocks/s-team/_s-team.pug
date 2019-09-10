@@ -13,7 +13,7 @@ mixin s-team()
 								mixin it(x)
 									+e.slide-sm.tabs__btn&attributes(attributes)
 										+e.img-wrap-sm
-											img(src="img/loadgif.gif" data-src=`img/team-${x}.png`, alt='') 
+											img(src="img/loadgif.gif" data-src=`img/@1x/photo${x}.png`, alt='') 
 								+it('1')(class="active")
 								+it('2')
 								+it('3')
@@ -29,8 +29,11 @@ mixin s-team()
 										+e.img-wrap
 											+e.title.d-md-none.text-center= t
 											picture 
-												source.lazy-sourse(srcset="#" data-srcset=`img/team-${i}-lg.png` media="(min-width: 2000px)" type="image/png" )
-												img.res-i(src="img/loadgif.gif" data-src=`img/team-${i}.png` , alt='')
+												source.lazy-sourse(srcset="#" data-srcset=`img/@2x/webp/photo${i}.webp` media="(min-width: 2000px)" type="image/webp" )
+												source.lazy-sourse(srcset="#" data-srcset=`img/@2x/photo${i}.png` media="(min-width: 2000px)" type="image/png" )
+												source.lazy-sourse(srcset="#" data-srcset=`img/@1x/webp/photo${i}.webp`  type="image/webp" )
+												source.lazy-sourse(srcset="#" data-srcset=`img/@1x/photo${i}.png`   type="image/png" )
+												img.res-i(src="img/loadgif.gif" data-src=`img/@1x/photo${i}.png` , alt='')
 									.col
 										+e.caption
 											+e.text

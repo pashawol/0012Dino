@@ -406,7 +406,7 @@ jQuery(document).ready(function ($) {
 		$('#crlsNav').removeClass("active");
 	}
 	body.click(function (e) {
-		if ($(e.target).closest('#headNav a').length != 0) hideMenu();
+		if ($(e.target).closest('#crlsNav li a').length != 0) hideMenu();
 	});
 	$('#menuOpen').click(function (e) {
 		e.preventDefault();
@@ -421,7 +421,7 @@ jQuery(document).ready(function ($) {
 
 		}
 	});
-	$(".crls__call, #headNav a").click(function () {
+	$(".crls__call, #crlsNav li a").click(function () {
 		hideMenu()
 		$.fn.fullpage.setAllowScrolling(true);
 
@@ -441,6 +441,7 @@ jQuery(document).ready(function ($) {
 	$('.full-modal-open-js').click(function (even) {
 		even.preventDefault();
 		body.toggleClass('call-opened2');
+		$(".btt-close--mob, .show-form").removeClass('d-none');
 		// $.fn.fullpage.setAllowScrolling(false);
 		var imgSrc = this.dataset.img
 		var img = '<img src="' + imgSrc + '">'
@@ -450,6 +451,8 @@ jQuery(document).ready(function ($) {
 
 	$('.callProjectClose').click(function () {
 		body.removeClass('call-opened2');
+		$(".call-mobile-js").removeClass('active');
+		$(".btt-close--mob, .show-form").addClass('d-none');
 		$.fn.fullpage.setAllowScrolling(true);
 		// document.querySelector('.project-block-modal')
 	});
@@ -507,6 +510,10 @@ jQuery(document).ready(function ($) {
 
 			$(this).attr('src',$(this).data("img-src"))
 		})
+	})
+
+	$(".show-form").click(function(){
+		$(".call-mobile-js").toggleClass("active")
 	})
 });
 

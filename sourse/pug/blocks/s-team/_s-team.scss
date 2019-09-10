@@ -40,7 +40,8 @@
 		width: 48px;
 		height: 48px;
 
-		margin-right: rem(15);
+		margin-right: rem(7);
+		margin-left: rem(7);
 		position: relative;
 		overflow: hidden;
 		cursor: pointer;
@@ -289,7 +290,8 @@
 		img {
 			@include media-breakpoint-up(xxxl) {
 
-				max-height: rem(900);
+				max-height: rem(750);
+				margin-top: rem(30);
 			}
 			
 			@include media-breakpoint-up(xxl) {

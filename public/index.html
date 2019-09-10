@@ -37,7 +37,7 @@
             </div><a class="btt btn-foot" href="#"><span>Оценить проект</span></a>
           </div>
         </div>
-        <div class="crls__form call" id="calProject">
+        <div class="crls__form call call-mobile-js" id="calProject">
           <div class="call__inner"><a class="btt-close callProjectClose"><span>Закрыть</span><i class="icn icn-close"></i></a>
             <div class="h1 text-white"><span class="text-warning">Оценить</span><br>ваш проект?</div>
             <div class="form-wrap">
@@ -83,6 +83,11 @@
           </div>
           <div class="project-block-modal__inner">
           </div>
+        </div><a class="btt-close btt-close--mob callProjectClose d-lg-none d-none"><i class="icn icn-close"></i></a>
+        <div class="show-form d-lg-none d-none">
+          <svg class="icon icon-calculator ">
+            <use xlink:href="img/svg/sprite.svg#calculator"></use>
+          </svg>
         </div>
         <div class="crls__nav" id="crlsNav">
           <ul class="crls__nav-menu" id="headNav">
@@ -648,23 +653,23 @@
                         <div class="col">
                           <div class="tabs__caption">
                                       <div class="s-team__slide-sm tabs__btn active">
-                                        <div class="s-team__img-wrap-sm"><img src="img/loadgif.gif" data-src="img/team-1.png" alt=""/>
+                                        <div class="s-team__img-wrap-sm"><img src="img/loadgif.gif" data-src="img/@1x/photo1.png" alt=""/>
                                         </div>
                                       </div>
                                       <div class="s-team__slide-sm tabs__btn">
-                                        <div class="s-team__img-wrap-sm"><img src="img/loadgif.gif" data-src="img/team-2.png" alt=""/>
+                                        <div class="s-team__img-wrap-sm"><img src="img/loadgif.gif" data-src="img/@1x/photo2.png" alt=""/>
                                         </div>
                                       </div>
                                       <div class="s-team__slide-sm tabs__btn">
-                                        <div class="s-team__img-wrap-sm"><img src="img/loadgif.gif" data-src="img/team-3.png" alt=""/>
+                                        <div class="s-team__img-wrap-sm"><img src="img/loadgif.gif" data-src="img/@1x/photo3.png" alt=""/>
                                         </div>
                                       </div>
                                       <div class="s-team__slide-sm tabs__btn">
-                                        <div class="s-team__img-wrap-sm"><img src="img/loadgif.gif" data-src="img/team-4.png" alt=""/>
+                                        <div class="s-team__img-wrap-sm"><img src="img/loadgif.gif" data-src="img/@1x/photo4.png" alt=""/>
                                         </div>
                                       </div>
                                       <div class="s-team__slide-sm tabs__btn">
-                                        <div class="s-team__img-wrap-sm"><img src="img/loadgif.gif" data-src="img/team-5.png" alt=""/>
+                                        <div class="s-team__img-wrap-sm"><img src="img/loadgif.gif" data-src="img/@1x/photo5.png" alt=""/>
                                         </div>
                                       </div>
                           </div>
@@ -679,7 +684,10 @@
                                   <div class="s-team__title d-md-none text-center">Дмитрий Новиков
                                   </div>
                                   <picture> 
-                                    <source class="lazy-sourse" srcset="#" data-srcset="img/team-1-lg.png" media="(min-width: 2000px)" type="image/png"/><img class="res-i" src="img/loadgif.gif" data-src="img/team-1.png" alt=""/>
+                                    <source class="lazy-sourse" srcset="#" data-srcset="img/@2x/webp/photo1.webp" media="(min-width: 2000px)" type="image/webp"/>
+                                    <source class="lazy-sourse" srcset="#" data-srcset="img/@2x/photo1.png" media="(min-width: 2000px)" type="image/png"/>
+                                    <source class="lazy-sourse" srcset="#" data-srcset="img/@1x/webp/photo1.webp" type="image/webp"/>
+                                    <source class="lazy-sourse" srcset="#" data-srcset="img/@1x/photo1.png" type="image/png"/><img class="res-i" src="img/loadgif.gif" data-src="img/@1x/photo1.png" alt=""/>
                                   </picture>
                                 </div>
                               </div>
@@ -710,7 +718,10 @@
                                   <div class="s-team__title d-md-none text-center">Денис Миловидов
                                   </div>
                                   <picture> 
-                                    <source class="lazy-sourse" srcset="#" data-srcset="img/team-2-lg.png" media="(min-width: 2000px)" type="image/png"/><img class="res-i" src="img/loadgif.gif" data-src="img/team-2.png" alt=""/>
+                                    <source class="lazy-sourse" srcset="#" data-srcset="img/@2x/webp/photo2.webp" media="(min-width: 2000px)" type="image/webp"/>
+                                    <source class="lazy-sourse" srcset="#" data-srcset="img/@2x/photo2.png" media="(min-width: 2000px)" type="image/png"/>
+                                    <source class="lazy-sourse" srcset="#" data-srcset="img/@1x/webp/photo2.webp" type="image/webp"/>
+                                    <source class="lazy-sourse" srcset="#" data-srcset="img/@1x/photo2.png" type="image/png"/><img class="res-i" src="img/loadgif.gif" data-src="img/@1x/photo2.png" alt=""/>
                                   </picture>
                                 </div>
                               </div>
@@ -741,7 +752,10 @@
                                   <div class="s-team__title d-md-none text-center">Алиса Новикова
                                   </div>
                                   <picture> 
-                                    <source class="lazy-sourse" srcset="#" data-srcset="img/team-3-lg.png" media="(min-width: 2000px)" type="image/png"/><img class="res-i" src="img/loadgif.gif" data-src="img/team-3.png" alt=""/>
+                                    <source class="lazy-sourse" srcset="#" data-srcset="img/@2x/webp/photo3.webp" media="(min-width: 2000px)" type="image/webp"/>
+                                    <source class="lazy-sourse" srcset="#" data-srcset="img/@2x/photo3.png" media="(min-width: 2000px)" type="image/png"/>
+                                    <source class="lazy-sourse" srcset="#" data-srcset="img/@1x/webp/photo3.webp" type="image/webp"/>
+                                    <source class="lazy-sourse" srcset="#" data-srcset="img/@1x/photo3.png" type="image/png"/><img class="res-i" src="img/loadgif.gif" data-src="img/@1x/photo3.png" alt=""/>
                                   </picture>
                                 </div>
                               </div>
@@ -772,7 +786,10 @@
                                   <div class="s-team__title d-md-none text-center">Дмитрий Пощикайло
                                   </div>
                                   <picture> 
-                                    <source class="lazy-sourse" srcset="#" data-srcset="img/team-4-lg.png" media="(min-width: 2000px)" type="image/png"/><img class="res-i" src="img/loadgif.gif" data-src="img/team-4.png" alt=""/>
+                                    <source class="lazy-sourse" srcset="#" data-srcset="img/@2x/webp/photo4.webp" media="(min-width: 2000px)" type="image/webp"/>
+                                    <source class="lazy-sourse" srcset="#" data-srcset="img/@2x/photo4.png" media="(min-width: 2000px)" type="image/png"/>
+                                    <source class="lazy-sourse" srcset="#" data-srcset="img/@1x/webp/photo4.webp" type="image/webp"/>
+                                    <source class="lazy-sourse" srcset="#" data-srcset="img/@1x/photo4.png" type="image/png"/><img class="res-i" src="img/loadgif.gif" data-src="img/@1x/photo4.png" alt=""/>
                                   </picture>
                                 </div>
                               </div>
@@ -803,7 +820,10 @@
                                   <div class="s-team__title d-md-none text-center">Андрей Бударинцев
                                   </div>
                                   <picture> 
-                                    <source class="lazy-sourse" srcset="#" data-srcset="img/team-5-lg.png" media="(min-width: 2000px)" type="image/png"/><img class="res-i" src="img/loadgif.gif" data-src="img/team-5.png" alt=""/>
+                                    <source class="lazy-sourse" srcset="#" data-srcset="img/@2x/webp/photo5.webp" media="(min-width: 2000px)" type="image/webp"/>
+                                    <source class="lazy-sourse" srcset="#" data-srcset="img/@2x/photo5.png" media="(min-width: 2000px)" type="image/png"/>
+                                    <source class="lazy-sourse" srcset="#" data-srcset="img/@1x/webp/photo5.webp" type="image/webp"/>
+                                    <source class="lazy-sourse" srcset="#" data-srcset="img/@1x/photo5.png" type="image/png"/><img class="res-i" src="img/loadgif.gif" data-src="img/@1x/photo5.png" alt=""/>
                                   </picture>
                                 </div>
                               </div>
@@ -920,40 +940,64 @@
               <div class="px px-6" id="px6"><img src="#" data-src="img/list-logo-3.png" alt="" data-depth="0.5"/></div>
             </div>
             <div class="row">
-              <div class="s-logos__col col-lg-3 col-md-4 col-6"><img class="res-i" src="img/loadgif.gif" data-src="img/logo-1.png"/>
+              <div class="s-logos__col col-lg-3 col-md-4 col-6">
+                <div class="s-logos__img-wrap"><img class="res-i" src="img/loadgif.gif" data-src="img/logo-1.png"/>
+                </div>
               </div>
               <!-- /+e.col.col-lg-3.col-md-4.col-6-->
-              <div class="s-logos__col col-lg-3 col-md-4 col-6"><img class="res-i" src="img/loadgif.gif" data-src="img/logo-2.png"/>
+              <div class="s-logos__col col-lg-3 col-md-4 col-6">
+                <div class="s-logos__img-wrap"><img class="res-i" src="img/loadgif.gif" data-src="img/logo-2.png"/>
+                </div>
               </div>
               <!-- /+e.col.col-lg-3.col-md-4.col-6-->
-              <div class="s-logos__col col-lg-3 col-md-4 col-6"><img class="res-i" src="img/loadgif.gif" data-src="img/logo-3.png"/>
+              <div class="s-logos__col col-lg-3 col-md-4 col-6">
+                <div class="s-logos__img-wrap"><img class="res-i" src="img/loadgif.gif" data-src="img/logo-3.png"/>
+                </div>
               </div>
               <!-- /+e.col.col-lg-3.col-md-4.col-6-->
-              <div class="s-logos__col col-lg-3 col-md-4 col-6"><img class="res-i" src="img/loadgif.gif" data-src="img/logo-4.png"/>
+              <div class="s-logos__col col-lg-3 col-md-4 col-6">
+                <div class="s-logos__img-wrap"><img class="res-i" src="img/loadgif.gif" data-src="img/logo-4.png"/>
+                </div>
               </div>
               <!-- /+e.col.col-lg-3.col-md-4.col-6-->
-              <div class="s-logos__col col-lg-3 col-md-4 col-6"><img class="res-i" src="img/loadgif.gif" data-src="img/logo-5.png"/>
+              <div class="s-logos__col col-lg-3 col-md-4 col-6">
+                <div class="s-logos__img-wrap"><img class="res-i" src="img/loadgif.gif" data-src="img/logo-5.png"/>
+                </div>
               </div>
               <!-- /+e.col.col-lg-3.col-md-4.col-6-->
-              <div class="s-logos__col col-lg-3 col-md-4 col-6"><img class="res-i" src="img/loadgif.gif" data-src="img/logo-6.png"/>
+              <div class="s-logos__col col-lg-3 col-md-4 col-6">
+                <div class="s-logos__img-wrap"><img class="res-i" src="img/loadgif.gif" data-src="img/logo-6.png"/>
+                </div>
               </div>
               <!-- /+e.col.col-lg-3.col-md-4.col-6-->
-              <div class="s-logos__col col-lg-3 col-md-4 col-6"><img class="res-i" src="img/loadgif.gif" data-src="img/logo-7.png"/>
+              <div class="s-logos__col col-lg-3 col-md-4 col-6">
+                <div class="s-logos__img-wrap"><img class="res-i" src="img/loadgif.gif" data-src="img/logo-7.png"/>
+                </div>
               </div>
               <!-- /+e.col.col-lg-3.col-md-4.col-6-->
-              <div class="s-logos__col col-lg-3 col-md-4 col-6"><img class="res-i" src="img/loadgif.gif" data-src="img/logo-8.png"/>
+              <div class="s-logos__col col-lg-3 col-md-4 col-6">
+                <div class="s-logos__img-wrap"><img class="res-i" src="img/loadgif.gif" data-src="img/logo-8.png"/>
+                </div>
               </div>
               <!-- /+e.col.col-lg-3.col-md-4.col-6-->
-              <div class="s-logos__col col-lg-3 col-md-4 col-6"><img class="res-i" src="img/loadgif.gif" data-src="img/logo-9.png"/>
+              <div class="s-logos__col col-lg-3 col-md-4 col-6">
+                <div class="s-logos__img-wrap"><img class="res-i" src="img/loadgif.gif" data-src="img/logo-9.png"/>
+                </div>
               </div>
               <!-- /+e.col.col-lg-3.col-md-4.col-6-->
-              <div class="s-logos__col col-lg-3 col-md-4 col-6"><img class="res-i" src="img/loadgif.gif" data-src="img/logo-10.png"/>
+              <div class="s-logos__col col-lg-3 col-md-4 col-6">
+                <div class="s-logos__img-wrap"><img class="res-i" src="img/loadgif.gif" data-src="img/logo-10.png"/>
+                </div>
               </div>
               <!-- /+e.col.col-lg-3.col-md-4.col-6-->
-              <div class="s-logos__col col-lg-3 col-md-4 col-6"><img class="res-i" src="img/loadgif.gif" data-src="img/logo-11.png"/>
+              <div class="s-logos__col col-lg-3 col-md-4 col-6">
+                <div class="s-logos__img-wrap"><img class="res-i" src="img/loadgif.gif" data-src="img/logo-11.png"/>
+                </div>
               </div>
               <!-- /+e.col.col-lg-3.col-md-4.col-6-->
-              <div class="s-logos__col col-lg-3 col-md-4 col-6"><img class="res-i" src="img/loadgif.gif" data-src="img/logo-12.png"/>
+              <div class="s-logos__col col-lg-3 col-md-4 col-6">
+                <div class="s-logos__img-wrap"><img class="res-i" src="img/loadgif.gif" data-src="img/logo-12.png"/>
+                </div>
               </div>
               <!-- /+e.col.col-lg-3.col-md-4.col-6-->
             </div>
