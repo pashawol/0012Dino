@@ -90,14 +90,23 @@
           </svg>
         </div>
         <div class="crls__nav" id="crlsNav">
-          <ul class="crls__nav-menu" id="headNav">
-            <li class="active" data-menuanchor="mainHead"><a href="#mainHead">Главная</a></li>
-            <li data-menuanchor="works"><a href="#works">Наши работы</a></li>
-            <li data-menuanchor="s-about"><a href="#s-about">О нас</a></li>
-            <li data-menuanchor="s-servises"><a href="#s-servises">Услуги</a></li>
-            <li data-menuanchor="s-logos"><a href="#s-logos">Наши клиенты</a></li>
-            <li data-menuanchor="s-form"><a href="#s-form">Контакты</a></li>
+          <ul class="crls__nav-menu d-none d-lg-flex" id="headNav">
+            <li class="active" data-menuanchor="mainHead1"><a href="#mainHead1">Главная</a></li>
+            <li data-menuanchor="works1"><a href="#works1">Наши работы</a></li>
+            <li data-menuanchor="s-about1"><a href="#s-about1">О нас</a></li>
+            <li data-menuanchor="s-servises1"><a href="#s-servises1">Услуги</a></li>
+            <li data-menuanchor="s-logos1"><a href="#s-logos1">Наши клиенты</a></li>
+            <li data-menuanchor="s-form1"><a href="#s-form1">Контакты</a></li>
             <li><a href="#">Блог</a></li>
+          </ul>
+          <ul class="crls__nav-menu d-lg-none">
+            <li class="active"><a class="scroll-link" href="#mainHead">Главная</a></li>
+            <li><a class="scroll-link" href="#works">Наши работы</a></li>
+            <li><a class="scroll-link" href="#s-about">О нас</a></li>
+            <li><a class="scroll-link" href="#s-servises">Услуги</a></li>
+            <li><a class="scroll-link" href="#s-logos">Наши клиенты</a></li>
+            <li><a class="scroll-link" href="#s-form">Контакты</a></li>
+            <li><a class="scroll-link" href="#">Блог</a></li>
           </ul>
           <div class="crls__nav-scls scls">
             <p>Связаться с нами:</p><a href="#">
@@ -149,7 +158,7 @@
       </div>
       <div class="wrp" id="wrp">
         <!-- / .Promo-->
-        <section class="section">
+        <section class="section" id="mainHead">
           <div class="prm">
             <div class="wrp__bg wow slideInRight" data-wow-duration="1.2s"></div>
             <!-- / WRP-->
@@ -409,7 +418,7 @@
         </section>
         <!-- .Promo /-->
         <!-- / .Works-->
-        <section class="wrks-wrap section scrollable fp-auto-height">
+        <section class="wrks-wrap section scrollable fp-auto-height" id="works">
           <div class="wrks"> 
             <div class="wrks__head">
               <div class="wrks_bg">
@@ -575,7 +584,7 @@
             <div class="swiper-wrapper">
               <div class="slider-about__slide swiper-slide">
                 <!-- start s-about-->
-                <div class="s-about section">
+                <div class="s-about section" id="s-about">
                   <div class="container">
                     <div class="row">
                       <div class="col-xl-8 col-lg-7">
@@ -857,7 +866,7 @@
           </div>
         </SECTION>
         <!-- start s-servises-->
-        <section class="s-servises section">
+        <section class="s-servises section" id="s-servises">
           <div class="container">
             <div class="section-title text-center">
               <h2>Наши услуги</h2>
@@ -929,7 +938,7 @@
         </section>
         <!-- end s-servises-->
         <!-- start s-logos-->
-        <section class="s-logos section">
+        <section class="s-logos section" id="s-logos">
           <div class="container">
             <div class="section-title text-center">
               <h2>Наши клиенты</h2>
@@ -1005,7 +1014,7 @@
         </section>
         <!-- end s-logos-->
         <!-- start s-form-->
-        <section class="s-form section">
+        <section class="s-form section" id="s-form">
           <div class="container">
             <div class="section-title text-center">
               <h2> <span class="text-warning">Оценить  </span> 

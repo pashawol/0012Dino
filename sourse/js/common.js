@@ -273,7 +273,7 @@ var JSCCommon = {
 
 				},
 
-				anchors: ['mainHead', 'works', 's-about', 's-servises', 's-logos', 's-form'],
+				anchors: ['mainHead1', 'works1', 's-about1', 's-servises1', 's-logos1', 's-form1'],
 				menu: '#headNav',
 			});
 
@@ -290,9 +290,9 @@ var JSCCommon = {
 				})
 			}
 
-			pageScrollTo('.crls_mouse', 'works')
-			pageScrollTo('.btt-calc', 's-form')
-			pageScrollTo('.btn-foot', 's-form')
+			pageScrollTo('.crls_mouse', 'works1')
+			pageScrollTo('.btt-calc', 's-form1')
+			pageScrollTo('.btn-foot', 's-form1')
 		}
 	},
 	// /fullPage
@@ -514,6 +514,17 @@ jQuery(document).ready(function ($) {
 
 	$(".show-form").click(function(){
 		$(".call-mobile-js").toggleClass("active")
+	})
+
+	$(".scroll-link").click(function(e){
+		e.preventDefault();
+		$(this).parent().addClass("active").siblings().removeClass("active");
+		var elementClick = $(this).attr("href");
+	       var destination = $(elementClick).offset().top;
+
+	           $('html, body').animate({ scrollTop: destination }, 1100);
+
+	       return false;
 	})
 });
 
