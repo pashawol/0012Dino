@@ -97,20 +97,17 @@
 		color: #ffffff;
 		padding: rem(15) rem(20);
 		margin-bottom: rem(20);
-		&::-webkit-input-placeholder { /* Chrome/Opera/Safari */
-				color: #ffffff;
+		&::placeholder {
+			color: #ffffff;
+			// opacity: 0.8;
 		}
-		&::-moz-placeholder { /* Firefox 19+ */
-				color: #ffffff;
-		}
-		&:-ms-input-placeholder { /* IE 10+ */
-				color: #ffffff;
-		}
-		&:-moz-placeholder { /* Firefox 18- */
-				color: #ffffff;
-		}
-		 
-	
+		&:focus  {
+
+			&::placeholder {
+				// color: red;
+				color: rgba($color:#fff, $alpha: .5)
+			}
+		 }
 	}
 	&__btn{
 		@extend .btn;

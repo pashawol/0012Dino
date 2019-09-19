@@ -51,6 +51,9 @@
 		margin-bottom: 0;
 	}
 
+	.icn, .icn:before {
+		display: block;
+	}
 	@include media-breakpoint-up(lg) {}
 
 	@include media-breakpoint-up(md) {}

@@ -28,6 +28,12 @@
     justify-content: center;
     margin-bottom: rem(10);
     align-items: center;
+    a{
+      display: block;
+    }
+    .icn, .icn:before {
+      display: block;
+    }
 	}
 
 // 
