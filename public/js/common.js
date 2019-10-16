@@ -237,8 +237,14 @@ var JSCCommon = {
 
 					}
 
-					if (destination.index < 6) {}
-					if (destination.index == 6) {
+					// if (destination.index < 6) {}
+					// if (destination.index == 6) {
+					// 	$("body").addClass('page-scrolled');
+					// 	$("body").removeClass('page-next');
+					// 	$("body").removeClass('nav-scrolled');
+
+					// }
+					if(destination.anchor == 's-form1'){
 						$("body").addClass('page-scrolled');
 						$("body").removeClass('page-next');
 						$("body").removeClass('nav-scrolled');
